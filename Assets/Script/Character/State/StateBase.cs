@@ -7,7 +7,7 @@ namespace Newvia {
         protected CharacterInit _CharacterInit = null;//캐릭터 컨트롤러
 
         //기능 구현 부분
-        public void Handle(CharacterInit init, params object[] datas)
+        public void Handle(CharacterInit init)
         {
             //캐릭터 값 초기화
             if (!this._CharacterInit)

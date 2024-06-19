@@ -22,10 +22,10 @@ namespace Newvia
         }
 
         //상태 전환
-        public void Transition(CharacterState state, params object[] datas)
+        public void Transition(CharacterState state)
         {
             CurrentState = state;
-            CurrentState.Handle(characterInit, datas);
+            CurrentState.Handle(characterInit);
         }
     }
 }

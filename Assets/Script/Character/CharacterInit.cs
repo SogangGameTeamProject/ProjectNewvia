@@ -15,7 +15,7 @@ namespace Newvia
 
 
         //현재 캐릭터의 상태 전환
-        public void StateTransition(CharacterState state)
+        public virtual void StateTransition(CharacterState state)
         {
             _stateContext.Transition(state);
         }

@@ -4,9 +4,8 @@ using UnityEngine;
 
 namespace Newvia
 {
-    public class PlayerController : CharacterInit
+    public interface ICommand
     {
-        
+        void Execute();
     }
 }
-

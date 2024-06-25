@@ -1,31 +1,56 @@
+using System;
+using Unity.IO.LowLevel.Unsafe;
+using Unity.VisualScripting;
+
 namespace Newvia
 {
     public class CharacterStateContext
     {
-        public CharacterState CurrentState
+        public CharacterState CurrentState { get; private set; }
+
+        // reference to the state objects
+        public PlayerWalkState walkState;
+        //public IdleState idleState;
+
+        // event to notify other objects of the state change
+        public event Action<CharacterState> stateChanged;
+
+        // pass in necessary parameters into constructor 
+        public CharacterStateContext(PlayerController player)
         {
-            get; set;
+            // create an instance for each state and pass in PlayerController
+            this.walkState = new PlayerWalkState(player);
+            //this.idleState = new IdleState(player);
         }
 
-        private readonly CharacterInit characterInit;
-
-
-        public CharacterStateContext(CharacterInit characterInit)
-        {
-            this.characterInit = characterInit;
-        }
-
-        //현재 상태 업데이트
-        public void Transition()
-        {
-            CurrentState.Handle(characterInit);
-        }
-
-        //상태 전환
-        public void Transition(CharacterState state)
+        // set the starting state
+        public void Initialize(CharacterState state)
         {
             CurrentState = state;
-            CurrentState.Handle(characterInit);
+            state.Enter();
+
+            // notify other objects that state has changed
+            stateChanged?.Invoke(state);
+        }
+
+        // exit this state and enter another
+        public void TransitionTo(CharacterState nextState)
+        {
+            CurrentState.Exit();
+            CurrentState = nextState;
+            nextState.Enter();
+
+            // notify other objects that state has changed
+            stateChanged?.Invoke(nextState);
+        }
+
+        // allow the StateMachine to update this state
+        public void Update()
+        {
+            if (CurrentState != null)
+            {
+                CurrentState.Update();
+            }
         }
     }
 }

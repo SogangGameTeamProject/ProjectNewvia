@@ -4,21 +4,18 @@ using UnityEngine;
 
 namespace Newvia
 {
-    public class CharacterInit : Subject
+    public abstract class CharacterInit : Subject
     {
         private CharacterStateContext _stateContext;
 
-        public void Start()
+        public virtual void Start()
         {
-            _stateContext = new CharacterStateContext(this);//stateContext °ª ÃÊ±âÈ­
+
         }
 
 
-        //ÇöÀç Ä³¸¯ÅÍÀÇ »óÅÂ ÀüÈ¯
-        public virtual void StateTransition(CharacterState state)
-        {
-            _stateContext.Transition(state);
-        }
+        //í˜„ì¬ ìºë¦­í„°ì˜ ìƒíƒœ ì „í™˜
+        public abstract void StateTransition(StateBase state);
     }
 }
 

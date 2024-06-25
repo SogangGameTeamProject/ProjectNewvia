@@ -8,7 +8,7 @@ namespace Newvia
     {
         protected PlayerController _player;
         [SerializeField]
-        protected StateInit runnigState = null;//Ä¿¸Çµå ÀÔ·Â ½Ã ½ÇÇàÇÒ »óÅÂ
+        protected StateBase runnigState = null;//ì»¤ë§¨ë“œ ì…ë ¥ ì‹œ ì‹¤í–‰í•  ìƒíƒœ
 
         public PlayerCommandInit(PlayerController player)
         {

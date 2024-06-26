@@ -7,7 +7,7 @@ namespace Newvia
             // code that runs when we first enter the state
         }
 
-        public void Update()
+        public void StateUpdate()
         {
             // per-frame logic, include condition to transition to a new state
         }

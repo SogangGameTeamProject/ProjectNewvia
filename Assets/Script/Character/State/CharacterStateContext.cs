@@ -8,20 +8,9 @@ namespace Newvia
     {
         public CharacterState CurrentState { get; private set; }
 
-        // reference to the state objects
-        public PlayerWalkState walkState;
-        //public IdleState idleState;
-
         // event to notify other objects of the state change
         public event Action<CharacterState> stateChanged;
 
-        // pass in necessary parameters into constructor 
-        public CharacterStateContext(PlayerController player)
-        {
-            // create an instance for each state and pass in PlayerController
-            this.walkState = new PlayerWalkState(player);
-            //this.idleState = new IdleState(player);
-        }
 
         // set the starting state
         public void Initialize(CharacterState state)
@@ -49,7 +38,7 @@ namespace Newvia
         {
             if (CurrentState != null)
             {
-                CurrentState.Update();
+                CurrentState.StateUpdate();
             }
         }
     }

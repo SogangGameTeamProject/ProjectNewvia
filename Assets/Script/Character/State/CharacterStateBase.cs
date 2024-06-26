@@ -2,12 +2,12 @@ using System.Collections;
 using UnityEngine;
 
 namespace Newvia {
-    public abstract class StateBase : MonoBehaviour, CharacterState
+    public abstract class CharacterStateBase : MonoBehaviour, CharacterState
     {
         protected PlayerController player;
 
         // pass in any parameters you need in the constructors
-        public StateBase(PlayerController player)
+        public CharacterStateBase(PlayerController player)
         {
             this.player = player;
         }
@@ -15,7 +15,7 @@ namespace Newvia {
         //상태 전환 시 처리
         public abstract void Enter();
 
-        public abstract void Update();
+        public abstract void StateUpdate();
 
         //상태 종료 시 처리
         public abstract void Exit();

@@ -6,7 +6,7 @@ namespace Newvia
 {
     public class PlayerController : CharacterInit
     {
-
+        
 
         public override void StateTransition(StateBase state)
         {

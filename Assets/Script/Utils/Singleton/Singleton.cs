@@ -4,12 +4,14 @@ using UnityEngine;
 
 namespace Newvia
 {
-    //°ÔÀÓ ¸Å´ÏÀú ±¸ÇöÀ» À§ÇÑ Á¦³Ê¸¯ Å¬·¡½º ±¸Çö
+    //ê²Œì„ ë§¤ë‹ˆì € êµ¬í˜„ì„ ìœ„í•œ ì œë„ˆë¦­ í´ë˜ìŠ¤ êµ¬í˜„
     public class Singleton<T> : MonoBehaviour where T : Component
     {
-        private static T _instance;//°ÔÀÓ ¸Å´ÏÀúÀÇ ÀÎ½ºÅÏ½º
+        private static T _instance;//ê²Œì„ ë§¤ë‹ˆì €ì˜ ì¸ìŠ¤í„´ìŠ¤
+        [SerializeField]
+        private bool _isDontDestroy = false;//ì‚­ì œë°©ì§€ ì—¬ë¶€
 
-        //get ÇÁ·ÎÆÛÆ¼·Î ÀÎ½ºÅÏ½º ¹İÈ¯
+        //get í”„ë¡œí¼í‹°ë¡œ ì¸ìŠ¤í„´ìŠ¤ ë°˜í™˜
         public static T Instance
         {
             get
@@ -17,7 +19,7 @@ namespace Newvia
                 if (_instance == null)
                 {
                     _instance = FindObjectOfType<T>();//
-                    //ÁöÁ¤ÇÑ Å¸ÀÔÀÇ ¿ÀºêÁ§Æ®°¡ ¾øÀ» ½Ã »õ·Î¿î GameObject¸¦ »ı¼ºÇÏ°í ÀÌ¸§À» ¹Ù²Û ÈÄ ÁöÁ¤µÇÁö ¾ÊÀº À¯ÇüÀÇ ÄÄÆ÷³ÍÆ®¸¦ Ãß°¡
+                    //ì§€ì •í•œ íƒ€ì…ì˜ ì˜¤ë¸Œì íŠ¸ê°€ ì—†ì„ ì‹œ ìƒˆë¡œìš´ GameObjectë¥¼ ìƒì„±í•˜ê³  ì´ë¦„ì„ ë°”ê¾¼ í›„ ì§€ì •ë˜ì§€ ì•Šì€ ìœ í˜•ì˜ ì»´í¬ë„ŒíŠ¸ë¥¼ ì¶”ê°€
                     if (_instance == null)
                     {
                         GameObject obj = new GameObject();
@@ -31,11 +33,12 @@ namespace Newvia
 
         public virtual void Awake()
         {
-            //±âÁ¸ÀÇ ÀÎ½ºÅÏ½º°¡ ¾øÀ¸¸é ÀÎ½ºÅÏ½º°ª ÃÊ±âÈ­
+            //ê¸°ì¡´ì˜ ì¸ìŠ¤í„´ìŠ¤ê°€ ì—†ìœ¼ë©´ ì¸ìŠ¤í„´ìŠ¤ê°’ ì´ˆê¸°í™”
             if (_instance == null)
             {
                 _instance = this as T;
-                DontDestroyOnLoad(gameObject);
+                if(_isDontDestroy)
+                    DontDestroyOnLoad(gameObject);
             }
             else
             {

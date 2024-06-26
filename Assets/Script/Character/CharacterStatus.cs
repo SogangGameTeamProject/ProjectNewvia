@@ -9,7 +9,7 @@ namespace Newvia
     {
         public string characterName = "";
         public int hp = 1;
+        public int power = 1;
         public float moveSpeed = 10;
-        public float power = 1;
     }
 }

@@ -6,12 +6,12 @@ namespace Newvia
 {
     public class InputHandler : MonoBehaviour
     {
-        [SerializeField]
-        private PlayerCommandInit _moveCommand;
+        PlayerController _playerController = null;
+        public PlayerCommandInit _moveCommand;
 
         private void Start()
         {
-            PlayerController _playerController = GetComponent<PlayerController>();
+            _playerController = GetComponent<PlayerController>();
         }
 
         private void Update()
@@ -24,12 +24,10 @@ namespace Newvia
         private void HandleInput()
         {
             //이동 입력 처리
-            float horizontalInput = Input.GetAxis("Horizontal");
-            float verticalInput = Input.GetAxis("Vertical");
-            if (horizontalInput != 0 || verticalInput != 0)
+            if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
             {
                 if(_moveCommand)
-                    _moveCommand.Execute();
+                    _moveCommand.Execute(_playerController);
             }
         }
     }

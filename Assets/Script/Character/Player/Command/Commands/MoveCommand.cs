@@ -4,18 +4,16 @@ using UnityEngine;
 
 namespace Newvia
 {
-    public class MoveCommand : PlayerCommandInit
+    public class MoveCommand : PlayerCommandInit 
     {
-        public MoveCommand(PlayerController player) : base(player)
+    
+
+        public override void Execute(PlayerController player)
         {
-        }
-
-        public override void Execute()
-        {
-            //ÀÔ·Â ¿¹¿ÜÃ³¸® ±¸Çö ºÎºÐ
+            //ìž…ë ¥ ì˜ˆì™¸ì²˜ë¦¬ êµ¬í˜„ ë¶€ë¶„
 
 
-            base.Execute();
+            base.Execute(player);
         }
     }
 }

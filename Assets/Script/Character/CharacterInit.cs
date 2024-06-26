@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Newvia
@@ -8,7 +9,7 @@ namespace Newvia
     {
         private CharacterStateContext _stateContext;//상태 콘텍스트
         [SerializeField]
-        private List<CharacterStateBase> _stateList;//상태 리스트
+        private CharacterStateBase _startState;
 
         [SerializeField]
         private CharacterStatus _statusInit = null;//초기 설정된 능력치 값
@@ -28,6 +29,8 @@ namespace Newvia
 
         public virtual void Start()
         {
+            _stateContext = new CharacterStateContext();
+            StateInit(_startState);
             SettingInitStatus();//캐릭터 스테이터스 초기화
         }
 
@@ -46,13 +49,13 @@ namespace Newvia
         //캐릭터 상태 초기화
         public void StateInit(CharacterStateBase state)
         {
-
+            _stateContext.Initialize(state.GetComponent<CharacterState>());
         }
 
         //캐릭터상태 전환
         public void StateTransition(CharacterStateBase state)
         {
-            _stateContext.TransitionTo(state);
+            _stateContext.TransitionTo(state.GetComponent<CharacterState>());
         }
     }
 }

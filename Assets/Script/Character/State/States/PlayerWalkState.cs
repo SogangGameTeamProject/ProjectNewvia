@@ -6,7 +6,7 @@ namespace Newvia
 {
     public class PlayerWalkState : CharacterStateBase
     {
-        public PlayerWalkState(PlayerController player) : base(player)
+        public PlayerWalkState(CharacterInit character) : base(character)
         {
         }
 

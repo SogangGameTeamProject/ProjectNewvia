@@ -6,6 +6,6 @@ namespace Newvia
 {
     public interface ICommand
     {
-        void Execute();
+        void Execute(PlayerController player);
     }
 }

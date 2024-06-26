@@ -4,12 +4,12 @@ using UnityEngine;
 namespace Newvia {
     public abstract class CharacterStateBase : MonoBehaviour, CharacterState
     {
-        protected PlayerController player;
+        protected CharacterInit _character;
 
         // pass in any parameters you need in the constructors
-        public CharacterStateBase(PlayerController player)
+        public CharacterStateBase(CharacterInit character)
         {
-            this.player = player;
+            this._character = character;
         }
 
         //상태 전환 시 처리

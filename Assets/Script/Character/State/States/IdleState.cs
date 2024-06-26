@@ -6,7 +6,7 @@ namespace Newvia
 {
     public class IdleState : CharacterStateBase
     {
-        public IdleState(PlayerController player) : base(player)
+        public IdleState(CharacterInit character) : base(character)
         {
         }
 

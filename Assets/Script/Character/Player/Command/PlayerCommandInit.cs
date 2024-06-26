@@ -8,7 +8,7 @@ namespace Newvia
     {
         protected PlayerController _player;
         [SerializeField]
-        protected StateBase runnigState = null;//커맨드 입력 시 실행할 상태
+        protected CharacterStateBase runnigState = null;//커맨드 입력 시 실행할 상태
 
         public PlayerCommandInit(PlayerController player)
         {

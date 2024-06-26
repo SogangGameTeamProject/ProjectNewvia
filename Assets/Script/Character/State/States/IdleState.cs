@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Newvia
 {
-    public class IdleState : StateBase
+    public class IdleState : CharacterStateBase
     {
         public IdleState(PlayerController player) : base(player)
         {
@@ -15,7 +15,7 @@ namespace Newvia
 
         }
 
-        public override void Update()
+        public override void StateUpdate()
         {
 
         }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Newvia
 {
-    public class PlayerWalkState : StateBase
+    public class PlayerWalkState : CharacterStateBase
     {
         public PlayerWalkState(PlayerController player) : base(player)
         {
@@ -15,7 +15,7 @@ namespace Newvia
             
         }
 
-        public override void Update()
+        public override void StateUpdate()
         {
 
         }

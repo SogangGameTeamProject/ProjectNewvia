@@ -4,9 +4,12 @@ using UnityEngine;
 
 namespace Newvia
 {
-    public abstract class CharacterInit : Subject
+    public class CharacterInit : Subject
     {
-        private CharacterStateContext _stateContext;
+        private CharacterStateContext _stateContext;//상태 콘텍스트
+        [SerializeField]
+        private List<CharacterStateBase> _stateList;//상태 리스트
+
         [SerializeField]
         private CharacterStatus _statusInit = null;//초기 설정된 능력치 값
         public int maxHp {  get; private set; }//최대 체력
@@ -40,8 +43,17 @@ namespace Newvia
             }
         }
 
-        //현재 캐릭터의 상태 전환
-        public abstract void StateTransition(StateBase state);
+        //캐릭터 상태 초기화
+        public void StateInit(CharacterStateBase state)
+        {
+
+        }
+
+        //캐릭터상태 전환
+        public void StateTransition(CharacterStateBase state)
+        {
+            _stateContext.TransitionTo(state);
+        }
     }
 }
 

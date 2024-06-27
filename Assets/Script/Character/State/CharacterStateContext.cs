@@ -1,6 +1,7 @@
 using System;
 using Unity.IO.LowLevel.Unsafe;
 using Unity.VisualScripting;
+using UnityEngine;
 
 namespace Newvia
 {
@@ -38,8 +39,6 @@ namespace Newvia
             // notify other objects that state has changed
             stateChanged?.Invoke(nextState);
         }
-
-        // allow the StateMachine to update this state
         public void Update()
         {
             if (CurrentState != null)

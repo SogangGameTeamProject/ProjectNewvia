@@ -10,8 +10,14 @@ namespace Newvia
         private CharacterStateContext _stateContext;//상태 콘텍스트
         public CharacterStateType runningStateType { get; private set; }
         //상태 관리를 위한 리스트
-        private Dictionary<CharacterStateType, CharacterStateBase> _stateList
-            = new Dictionary<CharacterStateType, CharacterStateBase>();
+        [System.Serializable]
+        private class stateInfo
+        {
+            public CharacterStateType stateType;
+            public CharacterStateBase state;
+        }
+        [SerializeField]
+        private List<stateInfo> _stateList = new List<stateInfo>();
 
         [SerializeField]
         private CharacterStatus _statusInit = null;//초기 설정된 능력치 값
@@ -36,6 +42,11 @@ namespace Newvia
             SettingInitStatus();//캐릭터 스테이터스 초기화
         }
 
+        private void Update()
+        {
+            _stateContext.Update();
+        }
+
         //캐릭터 초기 스테이터스 값 적용하는 함수
         private void SettingInitStatus()
         {
@@ -51,21 +62,27 @@ namespace Newvia
         //캐릭터 상태 초기화
         public void StateInit(CharacterStateType type)
         {
-            CharacterStateBase state = null;
-            _stateList.TryGetValue(type, out state);
-
-            if(_stateList != null)
-                _stateContext.Initialize(state.GetComponent<CharacterState>());
+            CharacterState state = null;
+            stateInfo findState = _stateList.Find(state => state.stateType == type);
+            if (findState != null)
+            {
+                state = findState.state.GetComponent<CharacterState>();
+                runningStateType = findState.stateType;
+                _stateContext.Initialize(state);
+            }
         }
 
         //캐릭터상태 전환
         public void StateTransition(CharacterStateType type)
         {
-            CharacterStateBase state = null;
-            _stateList.TryGetValue(type, out state);
-
-            if (_stateList != null)
-                _stateContext.TransitionTo(state.GetComponent<CharacterState>());
+            CharacterState state = null;
+            stateInfo findState = _stateList.Find(state => state.stateType == type);
+            if (findState != null)
+            {
+                state = findState.state.GetComponent<CharacterState>();
+                runningStateType = findState.stateType;
+                _stateContext.TransitionTo(state);
+            }
         }
     }
 }

@@ -10,24 +10,27 @@ namespace Newvia
 
         public override void Enter(CharacterInit character)
         {
-            Debug.Log("EnterMove");
+            base.Enter(character);
+            Debug.Log("이동 시작");
         }
 
         public override void StateUpdate()
         {
-            Debug.Log("UdateMove");
             float moveHorizontal = Input.GetAxis("Horizontal");
             float moveVertical = Input.GetAxis("Vertical");
             float speed = _character.moveSpeed;
 
             Vector3 movement = new Vector3(moveHorizontal, moveVertical, 0f);
+            Debug.Log(movement);
             if (movement != Vector3.zero)
                 _character.transform.position += movement * speed * Time.deltaTime;
+            else
+                _character.StateTransition(CharacterStateType.Idle);
         }
 
         public override void Exit()
         {
-            Debug.Log("ExitMove");
+            Debug.Log("이동 종료");
         }
     }
 

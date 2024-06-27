@@ -9,6 +9,7 @@ namespace Newvia
         PlayerController _playerController = null;
         public PlayerCommandInit _moveCommand;
 
+
         private void Start()
         {
             _playerController = GetComponent<PlayerController>();

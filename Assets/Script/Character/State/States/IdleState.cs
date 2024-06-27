@@ -6,11 +6,7 @@ namespace Newvia
 {
     public class IdleState : CharacterStateBase
     {
-        public IdleState(CharacterInit character) : base(character)
-        {
-        }
-
-        public override void Enter()
+        public override void Enter(CharacterInit character)
         {
 
         }

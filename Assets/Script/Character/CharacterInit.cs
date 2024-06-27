@@ -8,8 +8,10 @@ namespace Newvia
     public class CharacterInit : Subject
     {
         private CharacterStateContext _stateContext;//상태 콘텍스트
-        [SerializeField]
-        private CharacterStateBase _startState;
+        public CharacterStateType runningStateType { get; private set; }
+        //상태 관리를 위한 리스트
+        private Dictionary<CharacterStateType, CharacterStateBase> _stateList
+            = new Dictionary<CharacterStateType, CharacterStateBase>();
 
         [SerializeField]
         private CharacterStatus _statusInit = null;//초기 설정된 능력치 값
@@ -25,12 +27,12 @@ namespace Newvia
         }
         public int power {  get; private set; }//공격력
         public float moveSpeed {  get; private set; }//스피드
-
+        
 
         public virtual void Start()
         {
-            _stateContext = new CharacterStateContext();
-            StateInit(_startState);
+            _stateContext = new CharacterStateContext(this);
+            StateInit(CharacterStateType.Idle);
             SettingInitStatus();//캐릭터 스테이터스 초기화
         }
 
@@ -47,15 +49,23 @@ namespace Newvia
         }
 
         //캐릭터 상태 초기화
-        public void StateInit(CharacterStateBase state)
+        public void StateInit(CharacterStateType type)
         {
-            _stateContext.Initialize(state.GetComponent<CharacterState>());
+            CharacterStateBase state = null;
+            _stateList.TryGetValue(type, out state);
+
+            if(_stateList != null)
+                _stateContext.Initialize(state.GetComponent<CharacterState>());
         }
 
         //캐릭터상태 전환
-        public void StateTransition(CharacterStateBase state)
+        public void StateTransition(CharacterStateType type)
         {
-            _stateContext.TransitionTo(state.GetComponent<CharacterState>());
+            CharacterStateBase state = null;
+            _stateList.TryGetValue(type, out state);
+
+            if (_stateList != null)
+                _stateContext.TransitionTo(state.GetComponent<CharacterState>());
         }
     }
 }

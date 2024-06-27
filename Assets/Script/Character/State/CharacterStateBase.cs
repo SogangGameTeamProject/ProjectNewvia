@@ -4,16 +4,14 @@ using UnityEngine;
 namespace Newvia {
     public abstract class CharacterStateBase : MonoBehaviour, CharacterState
     {
-        protected CharacterInit _character;
-
-        // pass in any parameters you need in the constructors
-        public CharacterStateBase(CharacterInit character)
-        {
-            this._character = character;
-        }
+        protected CharacterInit _character = null;
 
         //상태 전환 시 처리
-        public abstract void Enter();
+        public virtual void Enter(CharacterInit character)
+        {
+            if (_character == null)
+                _character = character;
+        }
 
         public abstract void StateUpdate();
 

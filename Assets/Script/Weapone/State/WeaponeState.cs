@@ -1,8 +1,8 @@
 namespace Newvia
 {
-    public interface CharacterState
+    public interface WeaponeState
     {
-        public void Enter(CharacterInit character)
+        public void Enter()
         {
             // code that runs when we first enter the state
         }

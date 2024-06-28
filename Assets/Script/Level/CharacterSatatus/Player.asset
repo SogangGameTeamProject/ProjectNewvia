@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Player
   hp: 1
-  moveSpeed: 10
   power: 1
+  moveSpeed: 15

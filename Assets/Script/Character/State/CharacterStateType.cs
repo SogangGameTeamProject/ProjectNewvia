@@ -6,7 +6,9 @@ namespace Newvia
         //기본 상태
         Idle = 0, Move = 1, Hit = 2, Death = 3,
         //
-        Attack = 101
+        AttackSkill = 101,
+        MovementSkill = 201,
+        UtilitySkill = 301
     }
 }
 

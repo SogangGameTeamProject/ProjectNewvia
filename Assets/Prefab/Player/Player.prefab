@@ -263,7 +263,7 @@ MonoBehaviour:
     state: {fileID: 1804056171143423523}
   - stateType: 201
     state: {fileID: 3963996330606078325}
-  _statusInit: {fileID: 11400000, guid: 71076a5b780c2ac4c9138c63d66e68cd, type: 2}
+  _statusInit: {fileID: 11400000, guid: b0a042c49543b3544ab35755e9330963, type: 2}
 --- !u!114 &8512777488144242654
 MonoBehaviour:
   m_ObjectHideFlags: 0

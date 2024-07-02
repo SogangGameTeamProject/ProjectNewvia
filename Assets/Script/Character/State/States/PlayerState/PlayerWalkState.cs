@@ -26,7 +26,7 @@ namespace Newvia
             Vector3 movement = new Vector3(moveHorizontal, moveVertical, 0f);
             
             if (movement != Vector3.zero)
-                _rigidbody2D.velocity = movement*_character.moveSpeed;
+                _rigidbody2D.MovePosition(_rigidbody2D.position + (Vector2)movement * _character.moveSpeed * Time.fixedDeltaTime);
             //이동 멈춤 체크 시 Idle상태로 전환
             else
                 _character.StateTransition(CharacterStateType.Idle);

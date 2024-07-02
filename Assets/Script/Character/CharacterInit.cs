@@ -20,7 +20,7 @@ namespace Newvia
         private List<stateInfo> _stateList = new List<stateInfo>();
 
         [SerializeField]
-        private CharacterStatus _statusInit = null;//초기 설정된 능력치 값
+        protected CharacterStatus _statusInit = null;//초기 설정된 능력치 값
         public int maxHp {  get; private set; }//최대 체력
         public int nowHp { get; private set; }//현재 체력
         //현제 체력 설정
@@ -33,22 +33,25 @@ namespace Newvia
         }
         public int power {  get; private set; }//공격력
         public float moveSpeed {  get; private set; }//스피드
-        
 
-        public virtual void Start()
+        //
+        public bool isInvincible { get; set; }//무적 여부
+
+
+        protected virtual void Start()
         {
             _stateContext = new CharacterStateContext(this);
             StateInit(CharacterStateType.Idle);
             SettingInitStatus();//캐릭터 스테이터스 초기화
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
-            _stateContext.Update();
+            _stateContext.StateUpdate();
         }
 
         //캐릭터 초기 스테이터스 값 적용하는 함수
-        private void SettingInitStatus()
+        protected virtual void SettingInitStatus()
         {
             if (_statusInit)
             {

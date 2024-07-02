@@ -28,7 +28,10 @@ namespace Newvia
                 //카메라 이동
                 Vector3 desiredPosition = target.position;
                 desiredPosition.z = transform.position.z;
-                Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+                // 거리에 따라 속도를 조절
+                float distance = Vector3.Distance(transform.position, desiredPosition);
+                float adjustedSpeed = smoothSpeed * distance;
+                Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, adjustedSpeed);
                 transform.position = smoothedPosition;
 
                 //카메라 위치 제한

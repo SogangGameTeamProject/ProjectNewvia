@@ -39,7 +39,8 @@ namespace Newvia
             // notify other objects that state has changed
             stateChanged?.Invoke(nextState);
         }
-        public void Update()
+        
+        public void StateUpdate()
         {
             if (CurrentState != null)
             {

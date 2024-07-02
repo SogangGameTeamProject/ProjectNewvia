@@ -11,12 +11,11 @@ namespace Newvia
         public override void Execute(PlayerController player)
         {
             //입력 예외처리 구현 부분
-            if(player.runningStateType == runnigStatetype)
+            if(player.runningStateType != runnigStatetype)
             {
-                return;
+                base.Execute(player);
             }
-            Debug.Log("이동 입력");
-            base.Execute(player);
+            
         }
     }
 }

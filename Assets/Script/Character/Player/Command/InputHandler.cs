@@ -8,8 +8,9 @@ namespace Newvia
     {
         PlayerController _playerController = null;
         public PlayerCommandInit _moveCommand;
+        public PlayerCommandInit _dashCommand;
 
-
+        public KeyCode dahKey;
         private void Start()
         {
             _playerController = GetComponent<PlayerController>();
@@ -29,6 +30,12 @@ namespace Newvia
             {
                 if(_moveCommand)
                     _moveCommand.Execute(_playerController);
+            }
+            //대쉬 입력 처리
+            if (Input.GetKeyDown(dahKey))
+            {
+                if (_dashCommand)
+                    _dashCommand.Execute(_playerController);
             }
         }
     }

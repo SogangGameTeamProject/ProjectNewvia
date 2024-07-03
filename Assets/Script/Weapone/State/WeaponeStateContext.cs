@@ -6,14 +6,19 @@ namespace Newvia
 {
     public class WeaponeStateContext
     {
-        public CharacterState CurrentState { get; private set; }
+        public WeaponeState CurrentState { get; private set; }
+        private Weapone _weapone;
 
         // event to notify other objects of the state change
-        public event Action<CharacterState> stateChanged;
+        public event Action<WeaponeState> stateChanged;
 
+        public WeaponeStateContext(Weapone weapone)
+        {
+            _weapone = weapone;
+        }
 
         // set the starting state
-        public void Initialize(CharacterState state)
+        public void Initialize(WeaponeState state)
         {
             CurrentState = state;
             //state.Enter();
@@ -23,7 +28,7 @@ namespace Newvia
         }
 
         // exit this state and enter another
-        public void TransitionTo(CharacterState nextState)
+        public void TransitionTo(WeaponeState nextState)
         {
             CurrentState.Exit();
             CurrentState = nextState;
@@ -34,7 +39,7 @@ namespace Newvia
         }
 
         // allow the StateMachine to update this state
-        public void Update()
+        public void StateUpdate()
         {
             if (CurrentState != null)
             {

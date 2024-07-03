@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 153dc8e5529f89a469cf7ee4369f6a9f, type: 3}
+  m_Name: MagicGun
+  m_EditorClassIdentifier: 
+  WeaponeName: "\uB9C8\uAC74"
+  BulletPrep: {fileID: 0}
+  MaxMagazineCapacity: 6
+  FireCost: 1
+  RateOfFire: 0.5
+  FireSpeedReduction: 0
+  ReloadingSpeed: 0.75
+  ReloadingSpeedReduction: 0.5

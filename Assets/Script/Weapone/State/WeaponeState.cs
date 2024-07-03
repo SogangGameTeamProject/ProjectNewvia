@@ -2,7 +2,7 @@ namespace Newvia
 {
     public interface WeaponeState
     {
-        public void Enter()
+        public void Enter(Weapone weapone)
         {
             // code that runs when we first enter the state
         }

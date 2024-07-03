@@ -23,10 +23,21 @@ namespace Newvia
             }
         }
 
+        public GameObject _weaponePre = null;//장착할 무기 프리펩
+        public GameObject _weapone { get; set;}//장착한 무기
+        public Transform _weaponMountingLocation = null;//무기 장착 위치
+
+
         protected override void Start()
         {
             base.Start();
             StartCoroutine(StaminaRecovery());
+            //메인 웨폰 및 서브 웨폰 장착
+            if (_weaponePre)
+            {
+                _weapone = Instantiate(_weaponePre, _weaponMountingLocation.position, Quaternion.identity, this.transform);
+            }
+                
         }
 
         protected override void SettingInitStatus()

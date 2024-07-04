@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: MagicGun
   m_EditorClassIdentifier: 
   WeaponeName: "\uB9C8\uAC74"
-  BulletPrep: {fileID: 0}
+  BulletPrep: {fileID: 3660498062993063370, guid: 696e749128fdc2d48bc205781b9c2c06, type: 3}
   MaxMagazineCapacity: 6
   FireCost: 1
   RateOfFire: 0.5
   FireSpeedReduction: 0
+  BulletSpeed: 20
   ReloadingSpeed: 0.75
   ReloadingSpeedReduction: 0.5

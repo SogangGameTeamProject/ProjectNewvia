@@ -8,17 +8,15 @@ namespace Newvia
     {
         public override void Execute(PlayerController player)
         {
-            
-            CharacterStateType runningSateType = player.runningStateType;
+            base.Execute(player);
             //입력 예외처리 구현 부분
-            if (runningSateType != runnigStatetype &&
-                (runningSateType == CharacterStateType.Idle || runningSateType == CharacterStateType.Move) &&
+            if (_player.runningStateType != runnigStatetype &&
+                (_player.runningStateType == CharacterStateType.Idle || _player.runningStateType == CharacterStateType.Move) &&
                 player.dashStaminaCoast <= player.NowStamina
                 )
             {
-                
                 player.NowStamina -= player.dashStaminaCoast;
-                base.Execute(player);
+                _player.StateTransition(runnigStatetype);
             }
         }
     }

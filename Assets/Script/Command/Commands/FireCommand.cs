@@ -4,15 +4,20 @@ using UnityEngine;
 
 namespace Newvia
 {
-    public class FireCommand : PlayerCommandInit 
+    public class FireCommand : WeaponeCommandInit
     {
         public override void Execute(PlayerController player)
         {
+            base.Execute(player);
             //입력 예외처리 구현 부분
-            if(player.runningStateType != runnigStatetype &&
-                player.runningStateType == CharacterStateType.Idle)
+            if (_weapone.runningStateType != runnigStatetype &&
+                //플레이어 상태 체크
+                (_player.runningStateType == CharacterStateType.Idle || _player.runningStateType == CharacterStateType.Move) &&
+                //무기 상태 체크
+                (_weapone.runningStateType == WeaponeStateType.Idle || _weapone.runningStateType == WeaponeStateType.Relod)
+                )
             {
-                base.Execute(player);
+                _weapone.StateTransition(runnigStatetype);
             }
             
         }

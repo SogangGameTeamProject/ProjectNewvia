@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 723b3dc22fb99cc4489a83dc69bd5ff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runnigStatetype: -1
+  runnigStatetype: 1
 --- !u!1 &3830553711805802979
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,7 +588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b24f9878e61019e41b1aa4fe9cecc959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runnigStatetype: -1
+  runnigStatetype: 2
 --- !u!1 &7605253372757279259
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,8 +11,6 @@ namespace Newvia
         [Header("무기 스테이터스 값 설정")]
         [Tooltip("무기 이름")]
         public string WeaponeName = "";
-        [Tooltip("발사할 총알 프리펩")]
-        public GameObject BulletPrep = null;//발사할 총알 오브젝트
         [Tooltip("최대장탄수")]
         public float MaxMagazineCapacity = 8;//최대장탄수
         [Tooltip("발사 시 소모량")]

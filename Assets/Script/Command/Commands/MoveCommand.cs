@@ -10,11 +10,12 @@ namespace Newvia
 
         public override void Execute(PlayerController player)
         {
+            base.Execute(player);
             //입력 예외처리 구현 부분
-            if(player.runningStateType != runnigStatetype &&
+            if (player.runningStateType != runnigStatetype &&
                 player.runningStateType == CharacterStateType.Idle)
             {
-                base.Execute(player);
+                _player.StateTransition(runnigStatetype);
             }
             
         }

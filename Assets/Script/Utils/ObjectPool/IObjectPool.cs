@@ -4,8 +4,10 @@ using UnityEngine;
 
 namespace Newvia
 {
-    public enum WeaponeStateType
+    public interface IObjectPool<T>
     {
-        Null = -1, Idle = 0, Fire = 1, Relod = 2
+        T Get();
+        void Release(T obj);
     }
 }
+

@@ -237,6 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c95a5d98a6361c4c829722ed7ffef83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bulletPool: {fileID: 4282194896687071254}
 --- !u!1 &7689076634450953901
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,8 +269,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2700697207936577977}
-  - {fileID: 2013969921782274823}
+  - {fileID: 5512890614906347935}
   - {fileID: 8903908274930946082}
+  - {fileID: 2013969921782274823}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3205414199250327852
@@ -292,6 +294,52 @@ MonoBehaviour:
   - stateType: 2
     state: {fileID: 2855075698304113865}
   _statusInit: {fileID: 11400000, guid: e8e2620df3e45274ca9265d03b2c4979, type: 2}
+--- !u!1 &7758669023952705827
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5512890614906347935}
+  - component: {fileID: 4282194896687071254}
+  m_Layer: 0
+  m_Name: BulletPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5512890614906347935
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7758669023952705827}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3750117695335053682}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4282194896687071254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7758669023952705827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ce405934efd36c4a96c87c1022dd365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bulletPrefab: {fileID: 3660498062993063370, guid: 696e749128fdc2d48bc205781b9c2c06, type: 3}
+  _initialCapacity: 10
 --- !u!1 &9189299542059405866
 GameObject:
   m_ObjectHideFlags: 0

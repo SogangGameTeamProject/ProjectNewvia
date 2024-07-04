@@ -11,9 +11,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - Invincibility
   - 
   - 
   - 
@@ -46,4 +46,13 @@ TagManager:
     locked: 0
   - name: Character
     uniqueID: 3418851971
+    locked: 0
+  - name: DecoObject
+    uniqueID: 1365414853
+    locked: 0
+  - name: Bullect
+    uniqueID: 1929396717
+    locked: 0
+  - name: Effect
+    uniqueID: 3768672753
     locked: 0

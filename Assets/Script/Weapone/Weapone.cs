@@ -12,22 +12,28 @@ namespace Newvia
         [System.Serializable]
         private class stateInfo
         {
-            public WeaponStateType stateType;
+            public WeaponeStateType stateType;
             public WeaponeStateBase state;
         }
         [SerializeField]
         private List<stateInfo> _stateList = new List<stateInfo>();
-        public WeaponStateType runningStateType { get; private set; }
+        public WeaponeStateType runningStateType { get; private set; }
 
         //무기 스테이터스
         [SerializeField]
         private WeaponeStatus _statusInit = null;
+        public float _maxMagazineCapacity { get; set; }
+        public float _fireCost { get; set; }
+        public float _rateOfFire { get; set; }
+        public float _fireSpeedReduction { get; set; }
+        public float _reloadingSpeed { get; set; }
+        public float _reloadingSpeedReduction { get; set; }
 
         private void Start()
         {
             transform.parent.TryGetComponent<PlayerController>(out _playerController);
             _stateContext = new WeaponeStateContext(this);
-            StateInit(WeaponStateType.Idle);
+            StateInit(WeaponeStateType.Idle);
             SettingInitStatus();//캐릭터 스테이터스 초기화
         }
 
@@ -41,11 +47,20 @@ namespace Newvia
         //무기 초기 스테이터스 값 적용하는 함수
         protected virtual void SettingInitStatus()
         {
+            if (_statusInit)
+            {
+                _maxMagazineCapacity = _statusInit.MaxMagazineCapacity;
+                _fireCost = _statusInit.FireCost;
+                _rateOfFire = _statusInit.RateOfFire;
+                _fireSpeedReduction = _statusInit.FireSpeedReduction;
+                _reloadingSpeed = _statusInit.ReloadingSpeed;
+                _reloadingSpeedReduction = _statusInit.ReloadingSpeedReduction;
+            }
             
         }
 
         //캐릭터 상태 초기화
-        public void StateInit(WeaponStateType type)
+        public void StateInit(WeaponeStateType type)
         {
             WeaponeState state = null;
             stateInfo findState = _stateList.Find(state => state.stateType == type);
@@ -58,7 +73,7 @@ namespace Newvia
         }
 
         //캐릭터상태 전환
-        public void StateTransition(WeaponStateType type)
+        public void StateTransition(WeaponeStateType type)
         {
             WeaponeState state = null;
             stateInfo findState = _stateList.Find(state => state.stateType == type);

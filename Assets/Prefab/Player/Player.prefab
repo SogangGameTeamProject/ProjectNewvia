@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5628163477397213797}
   - component: {fileID: 3963996330606078325}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DashState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6450775670995030192}
   - component: {fileID: 1804056171143423523}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DeathState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6647864759479934940}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Commands
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1446966241564686487}
   - component: {fileID: 5230781624496868892}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FireCommand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,8 @@ GameObject:
   - component: {fileID: 5692515137726986447}
   - component: {fileID: 8512777488144242654}
   - component: {fileID: 7994014135537006438}
-  m_Layer: 0
+  - component: {fileID: 1054146221799478100}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330,7 +331,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveCommand: {fileID: 3619889729178252625}
   _dashCommand: {fileID: 7282800158780702222}
-  dahKey: 32
+  _fireCommand: {fileID: 5230781624496868892}
+  _reloadCommand: {fileID: 4269845721728659416}
+  dashKey: 32
+  fireKey: 323
+  reloadKey: 114
 --- !u!58 &7994014135537006438
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -366,6 +371,51 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.5}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!61 &1054146221799478100
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3830553711805802979}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 2}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2}
+  m_EdgeRadius: 0
 --- !u!1 &5088548908136732750
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,7 +426,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7289491777634006282}
   - component: {fileID: 7282800158780702222}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DashCommand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -421,7 +471,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3330110831892945229}
   - component: {fileID: 3619889729178252625}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MoveCommand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -466,7 +516,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5763932566354621684}
   - component: {fileID: 5859130682217975438}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: IdleState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -510,7 +560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8014636573763846999}
   - component: {fileID: 3558889318361960594}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MoveState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -554,7 +604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6074758931040123656}
   - component: {fileID: 4269845721728659416}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ReloadCommand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -598,7 +648,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 249055334795693142}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: States
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -634,7 +684,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1199028205677779614}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WeaponePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,7 +716,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8005926726131154729}
   - component: {fileID: 5956038217694625353}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HitState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -708,6 +758,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5622370480846818925}
     m_Modifications:
+    - target: {fileID: 292216072498319019, guid: 0d9e7c5f7ffda874bb3cf8f1b08f0a44, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 961649845346082348, guid: 0d9e7c5f7ffda874bb3cf8f1b08f0a44, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.75
@@ -748,9 +802,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6742815199819239164, guid: 0d9e7c5f7ffda874bb3cf8f1b08f0a44, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8860754139407080717, guid: 0d9e7c5f7ffda874bb3cf8f1b08f0a44, type: 3}
       propertyPath: m_Name
       value: SubWeaponeBase
+      objectReference: {fileID: 0}
+    - target: {fileID: 8860754139407080717, guid: 0d9e7c5f7ffda874bb3cf8f1b08f0a44, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

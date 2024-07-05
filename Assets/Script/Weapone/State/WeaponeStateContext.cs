@@ -1,10 +1,11 @@
 using System;
 using Unity.IO.LowLevel.Unsafe;
 using Unity.VisualScripting;
+using UnityEngine;
 
 namespace Newvia
 {
-    public class WeaponeStateContext
+    public class WeaponeStateContext: MonoBehaviour
     {
         public WeaponeState CurrentState { get; private set; }
         private Weapone _weapone;
@@ -21,7 +22,7 @@ namespace Newvia
         public void Initialize(WeaponeState state)
         {
             CurrentState = state;
-            //state.Enter();
+            state.Enter(_weapone);
 
             // notify other objects that state has changed
             stateChanged?.Invoke(state);
@@ -32,10 +33,11 @@ namespace Newvia
         {
             CurrentState.Exit();
             CurrentState = nextState;
-            //nextState.Enter();
+            nextState.Enter(_weapone);
 
             // notify other objects that state has changed
             stateChanged?.Invoke(nextState);
+            
         }
 
         // allow the StateMachine to update this state

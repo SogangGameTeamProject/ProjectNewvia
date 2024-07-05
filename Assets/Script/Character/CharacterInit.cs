@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Newvia
 {
-    public class CharacterInit : Subject
+    public class CharacterInit : Subject, IHit
     {
         private CharacterStateContext _stateContext;//상태 콘텍스트
         public CharacterStateType runningStateType { get; private set; }
@@ -24,11 +24,17 @@ namespace Newvia
         public int maxHp {  get; private set; }//최대 체력
         public int nowHp { get; private set; }//현재 체력
         //현제 체력 설정
-        public int setHp
+        private int NowHp
         {
+            get
+            {
+                return nowHp;
+            }
             set
             {
                 nowHp = Mathf.Clamp(value, 0, maxHp);
+                if (nowHp == 0)
+                    StateTransition(CharacterStateType.Death);
             }
         }
         public int power {  get; private set; }//공격력
@@ -60,6 +66,11 @@ namespace Newvia
                 power = _statusInit.power;
                 moveSpeed = _statusInit.moveSpeed;
             }
+        }
+
+        public void OnHit()
+        {
+            NowHp--;
         }
 
         //캐릭터 상태 초기화

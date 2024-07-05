@@ -8,7 +8,7 @@ namespace Newvia
     {
         public override void Enter(CharacterInit character)
         {
-
+            Destroy(character.gameObject);
         }
 
         public override void StateUpdate()

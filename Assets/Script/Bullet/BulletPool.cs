@@ -19,6 +19,11 @@ namespace Newvia
             _pool = new ObjectPool<Bullet>(_bulletPrefab, _initialCapacity, transform);
         }
 
+        private void Start()
+        {
+            transform.SetParent(null);
+        }
+
         public Bullet GetBullet()
         {
             return _pool.Get();

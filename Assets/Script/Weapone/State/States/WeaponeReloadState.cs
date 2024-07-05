@@ -6,17 +6,17 @@ namespace Newvia
 {
     public class WeaponeReloadState : WeaponeStateBase
     {
-        protected override void Enter(Weapone weapone)
+        public override void Enter(Weapone weapone)
         {
             base.Enter(weapone);
         }
 
-        protected override void StateUpdate()
+        public override void StateUpdate()
         {
 
         }
 
-        protected override void Exit()
+        public override void Exit()
         {
 
         }

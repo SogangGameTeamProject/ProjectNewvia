@@ -10,21 +10,27 @@ namespace Newvia
         private BulletPool _bulletPool = null;
         private Bullet _bullet = null;
         private float countTimer = 0;
-        protected override void Enter(Weapone weapone)
+        public override void Enter(Weapone weapone)
         {
             base.Enter(weapone);
+            countTimer = 0;
+
             _bullet = _bulletPool.GetBullet();
+            _bullet.transform.position = weapone._firePoint.position;
             _bullet.transform.rotation = weapone.transform.rotation;
+            _bullet.OnFire(weapone._firePoint.position, weapone.transform.rotation
+                , weapone._bulletPower, weapone._bulletRange
+                );
         }
 
-        protected override void StateUpdate()
+        public override void StateUpdate()
         {
             countTimer += Time.deltaTime;
             if (countTimer >= _weapone._rateOfFire)
                 _weapone.StateTransition(WeaponeStateType.Idle);
         }
 
-        protected override void Exit()
+        public override void Exit()
         {
             
         }

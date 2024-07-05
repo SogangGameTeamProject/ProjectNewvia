@@ -28,6 +28,10 @@ namespace Newvia
         public float _fireSpeedReduction { get; set; }
         public float _reloadingSpeed { get; set; }
         public float _reloadingSpeedReduction { get; set; }
+        public float _bulletPower { get; set; }
+        public float _bulletRange { get; set; }
+
+        public Transform _firePoint = null;
 
         private void Start()
         {
@@ -39,6 +43,7 @@ namespace Newvia
 
         private void Update()
         {
+            _stateContext.StateUpdate();
             //마우스 방향에 따른 무기 회전 및 캐릭터 좌우 반전
             RotateWeapon();
             RotatePlayer();
@@ -55,6 +60,8 @@ namespace Newvia
                 _fireSpeedReduction = _statusInit.FireSpeedReduction;
                 _reloadingSpeed = _statusInit.ReloadingSpeed;
                 _reloadingSpeedReduction = _statusInit.ReloadingSpeedReduction;
+                _bulletPower = _statusInit.BulletPower;
+                _bulletRange = _statusInit.BulletRange;
             }
             
         }

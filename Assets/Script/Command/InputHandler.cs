@@ -9,8 +9,13 @@ namespace Newvia
         PlayerController _playerController = null;
         public PlayerCommandInit _moveCommand;
         public PlayerCommandInit _dashCommand;
+        public WeaponeCommandInit _fireCommand;
+        public WeaponeCommandInit _reloadCommand;
 
-        public KeyCode dahKey;
+        public KeyCode dashKey;
+        public KeyCode fireKey;
+        public KeyCode reloadKey;
+
         private void Start()
         {
             _playerController = GetComponent<PlayerController>();
@@ -32,10 +37,22 @@ namespace Newvia
                     _moveCommand.Execute(_playerController);
             }
             //대쉬 입력 처리
-            if (Input.GetKeyDown(dahKey))
+            if (Input.GetKeyDown(dashKey))
             {
                 if (_dashCommand)
                     _dashCommand.Execute(_playerController);
+            }
+            //무기 발사 입력 처리
+            if (Input.GetKeyDown(fireKey))
+            {
+                if (_fireCommand)
+                    _fireCommand.Execute(_playerController);
+            }
+            //무기 재장전 입력 처리
+            if (Input.GetKeyDown(reloadKey))
+            {
+                if (_reloadCommand)
+                    _reloadCommand.Execute(_playerController);
             }
         }
     }

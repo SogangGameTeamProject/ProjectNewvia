@@ -23,6 +23,10 @@ namespace Newvia
         public float ReloadingSpeed = 0.75f;//재장전 속도(초)
         [Tooltip("장전 시 이동속도 감소량(%)")]
         public float ReloadingSpeedReduction = 0.5f;//장전시 이동적도 감소량(%)
+        [Tooltip("총알 파워")]
+        public float BulletPower = 100f;
+        [Tooltip("총알 사거리")]
+        public float BulletRange = 20f;
     }
 }
 

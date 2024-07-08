@@ -6,7 +6,7 @@ namespace Newvia
 {
     public class EnemyController : CharacterInit
     {
-        
+
     }
 }
 

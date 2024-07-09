@@ -16,7 +16,7 @@ MonoBehaviour:
   MaxMagazineCapacity: 6
   FireCost: 1
   RateOfFire: 0.25
-  FireSpeedReduction: 0
+  FireSpeedReduction: 1
   ReloadingSpeed: 0.75
   ReloadingSpeedReduction: 0.5
   BulletPower: 100

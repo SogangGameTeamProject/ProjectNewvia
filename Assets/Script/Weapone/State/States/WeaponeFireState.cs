@@ -10,11 +10,13 @@ namespace Newvia
         private BulletPool _bulletPool = null;
         private Bullet _bullet = null;
         private float countTimer = 0;
+        
         public override void Enter(Weapone weapone)
         {
             base.Enter(weapone);
             countTimer = 0;
 
+            //총알 발사
             _bullet = _bulletPool.GetBullet();
             _bullet.transform.position = weapone._firePoint.position;
             _bullet.transform.rotation = weapone.transform.rotation;

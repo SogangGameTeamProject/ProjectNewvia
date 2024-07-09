@@ -28,6 +28,9 @@ namespace Newvia
                 dashVec = Vector2.right;
 
             runningCoroutine = StartCoroutine(Dash());
+
+            //무기 캔슬
+            ((PlayerController)_character)._weapone.GetComponent<Weapone>().StateTransition(WeaponeStateType.Idle);
         }
 
         public override void StateUpdate()

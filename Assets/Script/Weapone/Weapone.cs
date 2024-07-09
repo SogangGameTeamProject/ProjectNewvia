@@ -30,6 +30,7 @@ namespace Newvia
         public float _reloadingSpeedReduction { get; set; }
         public float _bulletPower { get; set; }
         public float _bulletRange { get; set; }
+        public float _magazineCapacity { get; set; }
 
         public Transform _firePoint = null;
 
@@ -62,6 +63,7 @@ namespace Newvia
                 _reloadingSpeedReduction = _statusInit.ReloadingSpeedReduction;
                 _bulletPower = _statusInit.BulletPower;
                 _bulletRange = _statusInit.BulletRange;
+                _magazineCapacity = _maxMagazineCapacity;
             }
             
         }

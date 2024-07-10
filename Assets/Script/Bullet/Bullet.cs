@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Newvia
 {
-    public class Bullet : MonoBehaviour
+    public class Bullet : MonoBehaviour, ILight
     {
         private Rigidbody2D _rBody = null;
         [SerializeField]
@@ -51,6 +51,17 @@ namespace Newvia
         {
             gameObject.SetActive(false);
             transform.parent.GetComponent<BulletPool>().ReleaseBullet(this);
+        }
+
+        //빛에 들어왔을 때 처리
+        public void InLight()
+        {
+
+        }
+        //빛에서 나갔을 때 처리
+        public void OutLight()
+        {
+            OnBecameInvisible();
         }
     }
 }

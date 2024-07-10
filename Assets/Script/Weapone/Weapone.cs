@@ -22,24 +22,54 @@ namespace Newvia
         //무기 스테이터스
         [SerializeField]
         private WeaponeStatus _statusInit = null;
-        public float _maxMagazineCapacity { get; set; }
-        public float _fireCost { get; set; }
-        public float _rateOfFire { get; set; }
-        public float _fireSpeedReduction { get; set; }
-        public float _reloadingSpeed { get; set; }
-        public float _reloadingSpeedReduction { get; set; }
-        public float _bulletPower { get; set; }
-        public float _bulletRange { get; set; }
-        public float _magazineCapacity { get; set; }
+        public float _maxMagazineCapacity { get; private set; }
+        public float _fireCost { get; private set; }
+        public float _rateOfFire { get; private set; }
+        public float _fireSpeedReduction { get; private set; }
+        public float _reloadingSpeed { get; private set; }
+        public float _reloadingSpeedReduction { get; private set; }
+        public float _bulletPower { get; private set; }
+        public float _bulletRange { get; private set; }
+        public float _magazineCapacity { get; private set; }
+        public float MagazineCapacity
+        {
+            get
+            {
+                return _magazineCapacity;
+            }
+            set
+            {
+                _magazineCapacity = Mathf.Clamp(value, 0, _maxMagazineCapacity);
+                NotifyObservers();
+            }
+        }
 
         public Transform _firePoint = null;
 
+        private WeaponeHUDController _hUDController = null;
+
+        private void Awake()
+        {
+            _hUDController = FindObjectOfType<WeaponeHUDController>();
+        }
         private void Start()
         {
             transform.parent.TryGetComponent<PlayerController>(out _playerController);
             _stateContext = new WeaponeStateContext(this);
             StateInit(WeaponeStateType.Idle);
             SettingInitStatus();//캐릭터 스테이터스 초기화
+        }
+
+        private void OnEnable()
+        {
+            if (_hUDController)
+                Attach(_hUDController);
+        }
+
+        private void OnDisable()
+        {
+            if (_hUDController)
+                Detach(_hUDController);
         }
 
         private void Update()
@@ -63,7 +93,7 @@ namespace Newvia
                 _reloadingSpeedReduction = _statusInit.ReloadingSpeedReduction;
                 _bulletPower = _statusInit.BulletPower;
                 _bulletRange = _statusInit.BulletRange;
-                _magazineCapacity = _maxMagazineCapacity;
+                MagazineCapacity = _maxMagazineCapacity;
             }
             
         }

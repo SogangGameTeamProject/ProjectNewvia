@@ -15,10 +15,10 @@ namespace Newvia
                 (_player.runningStateType == CharacterStateType.Idle || _player.runningStateType == CharacterStateType.Move) &&
                 //무기 상태 체크
                 (_weapone.runningStateType == WeaponeStateType.Idle || _weapone.runningStateType == WeaponeStateType.Relod) &&
-                _weapone._magazineCapacity >= _weapone._fireCost
+                _weapone.MagazineCapacity >= _weapone._fireCost
                 )
             {
-                _weapone._magazineCapacity--;
+                _weapone.MagazineCapacity--;
                 _weapone.StateTransition(runnigStatetype);
             }
             

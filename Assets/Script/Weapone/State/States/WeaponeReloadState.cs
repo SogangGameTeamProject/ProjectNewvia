@@ -26,7 +26,7 @@ namespace Newvia
             //장전 처리
             if (loadingCount <= 0)
             {
-                _weapone._magazineCapacity = _weapone._maxMagazineCapacity;
+                _weapone.MagazineCapacity = _weapone._maxMagazineCapacity;
             }
                 
         }

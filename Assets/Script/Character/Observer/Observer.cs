@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Newvia
 {
-    //¿ÉÀú¹ö ÆĞÅÏ ±¸ÇöÀ» À§ÇÑ ¿ÉÀú¹ö Å¬·¡½º
+    //ì˜µì €ë²„ íŒ¨í„´ êµ¬í˜„ì„ ìœ„í•œ ì˜µì €ë²„ í´ë˜ìŠ¤
     public abstract class Observer : MonoBehaviour
     {
         public abstract void Notify(Subject subject);

@@ -14,7 +14,7 @@ namespace Newvia
                 //플레이어 상태 체크
                 (_player.runningStateType == CharacterStateType.Idle || _player.runningStateType == CharacterStateType.Move) &&
                 //무기 상태 체크
-                _weapone.runningStateType == WeaponeStateType.Idle && _weapone._magazineCapacity < _weapone._maxMagazineCapacity
+                _weapone.runningStateType == WeaponeStateType.Idle && _weapone.MagazineCapacity < _weapone._maxMagazineCapacity
                 )
             {
                 _weapone.StateTransition(runnigStatetype);

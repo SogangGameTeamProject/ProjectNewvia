@@ -6,11 +6,11 @@ namespace Newvia
 {
     public class PlayerController : CharacterInit
     {
-        public float dashStaminaCoast { get; set; }
-        public float staminaRecoveryAmount { get; set; }
+        public float dashStaminaCoast { get; private set; }
+        public float staminaRecoveryAmount { get; private set; }
         public float staminaRecoveryCycle = 0.25f;
-        public float maxStamina { get; set; }
-        private float nowStamina { get; set; }
+        public float maxStamina { get; private set; }
+        public float nowStamina { get; private set; }
         public float NowStamina
         {
             get
@@ -24,7 +24,7 @@ namespace Newvia
         }
 
         public GameObject _weaponePre = null;//장착할 무기 프리펩
-        public GameObject _weapone { get; set;}//장착한 무기
+        public GameObject _weapone { get; private set; }//장착한 무기
         public Transform _weaponMountingLocation = null;//무기 장착 위치
 
 

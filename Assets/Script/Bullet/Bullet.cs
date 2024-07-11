@@ -61,6 +61,7 @@ namespace Newvia
         //빛에서 나갔을 때 처리
         public void OutLight()
         {
+            Debug.Log("빛나감");
             OnBecameInvisible();
         }
     }

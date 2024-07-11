@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 6029561461651060885}
   - component: {fileID: 4837380899561404806}
   - component: {fileID: 603118794835997005}
-  m_Layer: 0
+  - component: {fileID: 6519616929098925577}
+  m_Layer: 9
   m_Name: LightObj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4785002489593729508}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -48,8 +49,8 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.43
-  m_Color: {r: 1, g: 0.9645274, b: 0.3150943, a: 1}
+  m_FalloffIntensity: 0.3
+  m_Color: {r: 0.9497674, g: 0.6094339, b: 1, a: 1}
   m_Intensity: 2.25
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -60,7 +61,7 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
-  m_NormalMapQuality: 2
+  m_NormalMapQuality: 0
   m_UseNormalMap: 0
   m_ShadowIntensityEnabled: 1
   m_ShadowIntensity: 1
@@ -112,9 +113,21 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 13.3
+--- !u!114 &6519616929098925577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4785002489593729508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55b1dff470df58843a958aa1bf79bbca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

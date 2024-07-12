@@ -32,9 +32,12 @@ namespace Newvia
             }
             set
             {
-                nowHp = Mathf.Clamp(value, 0, maxHp);
-                if (nowHp == 0)
-                    StateTransition(CharacterStateType.Death);
+                if (!isInvincible)
+                {
+                    nowHp = Mathf.Clamp(value, 0, maxHp);
+                    if (nowHp == 0)
+                        StateTransition(CharacterStateType.Death);
+                }
             }
         }
         public int power {  get; private set; }//공격력

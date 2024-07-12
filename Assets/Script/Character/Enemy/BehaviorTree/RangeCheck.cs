@@ -27,11 +27,11 @@ namespace Newvia
                 return State.Failure;
             //타켓 방향으로 사거리만큼 레이케스트를 쏴서 맞으면 Success처리
             Vector2 targetPosition = _target.transform.position;
-            Vector2 direction = ((Vector2)context.transform.position - targetPosition).normalized;
-
+            Vector2 direction = (targetPosition - (Vector2)context.transform.position).normalized;
+            
             // 레이캐스트를 쏘아서 히트 검사
             RaycastHit2D hit = Physics2D.Raycast(context.transform.position, direction, _chkRange, _targetLayer);
-
+            
             if (hit.collider != null)
                 return State.Success;
             else

@@ -15,7 +15,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: d52543412a859c04383153ffc7e6d925
-  position: {x: 512.61383, y: 379.19998}
+  position: {x: 512.8, y: 378.14197}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: "\uD50C\uB808\uC774\uC5B4 \uCD94\uC801"
@@ -38,7 +38,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 59a1c1dfddea80d48b5e3755419d43cf
-  position: {x: -365.59998, y: 517.6}
+  position: {x: -362.94196, y: 517.6}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: "\uD53C\uACA9 \uC0C1\uD0DC \uCCB4\uD06C"
@@ -59,12 +59,12 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 181cf053ccfb5804eb4101ba1f47839a
-  position: {x: -180.55992, y: 518.4001}
+  position: {x: -187.19994, y: 519.716}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: "\uC0AC\uAC70\uB9AC \uCCB4\uD06C"
   drawGizmos: 0
-  _chkRange: 0
+  _chkRange: 3
   _targetLayer:
     serializedVersion: 2
     m_Bits: 320
@@ -83,12 +83,12 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: ad21a0568c9ee0b4ebc63172f7eb0c74
-  position: {x: 4.7999797, y: 518.39996}
+  position: {x: 0.0000705719, y: 519.716}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: "\uCFE8\uD0C0\uC784 \uCCB4\uD06C"
   drawGizmos: 0
-  _coolTime: 5
+  _coolTime: 1.5
 --- !u!114 &-4903400346795581210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +128,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 8aceee913b388f24c8e83c01a1d22037
-  position: {x: 4.7897034, y: 381.59998}
+  position: {x: 0.0000705719, y: 383.71603}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: "\uADFC\uC811 \uACF5\uACA9"
@@ -152,7 +152,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 07520c93f535e7b4ea5eef22063d20a1
-  position: {x: 183.98965, y: 518.39996}
+  position: {x: 179.20004, y: 519.716}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: "\uADFC\uC811\uACF5\uACA9 \uC0C1\uD0DC\uB85C \uC804\uD658"
@@ -196,7 +196,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: f99db6fdb90f61b4c9cf7bc925ee785a
-  position: {x: -563.63947, y: 517.5514}
+  position: {x: -572.89124, y: 517.6}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: "\uC8FD\uC74C \uC0C1\uD0DC \uCCB4\uD06C"

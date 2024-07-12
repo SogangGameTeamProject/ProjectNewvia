@@ -26,6 +26,7 @@ namespace Newvia
             GameObject playerObj = GameObject.FindWithTag("Player");
             if (playerObj && !_target)
                 _target = playerObj.transform;
+            _timeCounter = 0;
         }
 
         public override void StateUpdate()
@@ -34,6 +35,13 @@ namespace Newvia
             if (_target != null)
             {
                 _agent.SetDestination(_target.position);
+
+                //이동 방향에 따른 
+                float moveDirection = _agent.velocity.x;
+                if (moveDirection > 0)
+                    _character.transform.localScale = new Vector3(1, 1, 1);
+                else if (moveDirection < 0)
+                    _character.transform.localScale = new Vector3(-1, 1, 1);
             }
 
             //추적 종료 체크
@@ -44,10 +52,8 @@ namespace Newvia
 
         public override void Exit()
         {
-
+            
         }
-
-        
     }
 }
 

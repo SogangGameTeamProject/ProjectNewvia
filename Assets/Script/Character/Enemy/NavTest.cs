@@ -14,6 +14,12 @@ public class NavTest : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.updateUpAxis = false;
         agent.updateRotation = false;
+
+        NavMeshObstacle obstacle = GetComponent<NavMeshObstacle>();
+        if (obstacle != null)
+        {
+            obstacle.size = Vector3.zero;
+        }
     }
 
     void Update()

@@ -15,7 +15,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: d52543412a859c04383153ffc7e6d925
-  position: {x: 512.8, y: 378.14197}
+  position: {x: 513.67804, y: 372.362}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: "\uD50C\uB808\uC774\uC5B4 \uCD94\uC801"
@@ -59,7 +59,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 181cf053ccfb5804eb4101ba1f47839a
-  position: {x: -187.19994, y: 519.716}
+  position: {x: -193.47444, y: 520}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: "\uC0AC\uAC70\uB9AC \uCCB4\uD06C"
@@ -104,7 +104,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: b5ca29e4c7eb0234d8e4d995c62f2909
-  position: {x: 0, y: 238.4}
+  position: {x: -0.00013122559, y: 238.40002}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: "\uD589\uB3D9 \uC120\uD0DD"
@@ -217,7 +217,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 92fb8760e5435484dbcd5c163d3bb04f
-  position: {x: -464.43945, y: 384.7513}
+  position: {x: -465.21664, y: 384}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: "\uD589\uB3D9 \uBD88\uAC00 \uC0C1\uD0DC \uCCB4\uD06C"
@@ -240,7 +240,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: ae087fa3354a0004f8c7cb5aa5554f81
-  position: {x: 631.84015, y: 518.4001}
+  position: {x: 630.942, y: 520}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: "\uD50C\uB808\uC774\uC5B4 \uCD94\uC801 \uC0C1\uD0DC\uB85C \uC804\uD658"

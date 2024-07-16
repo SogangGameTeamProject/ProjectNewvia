@@ -6,7 +6,6 @@ namespace Newvia {
     {
         protected Weapone _weapone;
 
-
         //상태 전환 시 처리
         public virtual void Enter(Weapone weapone)
         {

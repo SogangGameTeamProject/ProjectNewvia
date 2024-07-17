@@ -218,8 +218,54 @@ Transform:
   - {fileID: 7289491777634006282}
   - {fileID: 1446966241564686487}
   - {fileID: 6074758931040123656}
+  - {fileID: 3924955835577734019}
   m_Father: {fileID: 5622370480846818925}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1363571248513321204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3924955835577734019}
+  - component: {fileID: 8104060404482011541}
+  m_Layer: 6
+  m_Name: SkillCommand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3924955835577734019
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363571248513321204}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6647864759479934940}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8104060404482011541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363571248513321204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecaddfea574a9bd44bcadf6bbc3fb69b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runnigStatetype: 2
 --- !u!1 &2717589455484297737
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,6 +459,8 @@ MonoBehaviour:
   staminaRecoveryCycle: 0.25
   _weaponePre: {fileID: 7689076634450953901, guid: eff9de73b61ae6744898f1114ebb5d6a, type: 3}
   _weaponMountingLocation: {fileID: 1199028205677779614}
+  _subWeaponePre: {fileID: 8860754139407080717, guid: 0d9e7c5f7ffda874bb3cf8f1b08f0a44, type: 3}
+  _subWeaponMountingLocation: {fileID: 6103812552508461216}
 --- !u!114 &8512777488144242654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,9 +477,11 @@ MonoBehaviour:
   _dashCommand: {fileID: 7282800158780702222}
   _fireCommand: {fileID: 5230781624496868892}
   _reloadCommand: {fileID: 4269845721728659416}
+  _skillCommand: {fileID: 8104060404482011541}
   dashKey: 32
   fireKey: 323
   reloadKey: 114
+  skillKey: 325
 --- !u!58 &7994014135537006438
 CircleCollider2D:
   m_ObjectHideFlags: 0

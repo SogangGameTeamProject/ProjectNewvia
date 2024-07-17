@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Newvia
 {
     public class SubWeapone : Subject
     {
-        private PlayerController _playerController;
+        public PlayerController _playerController { get; private set; }
         private SubWeaponeStateContext _stateContext;//상태 콘텍스트
         //상태 관리를 위한 리스트
         [System.Serializable]
@@ -27,6 +28,10 @@ namespace Newvia
         public int _nowEnergy { get; private set; }
         public int SetNowEnergy
         {
+            get
+            {
+                return _nowEnergy;
+            }
             set
             {
                 _nowEnergy = Mathf.Clamp(value, 0, (_energyConsumed * _maximumCharge));
@@ -42,10 +47,10 @@ namespace Newvia
 
         private void Start()
         {
-            Debug.Log("초기화");
             _playerController = GameObject.FindObjectOfType<PlayerController>();
             _stateContext = new SubWeaponeStateContext(this);
             StateInit(SubWeaponeStateType.Idle);
+            NavMeshInit();  
             SettingInitStatus();
 
         }
@@ -75,6 +80,20 @@ namespace Newvia
                 state = findState.state.GetComponent<SubWeaponeState>();
                 runningStateType = findState.stateType;
                 _stateContext.Initialize(state);
+            }
+        }
+
+        private void NavMeshInit()
+        {
+            UnityEngine.AI.NavMeshAgent agent;
+            agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+            agent.updateUpAxis = false;
+            agent.updateRotation = false;
+
+            UnityEngine.AI.NavMeshObstacle obstacle = GetComponent<UnityEngine.AI.NavMeshObstacle>();
+            if (obstacle != null)
+            {
+                obstacle.size = Vector3.zero;
             }
         }
 

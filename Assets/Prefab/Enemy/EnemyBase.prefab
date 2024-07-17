@@ -405,6 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e862790522948d418acf5e0cf494e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  runningStateType: 0
   _stateList:
   - stateType: 0
     state: {fileID: 3295961585601514668}
@@ -611,7 +612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 018a7eac9dbd56946be70325ccfd24cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _chaseTime: 1
+  _chaseTime: 0.1
 --- !u!1 &8609693433598998547
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,6 +739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62503eb8847e8df4fbeba747debfa7ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathTime: 0.5
 --- !u!1001 &8541009266366724631
 PrefabInstance:
   m_ObjectHideFlags: 0

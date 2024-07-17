@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 namespace Newvia
 {
@@ -14,7 +13,6 @@ namespace Newvia
         public override void Enter(CharacterInit character)
         {
             base.Enter(character);
-            character.GetComponent<NavMeshAgent>().velocity = Vector2.zero;
             _stateCounter = 0;
             _damageZone.SetActive(false);
         }

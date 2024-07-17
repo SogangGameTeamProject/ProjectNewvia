@@ -27,6 +27,10 @@ namespace Newvia
         public GameObject _weapone { get; private set; }//장착한 무기
         public Transform _weaponMountingLocation = null;//무기 장착 위치
 
+        public GameObject _subWeaponePre = null;//장착할 보조무기 프리펩
+        public GameObject _subWeapone { get; private set; }//장착한 보조무기
+        public Transform _subWeaponMountingLocation = null;//서브무기 장착 위치
+
 
         protected override void Start()
         {
@@ -37,7 +41,9 @@ namespace Newvia
             {
                 _weapone = Instantiate(_weaponePre, _weaponMountingLocation.position, Quaternion.identity, this.transform);
             }
-                
+            if(_subWeaponePre)
+                _subWeapone = Instantiate(_subWeaponePre, _subWeaponMountingLocation.position, Quaternion.identity, null);
+
         }
 
         protected override void SettingInitStatus()

@@ -46,13 +46,17 @@ namespace Newvia
 
             //추적 종료 체크
             _timeCounter += Time.deltaTime;
-            if (_timeCounter <= _chaseTime)
+            if (_timeCounter >= _chaseTime)
                 _character.StateTransition(CharacterStateType.Idle);
         }
 
         public override void Exit()
         {
-            
+            if (_agent != null)
+            {
+                _agent.isStopped = true; // 추적 상태 종료 시 이동을 멈춤
+                _agent.ResetPath(); // 목적지를 초기화하여 이동 경로를 제거
+            }
         }
     }
 }

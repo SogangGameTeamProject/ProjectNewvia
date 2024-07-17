@@ -25,8 +25,10 @@ namespace Newvia
 
         protected override State OnUpdate()
         {
-            if (_enemy && chkState == nowSate)
+            if (chkState == nowSate)
+            {
                 return State.Success;
+            }
             else
                 return State.Failure;
         }

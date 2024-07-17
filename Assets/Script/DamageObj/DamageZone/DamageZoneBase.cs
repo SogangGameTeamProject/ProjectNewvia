@@ -19,7 +19,6 @@ namespace Newvia
 
                 if (iHit != null)
                 {
-                    Debug.Log("공격 성공");
                     iHit.OnHit();
                 }
                     

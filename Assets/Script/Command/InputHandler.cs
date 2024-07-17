@@ -11,10 +11,12 @@ namespace Newvia
         public PlayerCommandInit _dashCommand;
         public WeaponeCommandInit _fireCommand;
         public WeaponeCommandInit _reloadCommand;
+        public SubWeaponeCommandInit _skillCommand;
 
         public KeyCode dashKey;
         public KeyCode fireKey;
         public KeyCode reloadKey;
+        public KeyCode skillKey;
 
         private void Start()
         {
@@ -53,6 +55,12 @@ namespace Newvia
             {
                 if (_reloadCommand)
                     _reloadCommand.Execute(_playerController);
+            }
+            //스킬 입력 처리
+            if(Input.GetKeyDown(skillKey))
+            {
+                if (_skillCommand)
+                    _skillCommand.Execute(_playerController);
             }
         }
     }

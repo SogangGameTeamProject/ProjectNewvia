@@ -32,7 +32,10 @@ namespace Newvia
             if (_chageState == _nowState)
                 return State.Running;
             else
+            {
                 return State.Success;
+            }
+                
         }
     }
 }

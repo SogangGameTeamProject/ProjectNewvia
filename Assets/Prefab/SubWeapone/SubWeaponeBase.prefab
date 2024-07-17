@@ -78,6 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebd52c67c3fc6b34b90def1dd886a634, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _boomObjPre: {fileID: 6042577625620264151, guid: 491c477af49eda344b08dec6016e884c, type: 3}
 --- !u!1 &3913642982040535044
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,7 +177,6 @@ GameObject:
   m_Component:
   - component: {fileID: 961649845346082348}
   - component: {fileID: 3593468055413536043}
-  - component: {fileID: 8054538954671754173}
   - component: {fileID: 5982077297481881201}
   - component: {fileID: 2071793286449984976}
   - component: {fileID: 91580585371237451}
@@ -256,19 +256,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8054538954671754173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8860754139407080717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a701b1d4957558408a5904c9f893390, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!195 &5982077297481881201
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -331,7 +318,7 @@ MonoBehaviour:
     state: {fileID: 1082244427971915258}
   - stateType: 2
     state: {fileID: 5116686452021000400}
-  _statusInit: {fileID: 0}
+  _statusInit: {fileID: 11400000, guid: a4653b66a4a5b9845ab80b0beec134ce, type: 2}
 --- !u!1001 &2302734528961879832
 PrefabInstance:
   m_ObjectHideFlags: 0

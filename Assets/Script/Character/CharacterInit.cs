@@ -8,7 +8,7 @@ namespace Newvia
     public class CharacterInit : Subject, IHit
     {
         private CharacterStateContext _stateContext;//상태 콘텍스트
-        public CharacterStateType runningStateType { get; private set; }
+        public CharacterStateType runningStateType;
         //상태 관리를 위한 리스트
         [System.Serializable]
         private class stateInfo

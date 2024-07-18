@@ -7,7 +7,7 @@ namespace Newvia
     public class DamageZoneBase : MonoBehaviour
     {
         public LayerMask targetLayer;//데미지 줄 대상레이어
-
+        public int damageType = 0;
 
         private void OnTriggerEnter2D(Collider2D other)
         {
@@ -19,7 +19,7 @@ namespace Newvia
 
                 if (iHit != null)
                 {
-                    iHit.OnHit();
+                    iHit.OnHit(damageType);
                 }
                     
             }

@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Newvia
 {
     public interface IHit {
-        void OnHit();
+        void OnHit(int hitType = 0);
     }
 }
 

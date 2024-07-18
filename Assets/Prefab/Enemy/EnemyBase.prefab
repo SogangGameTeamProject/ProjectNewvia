@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446265a8022167b49a3042a16d7300ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _firstDeal: 0.5
-  _lastDeal: 0.25
+  _firstDeal: 0.4
+  _lastDeal: 0.2
   _damageZone: {fileID: 810906596700154744}
 --- !u!1 &265350501265156002
 GameObject:
@@ -414,7 +414,7 @@ MonoBehaviour:
   - stateType: 2
     state: {fileID: 4349560370580275842}
   - stateType: 3
-    state: {fileID: 315628908682982985}
+    state: {fileID: 8499508103413739669}
   - stateType: 101
     state: {fileID: 2939995966474624490}
   _statusInit: {fileID: 11400000, guid: 985bbdafa03bd084b95ad54edd829615, type: 2}
@@ -428,11 +428,11 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.61
-  m_Speed: 20
+  m_Speed: 30
   m_Acceleration: 30
   avoidancePriority: 50
   m_AngularSpeed: 50
-  m_StoppingDistance: 3.5
+  m_StoppingDistance: 5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -612,7 +612,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 018a7eac9dbd56946be70325ccfd24cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _chaseTime: 0.1
 --- !u!1 &8609693433598998547
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,7 +703,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8646462684490382767}
-  - component: {fileID: 315628908682982985}
+  - component: {fileID: 8499508103413739669}
   m_Layer: 7
   m_Name: DeathState
   m_TagString: Untagged
@@ -727,7 +726,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3289984974567573473}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &315628908682982985
+--- !u!114 &8499508103413739669
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -736,7 +735,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8983005543673859971}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62503eb8847e8df4fbeba747debfa7ff, type: 3}
+  m_Script: {fileID: 11500000, guid: d3eb3aacc723c5848a2b42977d79315c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   deathTime: 0.5

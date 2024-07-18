@@ -137,11 +137,11 @@ namespace Newvia
             // Flip the player based on mouse position
             if (mousePosition.x < _playerController.transform.position.x)
             {
-                _playerController.transform.localScale = new Vector3(-1, 1, 1);
+                _playerController.CharacterDirection = CharacterDirection.left;
             }
             else
             {
-                _playerController.transform.localScale = new Vector3(1, 1, 1);
+                _playerController.CharacterDirection = CharacterDirection.right;
             }
         }
 

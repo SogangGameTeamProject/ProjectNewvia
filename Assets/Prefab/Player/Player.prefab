@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62503eb8847e8df4fbeba747debfa7ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathTime: 0.5
 --- !u!1 &711521427536812909
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,6 +445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07cdf46ddc15c0544bf93188fa83fef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  runningStateType: 0
   _stateList:
   - stateType: 0
     state: {fileID: 5859130682217975438}
@@ -481,7 +483,7 @@ MonoBehaviour:
   dashKey: 32
   fireKey: 323
   reloadKey: 114
-  skillKey: 325
+  skillKey: 324
 --- !u!58 &7994014135537006438
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -514,9 +516,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.4}
+  m_Offset: {x: -0.14, y: 1}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
 --- !u!61 &1054146221799478100
 BoxCollider2D:
   m_ObjectHideFlags: 0

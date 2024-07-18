@@ -9,9 +9,6 @@ namespace Newvia
     {
         private NavMeshAgent _agent = null;
         private Transform _target = null;//타겟 위치
-        [SerializeField]
-        private float _chaseTime = 1f;//추적 시간
-        private float _timeCounter = 0f;//추적 시간 카운터
 
         public override void Enter(CharacterInit character)
         {
@@ -26,7 +23,6 @@ namespace Newvia
             GameObject playerObj = GameObject.FindWithTag("Player");
             if (playerObj && !_target)
                 _target = playerObj.transform;
-            _timeCounter = 0;
         }
 
         public override void StateUpdate()
@@ -36,18 +32,13 @@ namespace Newvia
             {
                 _agent.SetDestination(_target.position);
 
-                //이동 방향에 따른 
+                //이동 방향에 따른 방향 전환
                 float moveDirection = _agent.velocity.x;
                 if (moveDirection > 0)
-                    _character.transform.localScale = new Vector3(1, 1, 1);
+                    _character.CharacterDirection = CharacterDirection.right;
                 else if (moveDirection < 0)
-                    _character.transform.localScale = new Vector3(-1, 1, 1);
+                    _character.CharacterDirection = CharacterDirection.left;
             }
-
-            //추적 종료 체크
-            _timeCounter += Time.deltaTime;
-            if (_timeCounter >= _chaseTime)
-                _character.StateTransition(CharacterStateType.Idle);
         }
 
         public override void Exit()
@@ -56,6 +47,7 @@ namespace Newvia
             {
                 _agent.isStopped = true; // 추적 상태 종료 시 이동을 멈춤
                 _agent.ResetPath(); // 목적지를 초기화하여 이동 경로를 제거
+                _agent.velocity = Vector3.zero;
             }
         }
     }

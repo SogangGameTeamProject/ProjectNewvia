@@ -136,5 +136,6 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 128
+  damageType: 1
   maxScale: 20
   expansionRate: 40

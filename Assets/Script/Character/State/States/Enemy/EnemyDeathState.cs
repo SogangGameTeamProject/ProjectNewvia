@@ -10,6 +10,7 @@ namespace Newvia
         {
             base.Enter(character);
 
+            
         }
 
         public override void StateUpdate()

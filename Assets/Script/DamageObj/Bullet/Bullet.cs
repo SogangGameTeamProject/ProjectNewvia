@@ -18,6 +18,7 @@ namespace Newvia
         private int LightCnt = 0;
         private void Update()
         {
+            
             //레이 케스트로 충알 충돌 판정 처리
             // Raycast를 통한 피격 판정
             RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, 0.5f, hitLayers);
@@ -34,6 +35,10 @@ namespace Newvia
             }
             if((Vector2.Distance(startPos, (Vector2)this.transform.position) >= _range))
                 OnBecameInvisible();
+        }
+
+        private void LateUpdate()
+        {
         }
 
         public void OnFire(Vector3 firePos, Quaternion bulletRotate, float speed, float range)

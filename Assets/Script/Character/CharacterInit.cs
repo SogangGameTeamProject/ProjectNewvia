@@ -43,9 +43,24 @@ namespace Newvia
         public int power {  get; private set; }//공격력
         public float moveSpeed {  get; private set; }//스피드
 
-        //
         public bool isInvincible { get; set; }//무적 여부
-
+        //캐릭터 방향
+        private CharacterDirection characterDirection = CharacterDirection.right;
+        public CharacterDirection CharacterDirection
+        {
+            get
+            {
+                return characterDirection;
+            }
+            set
+            {
+                characterDirection = value;
+                if (characterDirection == CharacterDirection.right)
+                    transform.localScale = new Vector3(1, 1, 1);
+                else
+                    transform.localScale = new Vector3(-1, 1, 1);
+            }
+        }
 
         protected virtual void Start()
         {
@@ -71,13 +86,14 @@ namespace Newvia
             }
         }
 
-        public void OnHit()
+        public virtual void OnHit(int hitType)
         {
-            NowHp--;
+            if(NowHp > 0 && !isInvincible)
+                NowHp--;
         }
 
         //캐릭터 상태 초기화
-        public void StateInit(CharacterStateType type)
+        public virtual void StateInit(CharacterStateType type)
         {
             CharacterState state = null;
             stateInfo findState = _stateList.Find(state => state.stateType == type);

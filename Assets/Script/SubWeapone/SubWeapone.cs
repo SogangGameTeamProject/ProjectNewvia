@@ -35,6 +35,7 @@ namespace Newvia
             set
             {
                 _nowEnergy = Mathf.Clamp(value, 0, (_energyConsumed * _maximumCharge));
+                NotifyObservers();
             }
         }
 
@@ -42,7 +43,7 @@ namespace Newvia
 
         private void Awake()
         {
-
+            _subWeaponeHUD = GameObject.FindObjectOfType<SubWeaponeHUDController>();
         }
 
         private void Start()
@@ -52,17 +53,18 @@ namespace Newvia
             StateInit(SubWeaponeStateType.Idle);
             NavMeshInit();  
             SettingInitStatus();
-
         }
 
         private void OnEnable()
         {
-
+            if (_subWeaponeHUD)
+                Attach(_subWeaponeHUD);
         }
 
         private void OnDisable()
         {
-
+            if (_subWeaponeHUD)
+                Detach(_subWeaponeHUD);
         }
 
         private void Update()
@@ -118,6 +120,8 @@ namespace Newvia
                 _maximumCharge = _statusInit.MaximumCharge;
                 _energyConsumed = _statusInit.EnergyConsumed;
                 _nowEnergy = 0;
+                if (_subWeaponeHUD)
+                    _subWeaponeHUD.CreateSkillHUD(this);//서브 웨폰 HUD 생성
             }
         }
     }

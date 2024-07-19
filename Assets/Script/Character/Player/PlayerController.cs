@@ -20,6 +20,7 @@ namespace Newvia
             set
             {
                 nowStamina = Mathf.Clamp(value, 0, maxStamina);
+                NotifyObservers();
             }
         }
 
@@ -31,6 +32,12 @@ namespace Newvia
         public GameObject _subWeapone { get; private set; }//장착한 보조무기
         public Transform _subWeaponMountingLocation = null;//서브무기 장착 위치
 
+        private PlayerHUDController _playerHUD = null;
+
+        private void Awake()
+        {
+            _playerHUD = GameObject.FindObjectOfType<PlayerHUDController>();
+        }
 
         protected override void Start()
         {
@@ -44,6 +51,18 @@ namespace Newvia
             if(_subWeaponePre)
                 _subWeapone = Instantiate(_subWeaponePre, _subWeaponMountingLocation.position, Quaternion.identity, null);
 
+        }
+
+        private void OnEnable()
+        {
+            if (_playerHUD)
+                Attach(_playerHUD);
+        }
+
+        private void OnDisable()
+        {
+            if (_playerHUD)
+                Detach(_playerHUD);
         }
 
         protected override void SettingInitStatus()

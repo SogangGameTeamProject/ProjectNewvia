@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SubWeapone: Mercury
   MaximumCharge: 2
-  EnergyConsumed: 5
+  EnergyConsumed: 7

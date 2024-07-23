@@ -9,7 +9,8 @@ namespace Newvia
         private Rigidbody2D _rBody = null;
         [SerializeField]
         private float _range = 10f;//사거리
-
+        [SerializeField]
+        private float _nockBackPower = 30f;
         private Vector2 startPos = Vector2.zero;//발사 시작 위치
 
         [SerializeField]
@@ -25,20 +26,30 @@ namespace Newvia
             // 무언가에 맞았다면
             if (hitInfo.collider != null)
             {
+                //피격 가능 오브젝트면 피격
                 IHit hitObj = null;
                 hitInfo.collider.gameObject.TryGetComponent<IHit>(out hitObj);
                 if (hitObj != null)
                     hitObj.OnHit();
+
+                //피격체 넉백 가능 여부 체크 후 넉백
+                Rigidbody2D rigidbody2D = null;
+                hitInfo.collider.gameObject.TryGetComponent<Rigidbody2D>(out rigidbody2D);
+                CharacterInit character = null;
+                hitInfo.collider.gameObject.TryGetComponent<CharacterInit>(out character);
+
+                if (rigidbody2D && character)
+                {
+                    //무적이 체크
+                    if(!character.isInvincible)
+                        rigidbody2D.AddForce((_rBody.velocity).normalized * _nockBackPower, ForceMode2D.Impulse);
+                }
 
                 // 총알 비활성화
                 OnBecameInvisible();
             }
             if((Vector2.Distance(startPos, (Vector2)this.transform.position) >= _range))
                 OnBecameInvisible();
-        }
-
-        private void LateUpdate()
-        {
         }
 
         public void OnFire(Vector3 firePos, Quaternion bulletRotate, float speed, float range)

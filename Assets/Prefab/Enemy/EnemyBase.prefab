@@ -45,8 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446265a8022167b49a3042a16d7300ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _firstDeal: 0.4
-  _lastDeal: 0.2
+  firstDealDuration: 0.5
+  lastDealDuration: 0.25
+  skillDuration: 0.25
   _damageZone: {fileID: 810906596700154744}
 --- !u!1 &265350501265156002
 GameObject:
@@ -432,7 +433,7 @@ NavMeshAgent:
   m_Acceleration: 30
   avoidancePriority: 50
   m_AngularSpeed: 50
-  m_StoppingDistance: 5
+  m_StoppingDistance: 0.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1

@@ -86,7 +86,7 @@ namespace Newvia
             }
         }
 
-        public virtual void OnHit(int hitType)
+        public virtual void OnHit(int hitType = 0)
         {
             if(NowHp > 0 && !isInvincible)
                 NowHp--;

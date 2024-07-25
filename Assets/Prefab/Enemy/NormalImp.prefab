@@ -45,14 +45,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b37393b14fd0dd1439fc53584e61d76c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstDealDuration: 0.5
+  firstDealDuration: 0.25
   lastDealDuration: 0.25
   skillDuration: 1
+  chageState: 0
   _damageZone: {fileID: 5982476815568666649}
   rushPower: 45
+  dashDistance: 10
   wallLayerMask:
     serializedVersion: 2
     m_Bits: 1
+  wallCheckDistance: 3.5
 --- !u!1001 &2295043208888262401
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65,14 +68,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: NormalImp
       objectReference: {fileID: 0}
+    - target: {fileID: 2372265220114701574, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.421
+      objectReference: {fileID: 0}
+    - target: {fileID: 2372265220114701574, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.501
+      objectReference: {fileID: 0}
     - target: {fileID: 2466751899837716075, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: _stateList.Array.data[4].state
       value: 
       objectReference: {fileID: 2086152432888128780}
+    - target: {fileID: 3100897008789503470, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: decc8a0d76122bf468e637206602e555, type: 2}
+    - target: {fileID: 3348420053318341130, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_Acceleration
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348420053318341130, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348420053318341130, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4890638376562123823, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: tree
       value: 
       objectReference: {fileID: 11400000, guid: 855cab5ede9124e4b82057e6ad13a0f6, type: 2}
+    - target: {fileID: 5202670395233222630, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1374681635, guid: 048645ea05c495742ae2b691521b3dc2, type: 3}
     - target: {fileID: 5202670395233222630, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: m_Color.b
       value: 0.6462264
@@ -84,6 +115,18 @@ PrefabInstance:
     - target: {fileID: 5202670395233222630, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6178135845029963205, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 6178135845029963205, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 5.3333335
+      objectReference: {fileID: 0}
+    - target: {fileID: 6178135845029963205, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 5.3333335
       objectReference: {fileID: 0}
     - target: {fileID: 6470318082748202330, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: m_LocalPosition.x
@@ -124,6 +167,14 @@ PrefabInstance:
     - target: {fileID: 6470318082748202330, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8548918972681659567, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.166
+      objectReference: {fileID: 0}
+    - target: {fileID: 8548918972681659567, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.493
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2939995966474624490, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}

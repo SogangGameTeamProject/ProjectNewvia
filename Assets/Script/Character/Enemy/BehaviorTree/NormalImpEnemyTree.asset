@@ -15,7 +15,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: d52543412a859c04383153ffc7e6d925
-  position: {x: 557.262, y: 411.66205}
+  position: {x: 551.753, y: 368.27484}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: "\uD50C\uB808\uC774\uC5B4 \uCD94\uC801"
@@ -59,12 +59,12 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 181cf053ccfb5804eb4101ba1f47839a
-  position: {x: -199.34401, y: 805.91406}
+  position: {x: -193, y: 717}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: "\uC0AC\uAC70\uB9AC \uCCB4\uD06C"
   drawGizmos: 0
-  _chkRange: 10
+  _chkRange: 7.5
   _targetLayer:
     serializedVersion: 2
     m_Bits: 320
@@ -83,7 +83,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: ad21a0568c9ee0b4ebc63172f7eb0c74
-  position: {x: -7.539978, y: 787.628}
+  position: {x: 6, y: 714}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: "\uCFE8\uD0C0\uC784 \uCCB4\uD06C"
@@ -128,7 +128,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 8aceee913b388f24c8e83c01a1d22037
-  position: {x: -7.2000146, y: 630.0411}
+  position: {x: 0, y: 537}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: "\uB3CC\uC9C4 \uACF5\uACA9"
@@ -152,7 +152,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 07520c93f535e7b4ea5eef22063d20a1
-  position: {x: 189.26007, y: 787.628}
+  position: {x: 202, y: 716}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: "\uACF5\uACA9 \uC0C1\uD0DC\uB85C \uC804\uD658"
@@ -247,7 +247,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: f5a880e483796c846bb09b3446415bbd
-  position: {x: 462.062, y: 560.46204}
+  position: {x: 456.75305, y: 516.27484}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: "\uD50C\uB808\uC774\uC5B4 \uD0D0\uC0C9"
@@ -288,7 +288,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 468cc30886a36b443bec80ea55653b91
-  position: {x: 667.288, y: 560.8}
+  position: {x: 661.7529, y: 517.27484}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: "\uD50C\uB808\uC774\uC5B4 \uCD94\uC801"

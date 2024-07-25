@@ -30,7 +30,7 @@ namespace Newvia
             _agent.speed = moveSpeed;
         }
 
-        public override void OnHit(int hitType)
+        public override void OnHit(int hitType = 0)
         {
             base.OnHit(hitType);
             if(!isInvincible && hitType == 0)

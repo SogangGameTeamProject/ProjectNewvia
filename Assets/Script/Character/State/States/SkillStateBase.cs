@@ -12,7 +12,8 @@ namespace Newvia
         protected float lastDealDuration = 0.25f;  // 후딜
         [SerializeField]
         protected float skillDuration = 1.0f;     // 스킬 지속 시간
-
+        [SerializeField]
+        protected CharacterStateType chageState = CharacterStateType.Null;//상태 종료 시 변경할 상태
         protected float elapsedTime = 0.0f;
 
         public override void Enter(CharacterInit character)
@@ -52,7 +53,7 @@ namespace Newvia
             // 스킬 종료
             else
             {
-                _character.StateTransition(CharacterStateType.Idle);
+                _character.StateTransition(chageState);
             }
         }
 

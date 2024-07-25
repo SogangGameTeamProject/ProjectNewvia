@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446265a8022167b49a3042a16d7300ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateAniPara: IsAttack
   firstDealDuration: 0.5
   lastDealDuration: 0.25
   skillDuration: 0.25
@@ -94,6 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1ab2ee9237464c4dae9eaba531637c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateAniPara: 
 --- !u!1 &456228080294387207
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,6 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2e282955f95f9b40a45286503544f69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateAniPara: Idle
 --- !u!1 &2144157276693955226
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,12 +259,12 @@ SpriteRenderer:
   m_SortingLayerID: -876115325
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 97cb589838e122f48a9e83531487ea4c, type: 3}
+  m_Sprite: {fileID: -780875105, guid: 79f8542a12aa294409bfe4d0a64740d2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.266667, y: 4.266667}
+  m_Size: {x: 6.4, y: 6.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -304,7 +307,7 @@ Animator:
   m_GameObject: {fileID: 2144157276693955226}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e2a226434d0dc1d479ec4311d1dbf090, type: 2}
+  m_Controller: {fileID: 9100000, guid: ba7925f3f002ef946ac14804d43d326d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -385,9 +388,9 @@ BoxCollider2D:
   m_Offset: {x: -0.09236145, y: 1.7489829}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 4.266667, y: 4.266667}
-    newSize: {x: 4.266667, y: 4.266667}
+    pivot: {x: 0.32, y: 0}
+    oldSize: {x: 6.4, y: 6.4}
+    newSize: {x: 6.4, y: 6.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -614,6 +617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 018a7eac9dbd56946be70325ccfd24cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateAniPara: IsWalrk
 --- !u!1 &8609693433598998547
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,7 +744,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3eb3aacc723c5848a2b42977d79315c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathTime: 0.5
+  stateAniPara: IsDeath
+  deathTime: 1
 --- !u!1001 &8541009266366724631
 PrefabInstance:
   m_ObjectHideFlags: 0

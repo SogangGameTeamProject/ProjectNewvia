@@ -56,9 +56,14 @@ namespace Newvia
             {
                 characterDirection = value;
                 if (characterDirection == CharacterDirection.right)
+                {
                     transform.localScale = new Vector3(1, 1, 1);
+                }
                 else
+                {
                     transform.localScale = new Vector3(-1, 1, 1);
+                }
+                    
             }
         }
 

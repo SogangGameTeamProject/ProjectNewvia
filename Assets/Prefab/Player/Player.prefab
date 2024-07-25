@@ -44,8 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed3be9e041562914b9bc1d724f06038c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashPower: 60
-  dashTime: 0.25
+  stateAniPara: IsDash
+  dashPower: 75
+  dashTime: 0.4
 --- !u!1 &301061052409790782
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,7 +91,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62503eb8847e8df4fbeba747debfa7ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathTime: 0.5
+  stateAniPara: IsDeath
+  deathTime: 1
 --- !u!1 &711521427536812909
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,7 +460,7 @@ MonoBehaviour:
   - stateType: 201
     state: {fileID: 3963996330606078325}
   _statusInit: {fileID: 11400000, guid: b0a042c49543b3544ab35755e9330963, type: 2}
-  staminaRecoveryCycle: 0.25
+  staminaRecoveryCycle: 0.05
   _weaponePre: {fileID: 7689076634450953901, guid: eff9de73b61ae6744898f1114ebb5d6a, type: 3}
   _weaponMountingLocation: {fileID: 1199028205677779614}
   _subWeaponePre: {fileID: 8860754139407080717, guid: 0d9e7c5f7ffda874bb3cf8f1b08f0a44, type: 3}
@@ -551,7 +553,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.058863044, y: 1.7818737}
+  m_Offset: {x: -0.058863044, y: 1.2350323}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.48, y: 0.04}
@@ -562,7 +564,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1177261, y: 3.828105}
+  m_Size: {x: 1.1177261, y: 2.7344222}
   m_EdgeRadius: 0
 --- !u!95 &7218197591909059364
 Animator:
@@ -719,6 +721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2e282955f95f9b40a45286503544f69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateAniPara: IsIdle
 --- !u!1 &6718930818998982780
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,6 +766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c2725e142455ab48b741df7d1673b37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateAniPara: IsWalrk
 --- !u!1 &7577910487461644889
 GameObject:
   m_ObjectHideFlags: 0
@@ -919,3 +923,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1ab2ee9237464c4dae9eaba531637c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateAniPara: 

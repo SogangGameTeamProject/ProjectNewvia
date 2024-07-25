@@ -43,6 +43,7 @@ namespace Newvia
 
         public override void Exit()
         {
+            base.Exit();
             if (_agent != null)
             {
                 _agent.isStopped = true; // 추적 상태 종료 시 이동을 멈춤

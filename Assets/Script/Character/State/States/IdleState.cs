@@ -8,7 +8,7 @@ namespace Newvia
     {
         public override void Enter(CharacterInit character)
         {
-
+            base.Enter(character);
         }
 
         public override void StateUpdate()
@@ -18,7 +18,7 @@ namespace Newvia
 
         public override void Exit()
         {
-
+            base.Exit();
         }
     }
  }

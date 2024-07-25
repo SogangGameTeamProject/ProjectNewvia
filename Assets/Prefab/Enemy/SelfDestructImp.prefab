@@ -54,8 +54,8 @@ MonoBehaviour:
   dashDistance: 10
   wallLayerMask:
     serializedVersion: 2
-    m_Bits: 1
-  wallCheckDistance: 3.5
+    m_Bits: 65
+  wallCheckDistance: 2.5
 --- !u!1001 &2295043208888262401
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -268,19 +268,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5363724151577621305, guid: 90e7630aa9d20c64ab81cf5978b235ea, type: 3}
       propertyPath: m_Size.x
-      value: 1.8424916
+      value: 2.0194697
       objectReference: {fileID: 0}
     - target: {fileID: 5363724151577621305, guid: 90e7630aa9d20c64ab81cf5978b235ea, type: 3}
       propertyPath: m_Size.y
-      value: 2.6900115
+      value: 2.4737053
       objectReference: {fileID: 0}
     - target: {fileID: 5363724151577621305, guid: 90e7630aa9d20c64ab81cf5978b235ea, type: 3}
       propertyPath: m_Offset.x
-      value: 0.5049207
+      value: 0.5934098
       objectReference: {fileID: 0}
     - target: {fileID: 5363724151577621305, guid: 90e7630aa9d20c64ab81cf5978b235ea, type: 3}
       propertyPath: m_Offset.y
-      value: 1.6325734
+      value: 1.0033188
       objectReference: {fileID: 0}
     - target: {fileID: 9063258869422018927, guid: 90e7630aa9d20c64ab81cf5978b235ea, type: 3}
       propertyPath: m_Name

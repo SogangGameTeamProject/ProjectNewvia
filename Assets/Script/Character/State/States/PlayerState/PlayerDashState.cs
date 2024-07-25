@@ -27,6 +27,9 @@ namespace Newvia
             if (dashVec == Vector2.zero)
                 dashVec = Vector2.right;
 
+            //대쉬 방향에 따른 방향 전환
+            _character.CharacterDirection = (CharacterDirection)(Mathf.Round(dashVec.x));
+
             runningCoroutine = StartCoroutine(Dash());
 
             //무기 캔슬
@@ -41,6 +44,7 @@ namespace Newvia
 
         public override void Exit()
         {
+            base.Exit();
             _rigidbody2D.velocity = Vector2.zero;
         }
 

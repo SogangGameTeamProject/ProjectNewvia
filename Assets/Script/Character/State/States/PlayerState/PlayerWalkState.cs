@@ -35,6 +35,12 @@ namespace Newvia
             else if (weaponeStateType == WeaponeStateType.Relod)
                 speed *= weapone._reloadingSpeedReduction;
 
+            //이동 방향에 따른 애니메이션 파라미터 조정
+            if(movement.x == (int)_character.CharacterDirection)
+                _animator.SetBool("IsFront", true);
+            else if(movement.x != (int)_character.CharacterDirection)
+                _animator.SetBool("IsFront", false);
+
             if (movement != Vector3.zero)
                 _rigidbody2D.MovePosition(_rigidbody2D.position + (Vector2)movement * speed * Time.fixedDeltaTime);
             //이동 멈춤 체크 시 Idle상태로 전환
@@ -44,6 +50,7 @@ namespace Newvia
 
         public override void Exit()
         {
+            base.Exit();
         }
     }
 

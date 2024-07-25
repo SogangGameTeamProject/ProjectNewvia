@@ -77,7 +77,6 @@ namespace Newvia
             _stateContext.StateUpdate();
             //마우스 방향에 따른 무기 회전 및 캐릭터 좌우 반전
             RotateWeapon();
-            RotatePlayer();
         }
 
         //무기 초기 스테이터스 값 적용하는 함수
@@ -127,48 +126,30 @@ namespace Newvia
         //마우스 방향에 따른 무기 회전
         private void RotateWeapon()
         {
-            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector3 direction = mousePosition - transform.position;
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            CharacterStateType runningStateType = _playerController.runningStateType;
+            if (runningStateType == CharacterStateType.Idle ||
+                runningStateType == CharacterStateType.Move ||
+                runningStateType == CharacterStateType.AttackSkill
+                )
+            {
+                Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Vector3 direction = mousePosition - transform.position;
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-            // Rotate the weapon
-            transform.rotation = Quaternion.Euler(0, 0, angle);
+                // Rotate the weapon
+                transform.rotation = Quaternion.Euler(0, 0, angle);
 
-            // Flip the player based on mouse position
-            if (mousePosition.x < _playerController.transform.position.x)
-            {
-                _playerController.CharacterDirection = CharacterDirection.left;
-            }
-            else
-            {
-                _playerController.CharacterDirection = CharacterDirection.right;
-            }
-        }
-
-        //마우스 방향에 따른 플레이어 좌우 전환
-        private void RotatePlayer()
-        {
-            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector3 direction = mousePosition - _playerController.transform.position;
-
-            // Flip the player based on mouse position
-            if (mousePosition.x < _playerController.transform.position.x)
-            {
-                _playerController.transform.localScale = new Vector3(-1, 1, 1);
-            }
-            else
-            {
-                _playerController.transform.localScale = new Vector3(1, 1, 1);
-            }
-
-            // Ensure the weapon is on the correct side
-            if (_playerController.transform.localScale.x == -1)
-            {
-                transform.localScale = new Vector3(-1, -1, 1);
-            }
-            else
-            {
-                transform.localScale = new Vector3(1, 1, 1);
+                // Flip the player based on mouse position
+                if (mousePosition.x < _playerController.transform.position.x)
+                {
+                    this.transform.localScale = new Vector3(-1, -1, 1);
+                    _playerController.CharacterDirection = CharacterDirection.left;
+                }
+                else
+                {
+                    this.transform.localScale = new Vector3(1, 1, 1);
+                    _playerController.CharacterDirection = CharacterDirection.right;
+                }
             }
         }
     }

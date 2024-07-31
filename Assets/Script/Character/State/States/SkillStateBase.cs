@@ -16,10 +16,18 @@ namespace Newvia
         protected CharacterStateType chageState = CharacterStateType.Null;//상태 종료 시 변경할 상태
         protected float elapsedTime = 0.0f;
 
+        [SerializeField]
+        private string HandleSkilAniPara = null;
+        private bool playHandleSkillAni = false;
+        [SerializeField]
+        private string HandleLastDealAniPara = null;
+        private bool playHandleLastDeal = false;
         public override void Enter(CharacterInit character)
         {
             base.Enter(character);
             elapsedTime = 0.0f;
+            playHandleSkillAni = false;
+            playHandleLastDeal = false;
         }
 
         public override void Exit()
@@ -42,12 +50,23 @@ namespace Newvia
             // 스킬 처리
             else if (elapsedTime < firstDealDuration + skillDuration)
             {
+                if (!playHandleSkillAni && HandleSkilAniPara != string.Empty)
+                {
+                    Debug.Log("공격중 애니 출력");
+                    _animator.SetTrigger(HandleSkilAniPara);
+                    playHandleSkillAni = true;
+                }
                 // 스킬 중 처리
                 HandleSkill();
             }
             // 후딜 처리
             else if (elapsedTime < firstDealDuration + skillDuration + lastDealDuration)
             {
+                if (!playHandleLastDeal && HandleLastDealAniPara != string.Empty)
+                {
+                    _animator.SetTrigger(HandleLastDealAniPara);
+                    playHandleLastDeal = true;
+                }
                 // 후딜 중 처리
                 HandleLastDeal();
             }

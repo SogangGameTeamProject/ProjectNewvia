@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.UI.Image;
 
 namespace Newvia
 {
-    public class Bullet : MonoBehaviour, ILight
+    public class Bullet : MonoBehaviour
     {
         private Rigidbody2D _rBody = null;
         [SerializeField]
@@ -15,11 +16,18 @@ namespace Newvia
 
         [SerializeField]
         private LayerMask hitLayers;
+        [SerializeField]
+        private LayerMask lightLayers;
 
         private int LightCnt = 0;
         private void Update()
         {
-            
+            //레이 케스트로 빛 충돌 처리
+            RaycastHit2D hits = Physics2D.CircleCast(transform.position, 1, Vector2.zero, 0, lightLayers);
+
+            if (hits.collider == null)
+                OnBecameInvisible();
+
             //레이 케스트로 충알 충돌 판정 처리
             // Raycast를 통한 피격 판정
             RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, 0.5f, hitLayers);
@@ -68,19 +76,6 @@ namespace Newvia
         {
             gameObject.SetActive(false);
             transform.parent.GetComponent<BulletPool>().ReleaseBullet(this);
-        }
-
-        //빛에 들어왔을 때 처리
-        public void InLight()
-        {
-            LightCnt++;
-        }
-        //빛에서 나갔을 때 처리
-        public void OutLight()
-        {
-            LightCnt--;
-            if(LightCnt <= 0)
-                OnBecameInvisible();
         }
     }
 }

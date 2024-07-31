@@ -101,9 +101,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _range: 10
+  _nockBackPower: 30
   hitLayers:
     serializedVersion: 2
     m_Bits: 129
+  lightLayers:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!50 &1453556691352468342
 Rigidbody2D:
   serializedVersion: 4

@@ -39,6 +39,8 @@ namespace Newvia
                 else if (moveDirection < 0)
                     _character.CharacterDirection = CharacterDirection.left;
             }
+            else
+                _character.StateTransition(CharacterStateType.Idle);
         }
 
         public override void Exit()

@@ -25,7 +25,7 @@ namespace Newvia {
         //상태 종료 시 처리
         public virtual void Exit()
         {
- 
+            
         }
     }
 }

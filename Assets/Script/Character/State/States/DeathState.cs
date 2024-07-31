@@ -25,16 +25,23 @@ namespace Newvia
 
         public override void StateUpdate()
         {
+            //죽음 딜레이
             deathTimer += Time.deltaTime;
             if (deathTimer >= deathTime)
             {
-                Destroy(_character.gameObject);
+                OnDeath();
             }
         }
 
         public override void Exit()
         {
             base.Exit();
+        }
+
+        //죽음 구현
+        protected virtual void OnDeath()
+        {
+            Destroy(_character.gameObject);
         }
     }
  }

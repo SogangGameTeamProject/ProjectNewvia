@@ -31,16 +31,18 @@ namespace Newvia
                 _rBody = _character.GetComponent<Rigidbody2D>();
 
             isRushing = false;
+            
+        }
+
+        protected override void HandleFirstDeal()
+        {
             // 플레이어의 Transform을 찾아서 위치 저장
             Transform playerTransform = GameObject.FindWithTag("Player").transform;
             if (playerTransform != null)
             {
                 _targetPosition = playerTransform.position;
             }
-        }
 
-        protected override void HandleFirstDeal()
-        {
             //돌진 방향 갱신
             if (_targetPosition != null)
             {
@@ -58,7 +60,7 @@ namespace Newvia
                 _rBody.velocity = direction * rushPower; // 돌진 속도 설정
                 isRushing = true;
 
-                RaycastHit2D hitInfo = Physics2D.Raycast(transform.position + (Vector3.up * 0.5f), direction, wallCheckDistance, wallLayerMask);
+                RaycastHit2D hitInfo = Physics2D.CircleCast(transform.position, wallCheckDistance, Vector2.up, 1, wallLayerMask);
                 // 돌진 종료 체크
                 if (Vector2.Distance(_character.transform.position, _targetPosition + direction * dashDistance) <= 0.5f
                     || hitInfo.collider != null

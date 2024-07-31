@@ -748,6 +748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateAniPara: IsDeath
   deathTime: 1
+  soulPre: {fileID: 7029730050973029124, guid: 6595fd205460c8c4cbbfaaedc394f95f, type: 3}
 --- !u!1001 &8541009266366724631
 PrefabInstance:
   m_ObjectHideFlags: 0

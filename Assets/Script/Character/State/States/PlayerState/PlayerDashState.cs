@@ -28,7 +28,8 @@ namespace Newvia
                 dashVec = Vector2.right;
 
             //대쉬 방향에 따른 방향 전환
-            _character.CharacterDirection = (CharacterDirection)(Mathf.Round(dashVec.x));
+            if(dashVec.x != 0)
+                _character.CharacterDirection = (CharacterDirection)(Mathf.Round(dashVec.x));
 
             runningCoroutine = StartCoroutine(Dash());
 

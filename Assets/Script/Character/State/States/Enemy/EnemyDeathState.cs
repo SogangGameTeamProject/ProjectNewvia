@@ -6,6 +6,7 @@ namespace Newvia
 {
     public class EnemyDeathState : DeathState
     {
+        public GameObject soulPre;
         public override void Enter(CharacterInit character)
         {
             base.Enter(character);
@@ -21,6 +22,12 @@ namespace Newvia
         public override void Exit()
         {
             base.Exit();
+        }
+
+        protected override void OnDeath()
+        {
+            Instantiate(soulPre, this.transform.position, Quaternion.identity, null);
+            base.OnDeath();
         }
     }
  }

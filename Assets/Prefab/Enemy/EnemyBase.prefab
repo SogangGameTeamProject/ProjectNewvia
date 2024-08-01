@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2e282955f95f9b40a45286503544f69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateAniPara: Idle
+  stateAniPara: IsIdle
 --- !u!1 &2144157276693955226
 GameObject:
   m_ObjectHideFlags: 0

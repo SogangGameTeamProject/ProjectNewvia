@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5305306065164334005}
   - component: {fileID: 513985250751313153}
+  - component: {fileID: 5772926837196794576}
   - component: {fileID: 784788148101885851}
   - component: {fileID: 3490049314934498349}
   - component: {fileID: 5336380471804444521}
+  - component: {fileID: 3624776373164438126}
   m_Layer: 0
   m_Name: Altar
   m_TagString: Altar
@@ -77,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: -876115325
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b0e079cb5a30b3f4aac4105021ef83d4, type: 3}
+  m_Sprite: {fileID: -701512315, guid: db08d41675f000a4e9d02c0b1e996f8a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -88,6 +90,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &5772926837196794576
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2840046528882721507}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 44f605ac7925edd42966d9cbaa07f726, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!58 &784788148101885851
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -120,9 +143,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -2.6920238}
+  m_Offset: {x: 0, y: -1.63}
   serializedVersion: 2
-  m_Radius: 3.5
+  m_Radius: 1.96
 --- !u!58 &3490049314934498349
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -155,9 +178,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.41}
   serializedVersion: 2
-  m_Radius: 3.23
+  m_Radius: 1.83
 --- !u!114 &5336380471804444521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,6 +196,22 @@ MonoBehaviour:
   soulsRequired: 10
   soulTag: Soul
   altarLight: {fileID: 5230441167664912145}
+--- !u!114 &3624776373164438126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2840046528882721507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1001 &788689509446780661
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -196,6 +235,18 @@ PrefabInstance:
     - target: {fileID: 4785002489593729508, guid: 33202be444cc53849adc208125f9b044, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837380899561404806, guid: 33202be444cc53849adc208125f9b044, type: 3}
+      propertyPath: m_Color.b
+      value: 0.1542399
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837380899561404806, guid: 33202be444cc53849adc208125f9b044, type: 3}
+      propertyPath: m_Color.g
+      value: 0.44111633
+      objectReference: {fileID: 0}
+    - target: {fileID: 4837380899561404806, guid: 33202be444cc53849adc208125f9b044, type: 3}
+      propertyPath: m_Color.r
+      value: 0.93962264
       objectReference: {fileID: 0}
     - target: {fileID: 4837380899561404806, guid: 33202be444cc53849adc208125f9b044, type: 3}
       propertyPath: m_Intensity

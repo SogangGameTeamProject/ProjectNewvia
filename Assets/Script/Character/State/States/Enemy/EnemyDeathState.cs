@@ -10,7 +10,7 @@ namespace Newvia
         public override void Enter(CharacterInit character)
         {
             base.Enter(character);
-
+            GameManager.Instance.killCount++;
             
         }
 

@@ -19,5 +19,5 @@ MonoBehaviour:
   FireSpeedReduction: 1
   ReloadingSpeed: 0.77
   ReloadingSpeedReduction: 0.5
-  BulletPower: 100.2
+  BulletPower: 125
   BulletRange: 40

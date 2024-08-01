@@ -1,21 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Newvia
 {
     public class GameManager : Singleton<GameManager>
     {
-        // Start is called before the first frame update
-        void Start()
+        public int killCount { get; set; }//킬 카운트
+        private void Update()
         {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                SceneManager.LoadScene("TestScene");
+            }
         }
     }
 

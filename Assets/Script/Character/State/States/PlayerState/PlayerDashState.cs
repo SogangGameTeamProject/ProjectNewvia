@@ -13,6 +13,7 @@ namespace Newvia
         [SerializeField]
         private float dashTime = 0.25f;
         Coroutine runningCoroutine = null;
+        
         public override void Enter(CharacterInit character)
         {
             base.Enter(character);
@@ -35,6 +36,7 @@ namespace Newvia
 
             //무기 캔슬
             ((PlayerController)_character)._weapone.GetComponent<Weapone>().StateTransition(WeaponeStateType.Idle);
+            _character.isInvincible = true;//무적 적용
         }
 
         public override void StateUpdate()
@@ -46,6 +48,7 @@ namespace Newvia
         public override void Exit()
         {
             base.Exit();
+            _character.isInvincible = false;//무적 제거
             _rigidbody2D.velocity = Vector2.zero;
         }
 

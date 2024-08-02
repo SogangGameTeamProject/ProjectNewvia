@@ -79,12 +79,12 @@ SpriteRenderer:
   m_SortingLayerID: -876115325
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -701512315, guid: db08d41675f000a4e9d02c0b1e996f8a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 217c51576128ab14db85f9e831121c64, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.266667, y: 5.4666667}
+  m_Size: {x: 12.8, y: 12.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -143,9 +143,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.63}
+  m_Offset: {x: 0, y: 1.5}
   serializedVersion: 2
-  m_Radius: 1.96
+  m_Radius: 2.68
 --- !u!58 &3490049314934498349
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -178,7 +178,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.41}
+  m_Offset: {x: 0, y: 4.11}
   serializedVersion: 2
   m_Radius: 1.83
 --- !u!114 &5336380471804444521
@@ -193,9 +193,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f448a73c45dc14a8347bbc1d67db83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soulsRequired: 10
+  soulsRequired: 5
+  isTurnOn: 0
   soulTag: Soul
-  altarLight: {fileID: 5230441167664912145}
+  turnOnAniPara: 
 --- !u!114 &3624776373164438126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,6 +224,10 @@ PrefabInstance:
     - target: {fileID: 603118794835997005, guid: 33202be444cc53849adc208125f9b044, type: 3}
       propertyPath: m_Radius
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 603118794835997005, guid: 33202be444cc53849adc208125f9b044, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 603118794835997005, guid: 33202be444cc53849adc208125f9b044, type: 3}
       propertyPath: m_IsTrigger
@@ -258,7 +263,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4837380899561404806, guid: 33202be444cc53849adc208125f9b044, type: 3}
       propertyPath: m_PointLightOuterRadius
-      value: 30
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6029561461651060885, guid: 33202be444cc53849adc208125f9b044, type: 3}
       propertyPath: m_LocalPosition.x
@@ -266,7 +271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6029561461651060885, guid: 33202be444cc53849adc208125f9b044, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.11
       objectReference: {fileID: 0}
     - target: {fileID: 6029561461651060885, guid: 33202be444cc53849adc208125f9b044, type: 3}
       propertyPath: m_LocalPosition.z
@@ -305,11 +310,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33202be444cc53849adc208125f9b044, type: 3}
---- !u!1 &5230441167664912145 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4785002489593729508, guid: 33202be444cc53849adc208125f9b044, type: 3}
-  m_PrefabInstance: {fileID: 788689509446780661}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6439218217440231008 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6029561461651060885, guid: 33202be444cc53849adc208125f9b044, type: 3}

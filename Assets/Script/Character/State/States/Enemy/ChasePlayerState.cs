@@ -52,7 +52,6 @@ namespace Newvia
                 _agent.ResetPath(); // 목적지를 초기화하여 이동 경로를 제거
                 _agent.velocity = Vector3.zero;
             }
-            Debug.Log("추적 종료");
         }
     }
 }

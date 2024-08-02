@@ -61,6 +61,12 @@ namespace Newvia
 
             if (_targetPosition != null)
             {
+                //돌진 방향에 따른 캐릭터 방향 조정
+                if (direction.x > 0)
+                    _character.CharacterDirection = CharacterDirection.right;
+                else if (direction.x < 0)
+                    _character.CharacterDirection = CharacterDirection.left;
+
                 // 플레이어 위치로 돌진하기 시작
                 _rBody.velocity = direction * rushPower; // 돌진 속도 설정
                 isRushing = true;

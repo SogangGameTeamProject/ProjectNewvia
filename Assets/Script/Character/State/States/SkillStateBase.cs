@@ -52,7 +52,6 @@ namespace Newvia
             {
                 if (!playHandleSkillAni && HandleSkilAniPara != string.Empty)
                 {
-                    Debug.Log("공격중 애니 출력");
                     _animator.SetTrigger(HandleSkilAniPara);
                     playHandleSkillAni = true;
                 }

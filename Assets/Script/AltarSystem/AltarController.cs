@@ -7,13 +7,15 @@ namespace Newvia
     public class AltarController : MonoBehaviour
     {
         public int soulsRequired = 10; // 필요한 영혼의 수
+        public bool isTurnOn = false;
         public string soulTag = "Soul";
         private int soulsCollected = 0;
-        public GameObject altarLight; // 재단의 불
+        private Animator _animation = null;
+        public string turnOnAniPara = null;
 
         void Start()
         {
-            altarLight.SetActive(false); // 초기에는 불이 꺼져 있음
+            _animation = GetComponent<Animator>();
         }
         void OnTriggerEnter2D(Collider2D other)
         {
@@ -22,9 +24,10 @@ namespace Newvia
                 soulsCollected++;
                 Destroy(other.gameObject); // 영혼 파괴
 
-                if (soulsCollected >= soulsRequired)
+                if (soulsCollected >= soulsRequired && !isTurnOn)
                 {
-                    altarLight.SetActive(true); // 불 켜기
+                    isTurnOn = true;
+                    _animation.SetTrigger(turnOnAniPara);
                 }
             }
         }

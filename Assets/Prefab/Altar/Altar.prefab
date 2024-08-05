@@ -196,7 +196,8 @@ MonoBehaviour:
   soulsRequired: 5
   isTurnOn: 0
   soulTag: Soul
-  turnOnAniPara: 
+  soulsCollected: 0
+  turnOnAniPara: TurnOn
 --- !u!114 &3624776373164438126
 MonoBehaviour:
   m_ObjectHideFlags: 0

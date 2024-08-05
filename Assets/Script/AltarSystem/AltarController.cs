@@ -9,6 +9,7 @@ namespace Newvia
         public int soulsRequired = 10; // 필요한 영혼의 수
         public bool isTurnOn = false;
         public string soulTag = "Soul";
+        [SerializeField]
         private int soulsCollected = 0;
         private Animator _animation = null;
         public string turnOnAniPara = null;

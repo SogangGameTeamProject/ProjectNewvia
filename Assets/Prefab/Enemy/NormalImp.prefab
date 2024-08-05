@@ -58,7 +58,7 @@ MonoBehaviour:
   wallLayerMask:
     serializedVersion: 2
     m_Bits: 65
-  wallCheckDistance: 0.5
+  wallCheckDistance: 1
 --- !u!1001 &2295043208888262401
 PrefabInstance:
   m_ObjectHideFlags: 0

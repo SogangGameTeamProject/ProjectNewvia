@@ -52,13 +52,14 @@ namespace Newvia
             if (_targetPosition != null)
             {
                 direction = (_targetPosition - (Vector2)_character.transform.position).normalized;
+                
             }
         }
 
         protected override void HandleSkill()
         {
             _damageZone.SetActive(true);
-
+            Debug.Log(direction);
             if (_targetPosition != null)
             {
                 //돌진 방향에 따른 캐릭터 방향 조정
@@ -73,7 +74,7 @@ namespace Newvia
 
                 RaycastHit2D hitInfo = Physics2D.CircleCast(transform.position, wallCheckDistance, Vector2.up, 1.5f, wallLayerMask);
                 // 돌진 종료 체크
-                if (Vector2.Distance(_character.transform.position, _targetPosition + direction * dashDistance) <= 0.5f
+                if (Vector2.Distance(_character.transform.position, _targetPosition + direction * dashDistance) <= 1f
                     || hitInfo.collider != null
                     )
                 {

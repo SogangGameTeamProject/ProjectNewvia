@@ -36,7 +36,6 @@ namespace Newvia
             int nowMonsterCnt = _gameManager.nowMonsterCount;
             while (true)
             {
-                Debug.Log("코루틴 진행중");
                 if(nowMonsterCnt < maxMonsterNum && _gameManager.flowType == GameFlowType.Proceeding)
                 {
                     // a와 b 사이의 랜덤 시간 대기
@@ -53,30 +52,30 @@ namespace Newvia
         //몬스터를 스폰 함수     cnt: 스폰할 몬스터 수
         public void SpawnRandomMonster()
         {
-            Debug.Log("몬스터 스폰");
             PlayerController player = GameObject.FindAnyObjectByType<PlayerController>();
             if(player != null)
             {
                 //플레이어 위치 값을 기반으로 스포너 위치별 거리 구하기
                 SortedDictionary<float, Transform> spawnList = new SortedDictionary<float, Transform>();
+                
                 for (int i = 0; i < spawnPoints.Count; i++)
                 {
-                    float distance = Vector2.Distance(player.transform.position, spawnList[i].position);
+                    float distance = Vector2.Distance(player.transform.position, spawnPoints[i].position);
                     spawnList.Add(distance, spawnPoints[i]);
                 }
-                Debug.Log(spawnList.Co);
+
                 //구한 위치의 거리순으로 몬스터 랜덤 스폰
-                for (int i = 0;i < spawnMonsterNum; i++)
+                int j = 0;
+                foreach (Transform t in spawnList.Values)
                 {
-                    ;
-                    if (_gameManager.nowMonsterCount < maxMonsterNum)
+                    if (_gameManager.nowMonsterCount >= maxMonsterNum || j >= spawnMonsterNum)
                         break;
-                    
-                    if (i < spawnPoints.Count)
+                    if (j < spawnPoints.Count)
                     {
                         _gameManager.nowMonsterCount++;
-                        Instantiate(GetRandomMonster().prefab, spawnList[i].position, Quaternion.identity, null);
+                        Instantiate(GetRandomMonster().prefab, t.position, Quaternion.identity, null);
                     }
+                    j++;
                 }
             }
         }

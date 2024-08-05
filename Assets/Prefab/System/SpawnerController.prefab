@@ -76,6 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7fbd6fd5ee7e074fbd8e47157880335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isDontDestroy: 0
   monsters:
   - prefab: {fileID: 2144157276693955226, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
     weight: 3
@@ -83,6 +84,5 @@ MonoBehaviour:
     weight: 2
   - prefab: {fileID: 150925620444700059, guid: 9404778326faa704cb11539997ed0106, type: 3}
     weight: 1
-  spawnPoint: {fileID: 3083445682115274833}
-  minSpawnTime: 2
-  maxSpawnTime: 5
+  spawnPoint:
+  - {fileID: 0}

@@ -59,7 +59,6 @@ namespace Newvia
         protected override void HandleSkill()
         {
             _damageZone.SetActive(true);
-            Debug.Log(direction);
             if (_targetPosition != null)
             {
                 //돌진 방향에 따른 캐릭터 방향 조정

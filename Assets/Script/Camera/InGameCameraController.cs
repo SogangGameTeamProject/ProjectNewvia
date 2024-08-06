@@ -30,7 +30,8 @@ namespace Newvia
                 desiredPosition.z = transform.position.z;
                 // 거리에 따라 속도를 조절
                 float distance = Vector3.Distance(transform.position, desiredPosition);
-                float adjustedSpeed = smoothSpeed * distance;
+                float adjustedSpeed =  smoothSpeed * distance;
+                adjustedSpeed = Mathf.Clamp(adjustedSpeed, 0.025f, 1);
                 Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, adjustedSpeed);
                 transform.position = smoothedPosition;
 

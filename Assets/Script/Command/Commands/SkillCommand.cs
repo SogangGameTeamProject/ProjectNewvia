@@ -9,7 +9,6 @@ namespace Newvia
         public override void Execute(PlayerController player)
         {
             base.Execute(player);
-            Debug.Log(_player + ", " + _subWeapone);
             //입력 예외처리 구현 부분
             if ((_player.runningStateType == CharacterStateType.Idle || _player.runningStateType == CharacterStateType.Move) &&
                 (_subWeapone.runningStateType == SubWeaponeStateType.Idle || _subWeapone.runningStateType == SubWeaponeStateType.Walk) &&

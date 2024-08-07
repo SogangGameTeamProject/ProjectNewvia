@@ -13,7 +13,7 @@ namespace Newvia
         [SerializeField]
         private float rushPower = 30f;
         [SerializeField]
-        private float dashDistance = 10f;
+        private float dashDistance = 10f;//대쉬거리
         public LayerMask wallLayerMask; // 벽 레이어 마스크
         [SerializeField]
         private float wallCheckDistance = 3.5f;//벽 충돌 체크 거리
@@ -31,7 +31,6 @@ namespace Newvia
                 _rBody = _character.GetComponent<Rigidbody2D>();
 
             isRushing = false;
-            
         }
 
         protected override void HandleFirstDeal()
@@ -66,10 +65,12 @@ namespace Newvia
                     _character.CharacterDirection = CharacterDirection.right;
                 else if (direction.x < 0)
                     _character.CharacterDirection = CharacterDirection.left;
-
                 // 플레이어 위치로 돌진하기 시작
-                _rBody.velocity = direction * rushPower; // 돌진 속도 설정
-                isRushing = true;
+                if (!isRushing)
+                {
+                    _rBody.AddForce(direction * rushPower, ForceMode2D.Impulse);
+                    isRushing = true;
+                }
 
                 RaycastHit2D hitInfo = Physics2D.CircleCast(transform.position, wallCheckDistance, Vector2.up, 1.5f, wallLayerMask);
                 // 돌진 종료 체크

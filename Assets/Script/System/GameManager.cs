@@ -10,9 +10,12 @@ namespace Newvia
     {
         private MonsterSpawnManager _monsterSpawnManager = null;
         public int killCount { get; set; }//킬 카운트
-        public int nowMonsterCount {  get; set; }//몬스터 카운트
+        
         public GameFlowType flowType { get; set; }
 
+        public WavesInfo wavesInfo = null;//웨이브들의 정보
+        private int nowWave = -1;//현제 웨이브
+        
 
         private void Start()
         {
@@ -27,7 +30,7 @@ namespace Newvia
             GameFlowEventBus.Subscribe(GameFlowType.GameClear, GameClear);
             GameFlowEventBus.Subscribe(GameFlowType.GameOver, GameOver);
             GameFlowEventBus.Subscribe(GameFlowType.Pause, Pause);
-            GameFlowEventBus.Subscribe(GameFlowType.CutScene, CutScene);
+            GameFlowEventBus.Subscribe(GameFlowType.NextWave, NextWave);
         }
 
         
@@ -39,7 +42,7 @@ namespace Newvia
             GameFlowEventBus.Unsubscribe(GameFlowType.GameClear, GameClear);
             GameFlowEventBus.Unsubscribe(GameFlowType.GameOver, GameOver);
             GameFlowEventBus.Unsubscribe(GameFlowType.Pause, Pause);
-            GameFlowEventBus.Unsubscribe(GameFlowType.CutScene, CutScene);
+            GameFlowEventBus.Unsubscribe(GameFlowType.NextWave, NextWave);
         }
 
         private void Update()
@@ -55,17 +58,17 @@ namespace Newvia
         private void GameStart()
         {
             flowType = GameFlowType.GameStart;
-            GameFlowEventBus.Publish(GameFlowType.Proceeding);
+            GameFlowEventBus.Publish(GameFlowType.NextWave);
         }
         private void Proceeding()
         {
-            Debug.Log("게임 진행 중");
             flowType = GameFlowType.Proceeding;
         }
 
         private void GameClear()
         {
             flowType = GameFlowType.GameClear;
+            Debug.Log("GameClear");
         }
 
         private void GameOver()
@@ -78,9 +81,26 @@ namespace Newvia
             flowType = GameFlowType.Pause;
         }
 
-        private void CutScene()
+        //웨이브 전환
+        private void NextWave()
         {
-            flowType = GameFlowType.CutScene;
+            flowType = GameFlowType.NextWave;
+            nowWave++;
+
+            if (wavesInfo.wave.Count <= nowWave)
+            {
+                GameFlowEventBus.Publish(GameFlowType.GameClear);
+                return;
+            }
+
+            if(wavesInfo != null)
+            {
+                WaveLevel wave = wavesInfo.wave[nowWave];
+                _monsterSpawnManager.OnSpawner(wave.monsterList, wave.maxSpawnNum, wave.spawnMonsterNum,
+                                               wave.maxFieldMonsterNum, wave.minSpawnTime, wave.maxSpawnTime);
+            }
+
+            GameFlowEventBus.Publish(GameFlowType.Proceeding);
         }
         
     }

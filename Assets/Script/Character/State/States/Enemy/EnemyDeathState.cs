@@ -11,7 +11,7 @@ namespace Newvia
         {
             base.Enter(character);
             GameManager.Instance.killCount++;
-            GameManager.Instance.nowMonsterCount--;
+            MonsterSpawnManager.Instance.nowFieldMonsterCnt--;
         }
 
         public override void StateUpdate()

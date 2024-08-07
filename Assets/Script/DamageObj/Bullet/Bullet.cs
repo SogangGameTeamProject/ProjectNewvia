@@ -30,7 +30,7 @@ namespace Newvia
 
             //레이 케스트로 충알 충돌 판정 처리
             // Raycast를 통한 피격 판정
-            RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, 0.5f, hitLayers);
+            RaycastHit2D hitInfo = Physics2D.CircleCast(transform.position, 1, Vector2.zero, 0, hitLayers);
             // 무언가에 맞았다면
             if (hitInfo.collider != null)
             {

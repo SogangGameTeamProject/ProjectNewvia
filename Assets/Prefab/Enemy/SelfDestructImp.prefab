@@ -135,7 +135,8 @@ MonoBehaviour:
   HandleSkilAniPara: IsRush
   HandleLastDealAniPara: IsAttack
   _damageZone: {fileID: 5982476815568666649}
-  rushPower: 45
+  rushPower: 60
+  decelerationPower: 0.85
   dashDistance: 10
   wallLayerMask:
     serializedVersion: 2

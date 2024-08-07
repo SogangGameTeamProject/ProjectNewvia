@@ -48,12 +48,12 @@ MonoBehaviour:
   stateAniPara: IsAttackReady
   firstDealDuration: 0.5
   lastDealDuration: 0.25
-  skillDuration: 1
+  skillDuration: 0.75
   chageState: 0
   HandleSkilAniPara: IsRush
   HandleLastDealAniPara: IsAttack
   _damageZone: {fileID: 5982476815568666649}
-  rushPower: 45
+  rushPower: 60
   dashDistance: 10
   wallLayerMask:
     serializedVersion: 2

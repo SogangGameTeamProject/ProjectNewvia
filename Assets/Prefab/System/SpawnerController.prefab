@@ -301,23 +301,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isDontDestroy: 0
-  monsters:
-  - prefab: {fileID: 2144157276693955226, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
-    weight: 3
-  - prefab: {fileID: 150925620444700059, guid: 5ef7e22d64289f5438f64c6f17f8d05d, type: 3}
-    weight: 2
-  - prefab: {fileID: 150925620444700059, guid: 9404778326faa704cb11539997ed0106, type: 3}
-    weight: 1
-  spawnPoints:
-  - {fileID: 3083445682115274833}
-  - {fileID: 1129134063771735796}
-  - {fileID: 6580845947790065389}
-  - {fileID: 2332110456560173034}
-  - {fileID: 8613457087056680417}
-  - {fileID: 7849730959952044630}
-  - {fileID: 6417157669734996675}
-  - {fileID: 4659943348591253341}
-  spawnMonsterNum: 3
-  maxMonsterNum: 15
-  minSpawnTime: 3
-  maxSpawnTime: 5
+  monsterList: []
+  spawnerList:
+  - pos: {fileID: 3083445682115274833}
+  - pos: {fileID: 1129134063771735796}
+  - pos: {fileID: 6580845947790065389}
+  - pos: {fileID: 2332110456560173034}
+  - pos: {fileID: 8613457087056680417}
+  - pos: {fileID: 7849730959952044630}
+  - pos: {fileID: 6417157669734996675}
+  - pos: {fileID: 4659943348591253341}
+  maxSpawnNum: 30
+  spawnMonsterNum: 4
+  maxFieldMonsterNum: 15
+  minSpawnTime: 2
+  maxSpawnTime: 4

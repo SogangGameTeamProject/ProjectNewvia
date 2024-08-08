@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 namespace Newvia
 {
@@ -9,14 +10,27 @@ namespace Newvia
         private GameManager _gameManager = null;
 
         public List<Monster> monsterList; // 스폰할 몬스터 리스트
-        public List<Transform> spawnPoints;   // 몬스터가 스폰될 위치 리스트
-        public int maxSpawnNum = 30;//최대로 소환할 몬스터 수
-        private int spawnCnt = 0;//소환한 몬스터 수
-        public int spawnMonsterNum = 3;//주기별 스폰할 몬스터 수
-        public int maxFieldMonsterNum = 15;//필드에 존재 가능한 최대 몬스터 수
+
+        //스포너 정보값
+        [System.Serializable]
+        public class Spawner {
+            public Transform pos;//위치
+            public float weight { get; set; }//가중치
+        }
+
+        public List<Spawner> spawnerList;   //스포너 정보를 저장하는 리스트
+        public int maxSpawnNum { get; set; }//최대로 소환할 몬스터 수
+        private int spawnCnt { get; set; }//소환한 몬스터 수
+        public int spawnMonsterNum { get; set; }//주기별 스폰할 몬스터 수
+        public int maxFieldMonsterNum { get; set; }//필드에 존재 가능한 최대 몬스터 수
         public int nowFieldMonsterCnt { get; set; }//현재 필드의 몬스터 카운트
-        public float minSpawnTime = 3f;//최소 스폰 딜레이 시간
-        public float maxSpawnTime = 5f;//최대 스폰 딜레이 시간
+        public float minSpawnTime { get; set; }//최소 스폰 딜레이 시간
+        public float maxSpawnTime { get; set; }//최대 스폰 딜레이 시간
+
+        public float increaseSpawnerNum = 3;//가중치 증가할 스포너 수
+        public float defaultWeight = 1;//기본 가중치
+        public float weightIncrease = 5f;//스포너 가중치 증가량
+        
 
         private void Start()
         {
@@ -55,7 +69,6 @@ namespace Newvia
                 else if((nowFieldMonsterCnt < maxFieldMonsterNum && spawnCnt < maxSpawnNum) 
                     && _gameManager.flowType == GameFlowType.Proceeding)
                 {
-                    Debug.Log("스폰 처리중");
                     // a와 b 사이의 랜덤 시간 대기
                     float spawnInterval = Random.Range(minSpawnTime, maxSpawnTime);
                     yield return new WaitForSeconds(spawnInterval);
@@ -68,36 +81,66 @@ namespace Newvia
         }
 
 
-        //몬스터를 스폰 함수     cnt: 스폰할 몬스터 수
+        //몬스터를 생성하는 함수
         public void SpawnRandomMonster()
         {
             PlayerController player = GameObject.FindAnyObjectByType<PlayerController>();
             if(player != null)
             {
-                //플레이어 위치 값을 기반으로 스포너 위치별 거리 구하기
-                SortedDictionary<float, Transform> spawnList = new SortedDictionary<float, Transform>();
-                
-                for (int i = 0; i < spawnPoints.Count; i++)
+                // 스포너와 거리를 저장할 리스트
+                var spawnerDistances = spawnerList
+                    .Select(spawner => 
+                    new { spawner, distance = Vector2.Distance(spawner.pos.position, player.transform.position) })
+                    .OrderBy(item => item.distance) // 거리로 정렬
+                    .ToList();
+
+                // 가까운 스포너 n개에 가중치 3 부여
+                for (int i = 0; i < spawnerDistances.Count; i++)
                 {
-                    float distance = Vector2.Distance(player.transform.position, spawnPoints[i].position);
-                    spawnList.Add(distance, spawnPoints[i]);
+                    if (i < increaseSpawnerNum)
+                    {
+                        spawnerDistances[i].spawner.weight = weightIncrease;
+                    }
+                    else
+                    {
+                        spawnerDistances[i].spawner.weight = defaultWeight;
+                    }
                 }
 
-                //구한 위치의 거리순으로 몬스터 랜덤 스폰
-                int j = 0;
-                foreach (Transform t in spawnList.Values)
+                // 가중치에 따라 랜덤으로 스포너 선택하고 몬스터 스폰
+                for (int i = 0; i < spawnMonsterNum; i++)
                 {
-                    if (nowFieldMonsterCnt >= maxFieldMonsterNum || j >= spawnMonsterNum || spawnCnt >= maxSpawnNum)
-                        break;
-                    if (j < spawnPoints.Count)
+                    if (nowFieldMonsterCnt > maxFieldMonsterNum || spawnCnt >= maxSpawnNum)
+                        return;
+                    Spawner selectedSpawner = GetRandomSpawnerByWeight();
+                    if (selectedSpawner != null)
                     {
                         nowFieldMonsterCnt++;
                         spawnCnt++;
-                        Instantiate(GetRandomMonster().prefab, t.position, Quaternion.identity, null);
+                        Instantiate(GetRandomMonster().prefab, selectedSpawner.pos.position, Quaternion.identity, null);
                     }
-                    j++;
+                }
+                
+            }
+        }
+
+        //가중치에 따른 랜덤 스포너 선택
+        Spawner GetRandomSpawnerByWeight()
+        {
+            float totalWeight = spawnerList.Sum(spawner => spawner.weight);
+            float randomWeightPoint = Random.Range(0, totalWeight);
+
+            float currentWeightSum = 0;
+            foreach (var spawner in spawnerList)
+            {
+                currentWeightSum += spawner.weight;
+                if (randomWeightPoint <= currentWeightSum)
+                {
+                    return spawner;
                 }
             }
+
+            return null;
         }
 
         //가중 치에 따른 몬스터 랜덤 선택
@@ -127,8 +170,5 @@ namespace Newvia
             // 기본적으로 null 반환 (이 경우는 발생하지 않아야 함)
             return null;
         }
-
-        
     }
-
 }

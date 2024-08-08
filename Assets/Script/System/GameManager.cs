@@ -15,10 +15,13 @@ namespace Newvia
 
         public WavesInfo wavesInfo = null;//웨이브들의 정보
         private int nowWave = -1;//현제 웨이브
-        
+
+        public GameObject gameOverPopup = null;
+        public GameObject gmaeClearPopup = null;
 
         private void Start()
         {
+            Debug.Log("게임 시작");
             _monsterSpawnManager = MonsterSpawnManager.Instance;
             GameFlowEventBus.Publish(GameFlowType.GameStart);
         }
@@ -68,12 +71,15 @@ namespace Newvia
         private void GameClear()
         {
             flowType = GameFlowType.GameClear;
-            Debug.Log("GameClear");
+            if (gameOverPopup)
+                gameOverPopup.SetActive(true);
         }
 
         private void GameOver()
         {
             flowType = GameFlowType.GameOver;
+            if (gameOverPopup)
+                gameOverPopup.SetActive(true);
         }
 
         private void Pause()

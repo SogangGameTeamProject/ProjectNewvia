@@ -85,6 +85,11 @@ namespace Newvia
                 NowStamina += staminaRecoveryAmount;
             }
         }
+
+        private void OnDestroy()
+        {
+            GameFlowEventBus.Publish(GameFlowType.GameOver);
+        }
     }
 }
 

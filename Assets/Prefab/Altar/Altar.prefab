@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3490049314934498349}
   - component: {fileID: 5336380471804444521}
   - component: {fileID: 3624776373164438126}
+  - component: {fileID: 7920193090047061021}
   m_Layer: 0
   m_Name: Altar
   m_TagString: Altar
@@ -214,6 +215,36 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!114 &7920193090047061021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2840046528882721507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000ab537aaf838ac7cbc5936251ed410073f161a1e0
+  m_ShapePath:
+  - {x: -6.4000015, y: -2.5600014, z: 0}
+  - {x: -6.4000015, y: 10.24, z: 0}
+  - {x: 6.4000015, y: 10.24, z: 0}
+  - {x: 6.4000015, y: -2.5600014, z: 0}
+  m_ShapePathHash: 0
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -257354
+  m_LocalBounds:
+    m_Center: {x: 0, y: 3.8399992, z: 0}
+    m_Extent: {x: 6.4000015, y: 6.4000006, z: 0}
 --- !u!1001 &788689509446780661
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -72,7 +72,7 @@ namespace Newvia
                     isRushing = true;
                 }
 
-                RaycastHit2D hitInfo = Physics2D.CircleCast(transform.position, wallCheckDistance, Vector2.up, 1.5f, wallLayerMask);
+                RaycastHit2D hitInfo = Physics2D.CircleCast(transform.position, wallCheckDistance, Vector2.up, 1.1f, wallLayerMask);
                 // 돌진 종료 체크
                 if (Vector2.Distance(_character.transform.position, _targetPosition + direction * dashDistance) <= 1f
                     || hitInfo.collider != null

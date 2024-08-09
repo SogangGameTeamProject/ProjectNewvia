@@ -7,6 +7,7 @@ namespace Newvia
 {
     public class CharacterInit : Subject, IHit
     {
+        private GameManager _gameManager;
         private CharacterStateContext _stateContext;//상태 콘텍스트
         public CharacterStateType runningStateType;
         //상태 관리를 위한 리스트
@@ -69,6 +70,7 @@ namespace Newvia
 
         protected virtual void Start()
         {
+            _gameManager = GameManager.Instance;
             _stateContext = new CharacterStateContext(this);
             StateInit(CharacterStateType.Idle);
             SettingInitStatus();//캐릭터 스테이터스 초기화
@@ -76,7 +78,8 @@ namespace Newvia
 
         private void FixedUpdate()
         {
-            _stateContext.StateUpdate();
+            if(_gameManager.flowType == GameFlowType.Proceeding)
+                _stateContext.StateUpdate();
         }
 
         //캐릭터 초기 스테이터스 값 적용하는 함수

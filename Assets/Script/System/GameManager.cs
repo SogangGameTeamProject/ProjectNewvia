@@ -71,8 +71,9 @@ namespace Newvia
         private void GameClear()
         {
             flowType = GameFlowType.GameClear;
-            if (gameOverPopup)
-                gameOverPopup.SetActive(true);
+            
+            if (gmaeClearPopup)
+                gmaeClearPopup.SetActive(true);
         }
 
         private void GameOver()

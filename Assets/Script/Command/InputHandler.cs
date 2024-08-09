@@ -6,6 +6,7 @@ namespace Newvia
 {
     public class InputHandler : MonoBehaviour
     {
+        private GameManager _gameManager;
         PlayerController _playerController = null;
         public PlayerCommandInit _moveCommand;
         public PlayerCommandInit _dashCommand;
@@ -21,6 +22,7 @@ namespace Newvia
         private void Start()
         {
             _playerController = GetComponent<PlayerController>();
+            _gameManager = GameManager.Instance;
         }
 
         private void Update()
@@ -32,6 +34,8 @@ namespace Newvia
         //입력 처리 메소드
         private void HandleInput()
         {
+            if (_gameManager.flowType != GameFlowType.Proceeding)
+                return;
             //이동 입력 처리
             if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
             {

@@ -74,6 +74,8 @@ namespace Newvia
 
         private void Update()
         {
+            if(GameManager.Instance.flowType != GameFlowType.Proceeding)
+                return;
             _stateContext.StateUpdate();
             //마우스 방향에 따른 무기 회전 및 캐릭터 좌우 반전
             RotateWeapon();

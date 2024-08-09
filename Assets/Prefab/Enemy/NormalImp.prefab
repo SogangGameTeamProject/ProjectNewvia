@@ -58,7 +58,7 @@ MonoBehaviour:
   wallLayerMask:
     serializedVersion: 2
     m_Bits: 65
-  wallCheckDistance: 1
+  wallCheckDistance: 2
 --- !u!1001 &2295043208888262401
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -409,6 +409,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.5}
+  m_Offset: {x: 0, y: 1.1}
   serializedVersion: 2
-  m_Radius: 1.5
+  m_Radius: 2

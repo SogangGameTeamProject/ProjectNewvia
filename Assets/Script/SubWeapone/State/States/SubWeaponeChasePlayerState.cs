@@ -31,7 +31,8 @@ namespace Newvia
             //플레이어 추적
             if (agent && _subWeapone._playerController)
             {
-                agent.SetDestination(_subWeapone._playerController._subWeaponMountingLocation.position);
+                Vector3 tartget = _subWeapone._playerController._subWeaponMountingLocation.position;
+                agent.SetDestination(tartget);
             }
             else
                 _subWeapone.StateTransition(SubWeaponeStateType.Idle);

@@ -8,7 +8,7 @@ namespace Newvia
     public class EnemyController : CharacterInit
     {
         private NavMeshAgent _agent;
-        
+
         protected override void Start()
         {
             base.Start();

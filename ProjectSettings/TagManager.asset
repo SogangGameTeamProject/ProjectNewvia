@@ -46,15 +46,9 @@ TagManager:
   - name: Ground
     uniqueID: 2944029611
     locked: 0
-  - name: NotWaDecoObject
-    uniqueID: 1365414853
-    locked: 0
   - name: Character
     uniqueID: 3418851971
     locked: 0
   - name: Effect
-    uniqueID: 3768672753
-    locked: 0
-  - name: Bullect
-    uniqueID: 1929396717
+    uniqueID: 2414001191
     locked: 0

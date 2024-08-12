@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 
 namespace Newvia
 {
@@ -87,12 +88,12 @@ namespace Newvia
 
         private void NavMeshInit()
         {
-            UnityEngine.AI.NavMeshAgent agent;
-            agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+            NavMeshAgent agent;
+            agent = GetComponent<NavMeshAgent>();
             agent.updateUpAxis = false;
             agent.updateRotation = false;
 
-            UnityEngine.AI.NavMeshObstacle obstacle = GetComponent<UnityEngine.AI.NavMeshObstacle>();
+            UnityEngine.AI.NavMeshObstacle obstacle = GetComponent<NavMeshObstacle>();
             if (obstacle != null)
             {
                 obstacle.size = Vector3.zero;

@@ -324,12 +324,13 @@ GameObject:
   m_Component:
   - component: {fileID: 5622370480846818925}
   - component: {fileID: 1818669057325622570}
+  - component: {fileID: 6780209209352028267}
+  - component: {fileID: 7218197591909059364}
   - component: {fileID: 1858153047904091282}
-  - component: {fileID: 5692515137726986447}
-  - component: {fileID: 8512777488144242654}
   - component: {fileID: 7994014135537006438}
   - component: {fileID: 1054146221799478100}
-  - component: {fileID: 7218197591909059364}
+  - component: {fileID: 5692515137726986447}
+  - component: {fileID: 8512777488144242654}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -394,8 +395,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -876115325
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -1884482886, guid: ff468aeab942a5444960df9f896dfda7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -408,6 +409,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &6780209209352028267
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3830553711805802979}
+  m_Enabled: 1
+  m_SortingLayerID: -876115325
+  m_SortingLayer: 3
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
+--- !u!95 &7218197591909059364
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3830553711805802979}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5bafc94c5dffc4a4fb37ea9a4edba597, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!50 &1858153047904091282
 Rigidbody2D:
   serializedVersion: 4
@@ -435,57 +469,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &5692515137726986447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3830553711805802979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07cdf46ddc15c0544bf93188fa83fef0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  runningStateType: 0
-  _stateList:
-  - stateType: 0
-    state: {fileID: 5859130682217975438}
-  - stateType: 1
-    state: {fileID: 3558889318361960594}
-  - stateType: 2
-    state: {fileID: 5956038217694625353}
-  - stateType: 3
-    state: {fileID: 1804056171143423523}
-  - stateType: 201
-    state: {fileID: 3963996330606078325}
-  _statusInit: {fileID: 11400000, guid: b0a042c49543b3544ab35755e9330963, type: 2}
-  staminaRecoveryCycle: 0.05
-  _weaponePre: {fileID: 7689076634450953901, guid: eff9de73b61ae6744898f1114ebb5d6a, type: 3}
-  _weaponMountingLocation: {fileID: 1199028205677779614}
-  _subWeaponePre: {fileID: 8860754139407080717, guid: 0d9e7c5f7ffda874bb3cf8f1b08f0a44, type: 3}
-  _subWeaponMountingLocation: {fileID: 6103812552508461216}
---- !u!114 &8512777488144242654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3830553711805802979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acfe93d9cc9c1f94a9ea6a0f4e145355, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _moveCommand: {fileID: 3619889729178252625}
-  _dashCommand: {fileID: 7282800158780702222}
-  _fireCommand: {fileID: 5230781624496868892}
-  _reloadCommand: {fileID: 4269845721728659416}
-  _skillCommand: {fileID: 8104060404482011541}
-  dashKey: 32
-  fireKey: 323
-  reloadKey: 114
-  skillKey: 324
 --- !u!58 &7994014135537006438
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -556,7 +539,7 @@ BoxCollider2D:
   m_Offset: {x: -0.058863044, y: 1.2350323}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.48, y: 0.04}
+    pivot: {x: 0.48, y: 0.05}
     oldSize: {x: 4.266667, y: 4.266667}
     newSize: {x: 4.266667, y: 4.266667}
     adaptiveTilingThreshold: 0.5
@@ -566,27 +549,57 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1177261, y: 2.7344222}
   m_EdgeRadius: 0
---- !u!95 &7218197591909059364
-Animator:
-  serializedVersion: 5
+--- !u!114 &5692515137726986447
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3830553711805802979}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5bafc94c5dffc4a4fb37ea9a4edba597, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07cdf46ddc15c0544bf93188fa83fef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runningStateType: 0
+  _stateList:
+  - stateType: 0
+    state: {fileID: 5859130682217975438}
+  - stateType: 1
+    state: {fileID: 3558889318361960594}
+  - stateType: 2
+    state: {fileID: 5956038217694625353}
+  - stateType: 3
+    state: {fileID: 1804056171143423523}
+  - stateType: 201
+    state: {fileID: 3963996330606078325}
+  _statusInit: {fileID: 11400000, guid: b0a042c49543b3544ab35755e9330963, type: 2}
+  staminaRecoveryCycle: 0.05
+  _weaponePre: {fileID: 7689076634450953901, guid: eff9de73b61ae6744898f1114ebb5d6a, type: 3}
+  _weaponMountingLocation: {fileID: 1199028205677779614}
+  _subWeaponePre: {fileID: 8860754139407080717, guid: 0d9e7c5f7ffda874bb3cf8f1b08f0a44, type: 3}
+  _subWeaponMountingLocation: {fileID: 6103812552508461216}
+--- !u!114 &8512777488144242654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3830553711805802979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acfe93d9cc9c1f94a9ea6a0f4e145355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveCommand: {fileID: 3619889729178252625}
+  _dashCommand: {fileID: 7282800158780702222}
+  _fireCommand: {fileID: 5230781624496868892}
+  _reloadCommand: {fileID: 4269845721728659416}
+  _skillCommand: {fileID: 8104060404482011541}
+  dashKey: 32
+  fireKey: 323
+  reloadKey: 114
+  skillKey: 324
 --- !u!1 &5088548908136732750
 GameObject:
   m_ObjectHideFlags: 0

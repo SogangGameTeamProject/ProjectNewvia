@@ -22,7 +22,7 @@ MonoBehaviour:
     spawnMonsterNum: 4
     maxFieldMonsterNum: 8
     minSpawnTime: 3
-    maxSpawnTime: 5
+    maxSpawnTime: 5.05
   - monsterList:
     - prefab: {fileID: 2144157276693955226, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       weight: 4
@@ -32,6 +32,14 @@ MonoBehaviour:
       weight: 1
     maxSpawnNum: 30
     spawnMonsterNum: 6
+    maxFieldMonsterNum: 15
+    minSpawnTime: 3
+    maxSpawnTime: 5
+  - monsterList:
+    - prefab: {fileID: 148367944906056068, guid: ad3e823057373d14490cf9c820d2a882, type: 3}
+      weight: 2
+    maxSpawnNum: 1
+    spawnMonsterNum: 1
     maxFieldMonsterNum: 15
     minSpawnTime: 3
     maxSpawnTime: 5

@@ -30,7 +30,6 @@ namespace Newvia
         public float increaseSpawnerNum = 3;//가중치 증가할 스포너 수
         public float defaultWeight = 1;//기본 가중치
         public float weightIncrease = 5f;//스포너 가중치 증가량
-        
 
         private void Start()
         {
@@ -107,10 +106,13 @@ namespace Newvia
                     }
                 }
 
+                int overSpawnNum = (spawnCnt + spawnMonsterNum) - maxSpawnNum;//오버 스폰 수
+                int roofNum = overSpawnNum > 0 ? spawnMonsterNum: spawnMonsterNum-overSpawnNum;//스폰 반복 횟수
+
                 // 가중치에 따라 랜덤으로 스포너 선택하고 몬스터 스폰
                 for (int i = 0; i < spawnMonsterNum; i++)
                 {
-                    if (nowFieldMonsterCnt > maxFieldMonsterNum || spawnCnt >= maxSpawnNum)
+                    if (nowFieldMonsterCnt > maxFieldMonsterNum)
                         return;
                     Spawner selectedSpawner = GetRandomSpawnerByWeight();
                     if (selectedSpawner != null)
@@ -120,7 +122,6 @@ namespace Newvia
                         Instantiate(GetRandomMonster().prefab, selectedSpawner.pos.position, Quaternion.identity, null);
                     }
                 }
-                
             }
         }
 

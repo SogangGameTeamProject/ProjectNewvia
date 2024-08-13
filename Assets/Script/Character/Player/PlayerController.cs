@@ -46,10 +46,13 @@ namespace Newvia
             //메인 웨폰 및 서브 웨폰 장착
             if (_weaponePre)
             {
-                _weapone = Instantiate(_weaponePre, _weaponMountingLocation.position, Quaternion.identity, this.transform);
+                _weapone = Instantiate(_weaponePre, _weaponMountingLocation.position, Quaternion.Euler(0, 0, 0), this.transform);
             }
-            if(_subWeaponePre)
-                _subWeapone = Instantiate(_subWeaponePre, _subWeaponMountingLocation.position, Quaternion.identity, null);
+            if (_subWeaponePre)
+            {
+                _subWeapone = Instantiate(_subWeaponePre, _subWeaponMountingLocation.position, Quaternion.Euler(0, 0, 0), null);
+                _subWeapone.transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
 
         }
 

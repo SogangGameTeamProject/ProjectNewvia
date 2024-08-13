@@ -39,6 +39,7 @@ namespace Newvia
                 NotifyObservers();
             }
         }
+        private NavMeshAgent agent;
 
         private SubWeaponeHUDController _subWeaponeHUD = null;
 
@@ -88,7 +89,6 @@ namespace Newvia
 
         private void NavMeshInit()
         {
-            NavMeshAgent agent;
             agent = GetComponent<NavMeshAgent>();
             agent.updateUpAxis = false;
             agent.updateRotation = false;

@@ -180,7 +180,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -876115325
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9d11b5218328e8a4fb0a58d8288c1624, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -238,6 +238,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bulletPool: {fileID: 4282194896687071254}
+  fireEffect:
+  - {fileID: 1956666335576971283, guid: f209f391dc16f5c4090f97415845ae75, type: 3}
+  - {fileID: 2895804356425276959, guid: f081f1a416dfa2f47aefa2953a3b679c, type: 3}
+  - {fileID: 3228360868256380951, guid: 697e039d74028b744af4623ebae8ab93, type: 3}
 --- !u!1 &7689076634450953901
 GameObject:
   m_ObjectHideFlags: 0

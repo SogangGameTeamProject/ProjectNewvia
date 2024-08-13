@@ -128,15 +128,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniPara: IsAttackReady
-  firstDealDuration: 0.5
+  firstDealDuration: 0.75
   lastDealDuration: 0.1
   skillDuration: 1
   chageState: 3
   HandleSkilAniPara: IsRush
   HandleLastDealAniPara: IsAttack
   _damageZone: {fileID: 5982476815568666649}
-  rushPower: 60
-  dashDistance: 10
+  rushPower: 75
+  dashDistance: 15
   wallLayerMask:
     serializedVersion: 2
     m_Bits: 65
@@ -295,7 +295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6178135845029963205, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 8
+      value: 2.9
       objectReference: {fileID: 0}
     - target: {fileID: 6470318082748202330, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: m_LocalPosition.x

@@ -1,0 +1,1205 @@
+fileFormatVersion: 2
+guid: 03e86c98621be474d858568590cbfb26
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 15
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84a88e3bdbc41fe40b9ce7a6cd5674ef
+      internalID: -1922595087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d82d3a6a21705e4fbac180aed32a3a7
+      internalID: 1925605835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f66902414a705f4da7d53028dee6775
+      internalID: 2034977744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4243be3871a932f41a494723d617d906
+      internalID: 378742627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2263e4e250ab744aa7d2ddef4f00f63
+      internalID: -2126565224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97a75ab068bbb4142983a5e66726fbfe
+      internalID: -543726553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f46033c7365e6724290378b5f0aa91a7
+      internalID: -1413230267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6419b9bd8c5640489df059c525d373a
+      internalID: 469229402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c9f5baee76310a4cb520e39513044e0
+      internalID: 183387017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a226fed2932efd14eaec2c0ea826d10a
+      internalID: 2057235895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1af147ba9add7840a38075346ac95e1
+      internalID: -638285768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae1c763968fb64f4ab80cad06bc69331
+      internalID: -49713056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8585972030555a440b90b647834f14ab
+      internalID: -1029303941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1872
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e14f64f886a3b874b8b320945049faa4
+      internalID: 623663484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 130b134a2088cc84e8dc26b4ba34a674
+      internalID: -587110158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf278af233cce52479233cc60571eea8
+      internalID: 1116944223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57358b5aa1b0b664bb730e57700f1756
+      internalID: 1563991363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4d63d70fb8188c4e8e82a7e5725f743
+      internalID: -161545745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85c1454851b091e42b9ebb7ef71c4bbe
+      internalID: 1942934400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 2736
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61d6c9065fff7d444b1e061d657650bc
+      internalID: 1044125641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22bc6d4742ca9a54c9f145e34195e2c1
+      internalID: -1231204154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 3024
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2755a8c9e3d89fe42ba61a89f3cf4240
+      internalID: -1559532575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4b04d628f07da7438da4fcfdb775876
+      internalID: -1257819306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 3312
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb710d6fa1d13e74084be85fd541f080
+      internalID: 1278036443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 3456
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf57e251481251b48b00e2802998107b
+      internalID: -2039282807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93d7aa070ff516f42bced040e48c8d3f
+      internalID: -1315565175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc7ab82ecef29a4e8803f0b930fd1e4
+      internalID: -1945867496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 3888
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e3735b396749d43838df141d5c9eaa
+      internalID: -178285533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 4032
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9168caf4859a7744a9d62750950cbfd1
+      internalID: -1196233378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 4176
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b00815a4b5e28a041bc37da69d8edb8f
+      internalID: 935860264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b15d18dc5ea23994ba22cb1d83c5ba9f
+      internalID: 461079869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 4464
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e213222add705b44fa2932c2cf2ce770
+      internalID: 437170012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_32
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec8e7dbe4cdbb7b4ab0c19ac43296be0
+      internalID: -1706554172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_33
+      rect:
+        serializedVersion: 2
+        x: 4752
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b56433e41b86b7445b5f10e281d57988
+      internalID: 13314975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_34
+      rect:
+        serializedVersion: 2
+        x: 4896
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebad0d72a737d9142bdced8f8e86dd8f
+      internalID: -2034654482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_35
+      rect:
+        serializedVersion: 2
+        x: 5040
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e9a0568fbffc38459a1e5bc315d524c
+      internalID: -1413714019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_36
+      rect:
+        serializedVersion: 2
+        x: 5184
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55686d14305040a4e8e33e31146ddda2
+      internalID: -621292395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_37
+      rect:
+        serializedVersion: 2
+        x: 5328
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c50d4aaf72cd63f4d9cd2d7032d32377
+      internalID: 1059264969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_38
+      rect:
+        serializedVersion: 2
+        x: 5472
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3991400d246bb847bb4569f6b212e4b
+      internalID: 1024680548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_39
+      rect:
+        serializedVersion: 2
+        x: 5616
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 629a898678cd51d4aa008086b2615d64
+      internalID: -2095570984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_40
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d8a63c44b00f83408ff549f134b07df
+      internalID: 504292742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_41
+      rect:
+        serializedVersion: 2
+        x: 5904
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bf6783b5367b764d9a1d123e2e6a9bc
+      internalID: 1063748984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_42
+      rect:
+        serializedVersion: 2
+        x: 6048
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56f34a52cbc2a1f4b8429b0091c91a09
+      internalID: -1656272941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_43
+      rect:
+        serializedVersion: 2
+        x: 6192
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 577608d920bc82e448d7246fb134f27e
+      internalID: -1890918356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_44
+      rect:
+        serializedVersion: 2
+        x: 6336
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ae96c3b753bf2b4aa3125308cbfd07f
+      internalID: 2014678520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_45
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad811d34534f4241aba80a8d2981a18
+      internalID: -1371892529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_46
+      rect:
+        serializedVersion: 2
+        x: 6624
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6627a6cb652ae24599242fb344e1073
+      internalID: 102676069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_47
+      rect:
+        serializedVersion: 2
+        x: 6768
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 110da249712eaed4eb66e1f1218a5110
+      internalID: 51160158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS-Appear_sheet_48
+      rect:
+        serializedVersion: 2
+        x: 6912
+        y: 0
+        width: 144
+        height: 192
+      alignment: 9
+      pivot: {x: 0.52, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c10c07176ed80846941bb2246ba683c
+      internalID: -1566559494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      BOOS-Appear_sheet_0: -1922595087
+      BOOS-Appear_sheet_1: 1925605835
+      BOOS-Appear_sheet_10: -638285768
+      BOOS-Appear_sheet_11: -49713056
+      BOOS-Appear_sheet_12: -1029303941
+      BOOS-Appear_sheet_13: 623663484
+      BOOS-Appear_sheet_14: -587110158
+      BOOS-Appear_sheet_15: 1116944223
+      BOOS-Appear_sheet_16: 1563991363
+      BOOS-Appear_sheet_17: -161545745
+      BOOS-Appear_sheet_18: 1942934400
+      BOOS-Appear_sheet_19: 1044125641
+      BOOS-Appear_sheet_2: 2034977744
+      BOOS-Appear_sheet_20: -1231204154
+      BOOS-Appear_sheet_21: -1559532575
+      BOOS-Appear_sheet_22: -1257819306
+      BOOS-Appear_sheet_23: 1278036443
+      BOOS-Appear_sheet_24: -2039282807
+      BOOS-Appear_sheet_25: -1315565175
+      BOOS-Appear_sheet_26: -1945867496
+      BOOS-Appear_sheet_27: -178285533
+      BOOS-Appear_sheet_28: -1196233378
+      BOOS-Appear_sheet_29: 935860264
+      BOOS-Appear_sheet_3: 378742627
+      BOOS-Appear_sheet_30: 461079869
+      BOOS-Appear_sheet_31: 437170012
+      BOOS-Appear_sheet_32: -1706554172
+      BOOS-Appear_sheet_33: 13314975
+      BOOS-Appear_sheet_34: -2034654482
+      BOOS-Appear_sheet_35: -1413714019
+      BOOS-Appear_sheet_36: -621292395
+      BOOS-Appear_sheet_37: 1059264969
+      BOOS-Appear_sheet_38: 1024680548
+      BOOS-Appear_sheet_39: -2095570984
+      BOOS-Appear_sheet_4: -2126565224
+      BOOS-Appear_sheet_40: 504292742
+      BOOS-Appear_sheet_41: 1063748984
+      BOOS-Appear_sheet_42: -1656272941
+      BOOS-Appear_sheet_43: -1890918356
+      BOOS-Appear_sheet_44: 2014678520
+      BOOS-Appear_sheet_45: -1371892529
+      BOOS-Appear_sheet_46: 102676069
+      BOOS-Appear_sheet_47: 51160158
+      BOOS-Appear_sheet_48: -1566559494
+      BOOS-Appear_sheet_5: -543726553
+      BOOS-Appear_sheet_6: -1413230267
+      BOOS-Appear_sheet_7: 469229402
+      BOOS-Appear_sheet_8: 183387017
+      BOOS-Appear_sheet_9: 2057235895
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

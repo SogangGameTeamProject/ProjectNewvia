@@ -59,12 +59,12 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 181cf053ccfb5804eb4101ba1f47839a
-  position: {x: -193, y: 717}
+  position: {x: -199.75517, y: 716.00006}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: "\uC0AC\uAC70\uB9AC \uCCB4\uD06C"
   drawGizmos: 0
-  _chkRange: 7.5
+  _chkRange: 10
   _targetLayer:
     serializedVersion: 2
     m_Bits: 320

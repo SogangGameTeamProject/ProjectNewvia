@@ -110,7 +110,7 @@ namespace Newvia
                 int roofNum = overSpawnNum > 0 ? spawnMonsterNum: spawnMonsterNum-overSpawnNum;//스폰 반복 횟수
 
                 // 가중치에 따라 랜덤으로 스포너 선택하고 몬스터 스폰
-                for (int i = 0; i < spawnMonsterNum; i++)
+                for (int i = 0; i < roofNum; i++)
                 {
                     if (nowFieldMonsterCnt > maxFieldMonsterNum)
                         return;

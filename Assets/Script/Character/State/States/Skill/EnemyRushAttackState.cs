@@ -18,6 +18,8 @@ namespace Newvia
         [SerializeField]
         private float wallCheckDistance = 3.5f;//벽 충돌 체크 거리
         private Vector2 direction = Vector2.zero;//타겟 방향
+        //스킬 사거리 표시
+        public GameObject skillRangeDisplay = null;
 
         public override void Exit()
         {
@@ -53,10 +55,28 @@ namespace Newvia
                 direction = (_targetPosition - (Vector2)_character.transform.position).normalized;
                 
             }
+
+            //스킬 사거리 표시 구현
+            if (skillRangeDisplay)
+            {
+                skillRangeDisplay.SetActive(true);
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                if(_character.CharacterDirection == CharacterDirection.left)
+                {
+                    angle = 180 - angle;
+                }
+
+                // 오브젝트의 회전 설정 (기본적으로 오른쪽(0도) 방향이므로 추가적인 보정 필요 없음)
+                this.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+            }
         }
 
         protected override void HandleSkill()
         {
+            //스킬 사거리 표시 제거
+            if (skillRangeDisplay)
+                skillRangeDisplay.SetActive(false);
+
             _damageZone.SetActive(true);
             if (_targetPosition != null)
             {
@@ -94,6 +114,9 @@ namespace Newvia
 
         protected override void OnSkillEnd()
         {
+            //스킬 사거리 표시 제거
+            if (skillRangeDisplay)
+                skillRangeDisplay.SetActive(false);
             _damageZone.SetActive(false);
             // 돌진 종료 시 속도 0으로 설정
             _rBody.velocity = Vector2.zero;

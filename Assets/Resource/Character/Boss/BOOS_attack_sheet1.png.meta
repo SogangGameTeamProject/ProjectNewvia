@@ -108,7 +108,301 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: BOOS_attack_sheet1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 239
+        height: 118
+      alignment: 9
+      pivot: {x: 0.4853556, y: 0.2033898}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 678292dc4aa4f724390f41f239398ea8
+      internalID: -1962768610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS_attack_sheet1_1
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 0
+        width: 239
+        height: 118
+      alignment: 9
+      pivot: {x: 0.4853556, y: 0.2033898}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e2c9639f3f9aae41a799a89aa1a6d2d
+      internalID: 911374863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS_attack_sheet1_2
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 0
+        width: 239
+        height: 118
+      alignment: 9
+      pivot: {x: 0.4853556, y: 0.2033898}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3e83eb4d66fc704b8a1a1ec4a4e86eb
+      internalID: 745324880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS_attack_sheet1_3
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 0
+        width: 239
+        height: 118
+      alignment: 9
+      pivot: {x: 0.4853556, y: 0.2033898}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aad23d23eac09b4fb6fcc8596195f79
+      internalID: 1841746568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS_attack_sheet1_4
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 0
+        width: 239
+        height: 118
+      alignment: 9
+      pivot: {x: 0.4853556, y: 0.2033898}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b731b16798b93f446ac896100fee622c
+      internalID: 997189832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS_attack_sheet1_5
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 0
+        width: 239
+        height: 118
+      alignment: 9
+      pivot: {x: 0.4853556, y: 0.2033898}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e7cca30e05aa44d98fac29a865c8d1
+      internalID: 1877990637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS_attack_sheet1_6
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 0
+        width: 239
+        height: 118
+      alignment: 9
+      pivot: {x: 0.4853556, y: 0.2033898}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef342f5c1c01a6f4ca232bed3b4116e7
+      internalID: -1598965800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS_attack_sheet1_7
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 0
+        width: 239
+        height: 118
+      alignment: 9
+      pivot: {x: 0.4853556, y: 0.2033898}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91042374cc0d9bc4bb1d03f19a6f6a11
+      internalID: 1109638239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS_attack_sheet1_8
+      rect:
+        serializedVersion: 2
+        x: 1912
+        y: 0
+        width: 239
+        height: 118
+      alignment: 9
+      pivot: {x: 0.4853556, y: 0.2033898}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 317ebc0975b454649b99fd6f808434d2
+      internalID: -864719923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS_attack_sheet1_9
+      rect:
+        serializedVersion: 2
+        x: 2151
+        y: 0
+        width: 239
+        height: 118
+      alignment: 9
+      pivot: {x: 0.4853556, y: 0.2033898}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc601e203fc88f4e9b4e901dca3201b
+      internalID: 1124748173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS_attack_sheet1_10
+      rect:
+        serializedVersion: 2
+        x: 2390
+        y: 0
+        width: 239
+        height: 118
+      alignment: 9
+      pivot: {x: 0.4853556, y: 0.2033898}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c03afa28b915ee44ba6f04379f36c417
+      internalID: -670727607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS_attack_sheet1_11
+      rect:
+        serializedVersion: 2
+        x: 2629
+        y: 0
+        width: 239
+        height: 118
+      alignment: 9
+      pivot: {x: 0.4853556, y: 0.2033898}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9d5a2d4938d56e4091e1cb3b2a4963b
+      internalID: 1230754445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS_attack_sheet1_12
+      rect:
+        serializedVersion: 2
+        x: 2868
+        y: 0
+        width: 239
+        height: 118
+      alignment: 9
+      pivot: {x: 0.4853556, y: 0.2033898}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 395d6fdefbaefe346a46c13ba95772f8
+      internalID: -1125038292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOOS_attack_sheet1_13
+      rect:
+        serializedVersion: 2
+        x: 3107
+        y: 0
+        width: 239
+        height: 118
+      alignment: 9
+      pivot: {x: 0.4853556, y: 0.2033898}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4beaaa0467952c649b77a28f4a5204df
+      internalID: 844661331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +413,21 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BOOS_attack_sheet1_0: -1962768610
+      BOOS_attack_sheet1_1: 911374863
+      BOOS_attack_sheet1_10: -670727607
+      BOOS_attack_sheet1_11: 1230754445
+      BOOS_attack_sheet1_12: -1125038292
+      BOOS_attack_sheet1_13: 844661331
+      BOOS_attack_sheet1_2: 745324880
+      BOOS_attack_sheet1_3: 1841746568
+      BOOS_attack_sheet1_4: 997189832
+      BOOS_attack_sheet1_5: 1877990637
+      BOOS_attack_sheet1_6: -1598965800
+      BOOS_attack_sheet1_7: 1109638239
+      BOOS_attack_sheet1_8: -864719923
+      BOOS_attack_sheet1_9: 1124748173
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

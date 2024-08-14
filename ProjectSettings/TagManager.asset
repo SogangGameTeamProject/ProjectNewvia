@@ -46,9 +46,15 @@ TagManager:
   - name: Ground
     uniqueID: 2944029611
     locked: 0
+  - name: SkillRangeDisplay
+    uniqueID: 372263211
+    locked: 0
   - name: Character
     uniqueID: 3418851971
     locked: 0
   - name: Effect
     uniqueID: 2414001191
+    locked: 0
+  - name: UI
+    uniqueID: 1720052815
     locked: 0

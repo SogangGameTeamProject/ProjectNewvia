@@ -32,7 +32,7 @@ MonoBehaviour:
       weight: 1
     maxSpawnNum: 30
     spawnMonsterNum: 6
-    maxFieldMonsterNum: 15
+    maxFieldMonsterNum: 12
     minSpawnTime: 3
     maxSpawnTime: 5
   - monsterList:

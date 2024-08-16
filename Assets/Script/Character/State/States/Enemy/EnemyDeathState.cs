@@ -11,6 +11,7 @@ namespace Newvia
         {
             base.Enter(character);
             GameManager.Instance.killCount++;
+            Debug.Log("킬");
             MonsterSpawnManager.Instance.nowFieldMonsterCnt--;
         }
 

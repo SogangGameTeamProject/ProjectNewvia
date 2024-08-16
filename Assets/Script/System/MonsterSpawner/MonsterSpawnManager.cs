@@ -11,6 +11,9 @@ namespace Newvia
 
         public List<Monster> monsterList; // 스폰할 몬스터 리스트
 
+        //보스 스폰 정보
+        public bool isBoss = false;
+        public Transform bossSpawnPosition = null;
         //스포너 정보값
         [System.Serializable]
         public class Spawner {
@@ -37,10 +40,11 @@ namespace Newvia
         }
 
         //몬스터 스폰 활성화 
-        public void OnSpawner(List<Monster> monsterList, int maxSpawnNum, int spawnMonsterNum,
+        public void OnSpawner(bool isBoss, List<Monster> monsterList, int maxSpawnNum, int spawnMonsterNum,
             int maxFieldMonsterNum, float minSpawnTime, float maxSpawnTime)
         {
             //스포너 설정 초기화
+            this.isBoss = isBoss;
             this.monsterList = monsterList;
             this.maxSpawnNum = maxSpawnNum;
             this.spawnMonsterNum = spawnMonsterNum;
@@ -71,14 +75,25 @@ namespace Newvia
                     // a와 b 사이의 랜덤 시간 대기
                     float spawnInterval = Random.Range(minSpawnTime, maxSpawnTime);
                     yield return new WaitForSeconds(spawnInterval);
-
-                    // 랜덤 몬스터 스폰
-                    SpawnRandomMonster();
+                    //보스 몬스터 스폰
+                    if (isBoss)
+                        SpawnBossMonster();
+                    //일반 몬스터 랜덤 스폰
+                    else
+                        SpawnRandomMonster();
+                    
                 }
                 yield return null;
             }
         }
 
+        //보스 몬스터 스폰 이벤트 처리
+        public void SpawnBossMonster()
+        {
+            spawnCnt++;
+            nowFieldMonsterCnt++;
+            Instantiate(GetRandomMonster().prefab, bossSpawnPosition.position, Quaternion.identity, null);
+        }
 
         //몬스터를 생성하는 함수
         public void SpawnRandomMonster()
@@ -107,12 +122,13 @@ namespace Newvia
                 }
 
                 int overSpawnNum = (spawnCnt + spawnMonsterNum) - maxSpawnNum;//오버 스폰 수
-                int roofNum = overSpawnNum > 0 ? spawnMonsterNum: spawnMonsterNum-overSpawnNum;//스폰 반복 횟수
-
+               
+                int roofNum = overSpawnNum > 0 ? spawnMonsterNum - overSpawnNum : spawnMonsterNum;//스폰 반복 횟수
+                Debug.Log("spawnCnt:" + spawnCnt + ", spawnMonsterNum:" + spawnMonsterNum + ", overSpawnNum:" + overSpawnNum + ", roofNum: " + roofNum);
                 // 가중치에 따라 랜덤으로 스포너 선택하고 몬스터 스폰
                 for (int i = 0; i < roofNum; i++)
                 {
-                    if (nowFieldMonsterCnt > maxFieldMonsterNum)
+                    if (nowFieldMonsterCnt+1 > maxFieldMonsterNum)
                         return;
                     Spawner selectedSpawner = GetRandomSpawnerByWeight();
                     if (selectedSpawner != null)

@@ -96,8 +96,12 @@ namespace Newvia
 
         public virtual void OnHit(int hitType = 0)
         {
+            
             if(NowHp > 0 && !isInvincible)
+            {
                 NowHp--;
+            }
+                
         }
 
         //캐릭터 상태 초기화

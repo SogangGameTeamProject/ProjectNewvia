@@ -103,7 +103,7 @@ namespace Newvia
             if(wavesInfo != null)
             {
                 WaveLevel wave = wavesInfo.wave[nowWave];
-                _monsterSpawnManager.OnSpawner(wave.monsterList, wave.maxSpawnNum, wave.spawnMonsterNum,
+                _monsterSpawnManager.OnSpawner(wave.isBoss, wave.monsterList, wave.maxSpawnNum, wave.spawnMonsterNum,
                                                wave.maxFieldMonsterNum, wave.minSpawnTime, wave.maxSpawnTime);
             }
 

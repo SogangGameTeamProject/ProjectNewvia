@@ -20,7 +20,6 @@ namespace Newvia
             {
                 Destroy(collider);
             }
-
         }
 
         public override void StateUpdate()

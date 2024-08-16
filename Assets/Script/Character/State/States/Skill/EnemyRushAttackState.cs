@@ -63,7 +63,7 @@ namespace Newvia
                 float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
                 if(_character.CharacterDirection == CharacterDirection.left)
                 {
-                    angle = 180 - angle;
+                    angle = 180 + angle;
                 }
 
                 // 오브젝트의 회전 설정 (기본적으로 오른쪽(0도) 방향이므로 추가적인 보정 필요 없음)
@@ -92,7 +92,7 @@ namespace Newvia
                     isRushing = true;
                 }
 
-                RaycastHit2D hitInfo = Physics2D.CircleCast(transform.position, wallCheckDistance, Vector2.up, 1.1f, wallLayerMask);
+                RaycastHit2D hitInfo = Physics2D.CircleCast(transform.position, wallCheckDistance, Vector2.up, 1.25f, wallLayerMask);
                 // 돌진 종료 체크
                 if (Vector2.Distance(_character.transform.position, _targetPosition + direction * dashDistance) <= 1f
                     || hitInfo.collider != null

@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniPara: IsAttack
-  firstDealDuration: 0.5
+  firstDealDuration: 0.3
   lastDealDuration: 0.25
   skillDuration: 0.25
   chageState: 0

@@ -7,6 +7,7 @@ namespace Newvia
     [System.Serializable]
     public class WaveLevel
     {
+        public bool isBoss = false;
         public List<Monster> monsterList;//스폰할 몬스터 리스트
         public int maxSpawnNum = 30;//최대로 소환할 몬스터 수
         public int spawnMonsterNum = 3;//주기별 스폰할 몬스터 수

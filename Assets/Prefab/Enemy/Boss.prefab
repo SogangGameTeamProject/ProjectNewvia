@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 2939995966474624490, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: stateAniPara
+      value: IsNormarAttak
+      objectReference: {fileID: 0}
     - target: {fileID: 3100897008789503470, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: m_Controller
       value: 

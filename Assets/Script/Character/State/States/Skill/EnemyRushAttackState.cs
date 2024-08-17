@@ -17,6 +17,8 @@ namespace Newvia
         public LayerMask wallLayerMask; // 벽 레이어 마스크
         [SerializeField]
         private float wallCheckDistance = 3.5f;//벽 충돌 체크 거리
+        [SerializeField]
+        private float wallCastY = 1.25f;//벽 체크 케스트 시작 y위치 값
         private Vector2 direction = Vector2.zero;//타겟 방향
         //스킬 사거리 표시
         public GameObject skillRangeDisplay = null;
@@ -92,7 +94,7 @@ namespace Newvia
                     isRushing = true;
                 }
 
-                RaycastHit2D hitInfo = Physics2D.CircleCast(transform.position, wallCheckDistance, Vector2.up, 1.25f, wallLayerMask);
+                RaycastHit2D hitInfo = Physics2D.CircleCast(transform.position, wallCheckDistance, Vector2.up, wallCastY, wallLayerMask);
                 // 돌진 종료 체크
                 if (Vector2.Distance(_character.transform.position, _targetPosition + direction * dashDistance) <= 1f
                     || hitInfo.collider != null

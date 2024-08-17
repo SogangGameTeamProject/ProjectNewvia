@@ -59,12 +59,12 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 181cf053ccfb5804eb4101ba1f47839a
-  position: {x: -178, y: 794}
+  position: {x: -178, y: 806.263}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: "\uC0AC\uAC70\uB9AC \uCCB4\uD06C"
   drawGizmos: 0
-  _chkRange: 0.75
+  _chkRange: 1
   _targetLayer:
     serializedVersion: 2
     m_Bits: 320
@@ -83,7 +83,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: ad21a0568c9ee0b4ebc63172f7eb0c74
-  position: {x: -7.539978, y: 787.628}
+  position: {x: -6.6728616, y: 795.0074}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: "\uCFE8\uD0C0\uC784 \uCCB4\uD06C"

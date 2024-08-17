@@ -16,12 +16,10 @@ namespace Newvia
             {
                 IHit iHit = null;
                 other.gameObject.TryGetComponent<IHit>(out iHit);
-
                 if (iHit != null)
                 {
                     iHit.OnHit(damageType);
                 }
-                    
             }
         }
     }

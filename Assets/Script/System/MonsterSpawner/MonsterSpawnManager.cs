@@ -124,7 +124,6 @@ namespace Newvia
                 int overSpawnNum = (spawnCnt + spawnMonsterNum) - maxSpawnNum;//오버 스폰 수
                
                 int roofNum = overSpawnNum > 0 ? spawnMonsterNum - overSpawnNum : spawnMonsterNum;//스폰 반복 횟수
-                Debug.Log("spawnCnt:" + spawnCnt + ", spawnMonsterNum:" + spawnMonsterNum + ", overSpawnNum:" + overSpawnNum + ", roofNum: " + roofNum);
                 // 가중치에 따라 랜덤으로 스포너 선택하고 몬스터 스폰
                 for (int i = 0; i < roofNum; i++)
                 {

@@ -8,7 +8,7 @@ namespace Newvia
     {
         public GameObject _damageZone = null; // 활성화할 데미지 존 오브젝트
         private Rigidbody2D _rBody = null;
-        private Vector2 _targetPosition;
+        protected Vector2 _targetPosition;
         private bool isRushing = false;
         [SerializeField]
         private float rushPower = 30f;
@@ -19,7 +19,7 @@ namespace Newvia
         private float wallCheckDistance = 3.5f;//벽 충돌 체크 거리
         [SerializeField]
         private float wallCastY = 1.25f;//벽 체크 케스트 시작 y위치 값
-        private Vector2 direction = Vector2.zero;//타겟 방향
+        protected Vector2 direction = Vector2.zero;//타겟 방향
         //스킬 사거리 표시
         public GameObject skillRangeDisplay = null;
 
@@ -80,6 +80,7 @@ namespace Newvia
                 skillRangeDisplay.SetActive(false);
 
             _damageZone.SetActive(true);
+            
             if (_targetPosition != null)
             {
                 //돌진 방향에 따른 캐릭터 방향 조정

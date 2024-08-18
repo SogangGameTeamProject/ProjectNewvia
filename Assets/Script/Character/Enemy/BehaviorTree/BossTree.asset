@@ -64,7 +64,7 @@ MonoBehaviour:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: "\uC0AC\uAC70\uB9AC \uCCB4\uD06C"
   drawGizmos: 0
-  _chkRange: 3
+  _chkRange: 5
   _targetLayer:
     serializedVersion: 2
     m_Bits: 320
@@ -104,7 +104,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: b3f45304098f02c42ae80d7ead65a02b
-  position: {x: -73.67749, y: 993.00006}
+  position: {x: -73, y: 993}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: "\uC21C\uAC04 \uC774\uB3D9 \uACF5\uACA9 \uC0C1\uD0DC \uC804\uD658"
@@ -132,7 +132,7 @@ MonoBehaviour:
   drawGizmos: 0
   children:
   - {fileID: 9123770179934064320}
-  - {fileID: 7219637038576080500}
+  - {fileID: -392206429741667445}
   - {fileID: -8406216123550827362}
 --- !u!114 &-4020235176481896495
 MonoBehaviour:
@@ -244,6 +244,29 @@ MonoBehaviour:
   description: "\uC8FD\uC74C \uC0C1\uD0DC \uCCB4\uD06C"
   drawGizmos: 0
   chkState: 3
+--- !u!114 &-392206429741667445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460be9e34c566ea45b9e282b1adcb028, type: 3}
+  m_Name: Selector
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 9912f1600df3a5549a3119e56c77de5d
+  position: {x: 3.5398967, y: 615.9805}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: "\uBCF4\uC2A4 \uC2A4\uD0AC \uC120\uD0DD"
+  drawGizmos: 0
+  children:
+  - {fileID: 7213643872787124730}
+  - {fileID: -4020235176481896495}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,7 +299,7 @@ MonoBehaviour:
   - {fileID: 7006584622974610365}
   - {fileID: -2694321966096058910}
   - {fileID: -5417677290228715860}
-  - {fileID: 7219637038576080500}
+  - {fileID: -392206429741667445}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &3374588740961584852
@@ -314,15 +337,15 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: d2d225638e2b8d24cb57904ada92462c
-  position: {x: -481.41757, y: 989.42}
+  position: {x: -481, y: 990}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: "\uC0AC\uAC70\uB9AC \uCCB4\uD06C"
   drawGizmos: 0
-  _chkRange: 10
+  _chkRange: 15
   _targetLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
 --- !u!114 &7057051832192101713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,29 +391,6 @@ MonoBehaviour:
   - {fileID: 7006584622974610365}
   - {fileID: -2694321966096058910}
   - {fileID: -5417677290228715860}
---- !u!114 &7219637038576080500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
-  m_Name: Sequencer
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 2565e45e3b82bfe4da18bc182c864f91
-  position: {x: 2.699985, y: 629.85004}
-  blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
-  description: "\uC801 \uACF5\uACA9 \uC120\uD0DD"
-  drawGizmos: 0
-  children:
-  - {fileID: 7213643872787124730}
-  - {fileID: -4020235176481896495}
 --- !u!114 &7411764511287306591
 MonoBehaviour:
   m_ObjectHideFlags: 0

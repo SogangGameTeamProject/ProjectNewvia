@@ -53,8 +53,8 @@ MonoBehaviour:
   HandleSkilAniPara: 
   HandleLastDealAniPara: 
   _damageZone: {fileID: 6084614523517978057}
-  rushPower: 50
-  dashDistance: 5
+  rushPower: 75
+  dashDistance: 10
   wallLayerMask:
     serializedVersion: 2
     m_Bits: 65
@@ -70,7 +70,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5968028321473283330}
-  - component: {fileID: 7979657502138711334}
+  - component: {fileID: 8398959001232538012}
   m_Layer: 7
   m_Name: TeleptionAttackState
   m_TagString: Untagged
@@ -94,7 +94,7 @@ Transform:
   - {fileID: 5764713407418597119}
   m_Father: {fileID: 3631827188543563007}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7979657502138711334
+--- !u!114 &8398959001232538012
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,18 +103,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 4550868736317828420}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b37393b14fd0dd1439fc53584e61d76c, type: 3}
+  m_Script: {fileID: 11500000, guid: 66e1014f45a4ffb4882eff2ce807c50f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateAniPara: IsNormarAttak
-  firstDealDuration: 0.3
-  lastDealDuration: 0.1
-  skillDuration: 0.4
+  stateAniPara: IsTelepotion
+  firstDealDuration: 0.5
+  lastDealDuration: 0.25
+  skillDuration: 0.5
   chageState: 0
-  HandleSkilAniPara: 
+  HandleSkilAniPara: IsInstantAttack
   HandleLastDealAniPara: 
   _damageZone: {fileID: 4561537963173882179}
-  rushPower: 50
+  rushPower: 100
   dashDistance: 5
   wallLayerMask:
     serializedVersion: 2
@@ -122,6 +122,7 @@ MonoBehaviour:
   wallCheckDistance: 2.25
   wallCastY: 1.75
   skillRangeDisplay: {fileID: 0}
+  teleportDistance: 7.5
 --- !u!1001 &2291919287071777566
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -149,7 +150,7 @@ PrefabInstance:
     - target: {fileID: 2466751899837716075, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: _stateList.Array.data[5].state
       value: 
-      objectReference: {fileID: 3366734647048379489}
+      objectReference: {fileID: 8398959001232538012}
     - target: {fileID: 2466751899837716075, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: _stateList.Array.data[5].stateType
       value: 201

@@ -25,7 +25,8 @@ namespace Newvia {
         //상태 종료 시 처리
         public virtual void Exit()
         {
-            
+            if (_animator && stateAniPara != string.Empty)
+                _animator.ResetTrigger(stateAniPara);
         }
     }
 }

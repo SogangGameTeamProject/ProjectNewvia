@@ -9,6 +9,7 @@ namespace Newvia
     {
         private GameManager _gameManager;
         private CharacterStateContext _stateContext;//상태 콘텍스트
+        public CharacterStateType startState = CharacterStateType.Idle;
         public CharacterStateType runningStateType;
         //상태 관리를 위한 리스트
         [System.Serializable]
@@ -72,7 +73,7 @@ namespace Newvia
         {
             _gameManager = GameManager.Instance;
             _stateContext = new CharacterStateContext(this);
-            StateInit(CharacterStateType.Idle);
+            StateInit(startState);
             SettingInitStatus();//캐릭터 스테이터스 초기화
         }
 

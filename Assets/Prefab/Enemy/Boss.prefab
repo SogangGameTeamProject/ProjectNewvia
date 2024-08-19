@@ -54,13 +54,60 @@ MonoBehaviour:
   HandleLastDealAniPara: 
   _damageZone: {fileID: 6084614523517978057}
   rushPower: 75
-  dashDistance: 10
+  dashDistance: 7
   wallLayerMask:
     serializedVersion: 2
     m_Bits: 65
   wallCheckDistance: 2.25
   wallCastY: 1.75
   skillRangeDisplay: {fileID: 0}
+--- !u!1 &3997487448103607762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5397517271615619868}
+  - component: {fileID: 7405136397262596589}
+  m_Layer: 7
+  m_Name: AppearedState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5397517271615619868
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997487448103607762}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3631827188543563007}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7405136397262596589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3997487448103607762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7821d71a89a40742a455a5a9023a273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateAniPara: IsAppeared
+  appearedTime: 4
+  nextState: 0
 --- !u!1 &4550868736317828420
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,6 +170,37 @@ MonoBehaviour:
   wallCastY: 1.75
   skillRangeDisplay: {fileID: 0}
   teleportDistance: 7.5
+--- !u!1 &5211159451111877562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4058273768185490534}
+  m_Layer: 7
+  m_Name: ShadowSummonState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4058273768185490534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5211159451111877562}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3631827188543563007}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2291919287071777566
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -140,19 +218,39 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2466751899837716075, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: startState
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466751899837716075, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: runningStateType
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466751899837716075, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: _stateList.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2466751899837716075, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: _stateList.Array.data[4].state
       value: 
-      objectReference: {fileID: 3366734647048379489}
+      objectReference: {fileID: 7405136397262596589}
     - target: {fileID: 2466751899837716075, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: _stateList.Array.data[5].state
       value: 
+      objectReference: {fileID: 3366734647048379489}
+    - target: {fileID: 2466751899837716075, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: _stateList.Array.data[6].state
+      value: 
       objectReference: {fileID: 8398959001232538012}
     - target: {fileID: 2466751899837716075, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: _stateList.Array.data[4].stateType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466751899837716075, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: _stateList.Array.data[5].stateType
+      value: 101
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466751899837716075, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: _stateList.Array.data[6].stateType
       value: 201
       objectReference: {fileID: 0}
     - target: {fileID: 2939995966474624490, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
@@ -166,7 +264,7 @@ PrefabInstance:
     - target: {fileID: 4890638376562123823, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: tree
       value: 
-      objectReference: {fileID: 11400000, guid: 548a08c6733987f45b07a9c4ce27b025, type: 2}
+      objectReference: {fileID: 11400000, guid: 48ca3c6523abedd4783e00905f078b52, type: 2}
     - target: {fileID: 5202670395233222630, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -247,6 +345,12 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 97652503278385491, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3289984974567573473, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5397517271615619868}
+    - targetCorrespondingSourceObject: {fileID: 3289984974567573473, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4058273768185490534}
     - targetCorrespondingSourceObject: {fileID: 3289984974567573473, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7136276845362196403}

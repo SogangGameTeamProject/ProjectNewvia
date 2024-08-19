@@ -42,6 +42,12 @@ namespace Newvia
                     subWeapone.SetNowEnergy++;
             }
         }
+
+        public override void StateTransition(CharacterStateType type)
+        {
+            Debug.Log(type);
+            base.StateTransition(type);
+        }
     }
 }
 

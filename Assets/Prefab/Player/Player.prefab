@@ -45,6 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniPara: IsDash
+  stateCutScene: 0
+  virtualCameraName: VirtualCamera
+  zoomInFOV: 30
+  zoomSpeed: 2
   dashPower: 75
   dashTime: 0.4
 --- !u!1 &301061052409790782
@@ -92,7 +96,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniPara: IsDeath
-  deathTime: 1
+  stateCutScene: 1
+  virtualCameraName: VirtualCamera
+  zoomInFOV: 75
+  zoomSpeed: 100
+  deathTime: 2
+  vecZero: 0
 --- !u!1 &711521427536812909
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,7 +341,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -876115325
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -1884482886, guid: ff468aeab942a5444960df9f896dfda7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -354,7 +363,7 @@ SortingGroup:
   m_GameObject: {fileID: 3830553711805802979}
   m_Enabled: 1
   m_SortingLayerID: -876115325
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_SortAtRoot: 0
 --- !u!95 &7218197591909059364
@@ -497,6 +506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07cdf46ddc15c0544bf93188fa83fef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startState: 0
   runningStateType: 0
   _stateList:
   - stateType: 0
@@ -671,6 +681,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniPara: IsIdle
+  stateCutScene: 0
+  virtualCameraName: VirtualCamera
+  zoomInFOV: 30
+  zoomSpeed: 2
 --- !u!1 &6718930818998982780
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,6 +730,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniPara: IsWalrk
+  stateCutScene: 0
+  virtualCameraName: VirtualCamera
+  zoomInFOV: 30
+  zoomSpeed: 2
 --- !u!1 &7577910487461644889
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,3 +891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniPara: 
+  stateCutScene: 0
+  virtualCameraName: VirtualCamera
+  zoomInFOV: 30
+  zoomSpeed: 2

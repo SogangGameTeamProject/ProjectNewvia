@@ -20,6 +20,12 @@ namespace Newvia
 
         public override void StateUpdate()
         {
+            if(GameManager.Instance.flowType != GameFlowType.Proceeding)
+            {
+                _character.StateTransition(CharacterStateType.Idle);
+                return;
+            }
+
             //이동 구현 부분
             float moveHorizontal = Input.GetAxis("Horizontal");
             float moveVertical = Input.GetAxis("Vertical");

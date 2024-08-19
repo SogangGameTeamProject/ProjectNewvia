@@ -27,6 +27,10 @@ namespace Newvia
 
         public override void StateUpdate()
         {
+            if(GameManager.Instance.flowType != GameFlowType.Proceeding)
+            {
+                _target = null;
+            }
             //플레이어 추적 구현
             if (_target != null)
             {

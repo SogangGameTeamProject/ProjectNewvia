@@ -125,24 +125,28 @@ namespace Newvia
             }
         }
 
-        //마우스 방향에 따른 무기 회전
+        // 마우스 방향에 따른 무기 회전
         private void RotateWeapon()
         {
             CharacterStateType runningStateType = _playerController.runningStateType;
             if (runningStateType == CharacterStateType.Idle ||
                 runningStateType == CharacterStateType.Move ||
-                runningStateType == CharacterStateType.AttackSkill
-                )
+                runningStateType == CharacterStateType.AttackSkill)
             {
-                Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                Vector3 direction = mousePosition - transform.position;
+                // 카메라의 깊이(nearClipPlane) 설정
+                Vector3 mousePosition = Input.mousePosition;
+                mousePosition.z = Camera.main.WorldToScreenPoint(transform.position).z;
+
+                // 마우스 위치를 월드 좌표로 변환
+                Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+                Vector3 direction = worldMousePosition - transform.position;
                 float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-                // Rotate the weapon
+                // 무기 회전 적용
                 transform.rotation = Quaternion.Euler(0, 0, angle);
 
-                // Flip the player based on mouse position
-                if (mousePosition.x < _playerController.transform.position.x)
+                // 마우스 위치에 따라 캐릭터를 좌우로 플립
+                if (worldMousePosition.x < _playerController.transform.position.x)
                 {
                     this.transform.localScale = new Vector3(-1, -1, 1);
                     _playerController.CharacterDirection = CharacterDirection.left;
@@ -154,5 +158,6 @@ namespace Newvia
                 }
             }
         }
+
     }
 }

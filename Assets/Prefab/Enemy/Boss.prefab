@@ -46,6 +46,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniPara: IsNormarAttak
+  stateCutScene: 0
+  virtualCameraName: VirtualCamera
+  zoomInFOV: 30
+  zoomSpeed: 10
   firstDealDuration: 0.3
   lastDealDuration: 0.1
   skillDuration: 0.4
@@ -106,6 +110,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniPara: IsAppeared
+  stateCutScene: 1
+  virtualCameraName: VirtualCamera
+  zoomInFOV: 75
+  zoomSpeed: 100
   appearedTime: 4
   nextState: 0
 --- !u!1 &4550868736317828420
@@ -154,7 +162,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniPara: IsTelepotion
-  firstDealDuration: 0.5
+  stateCutScene: 0
+  virtualCameraName: VirtualCamera
+  zoomInFOV: 30
+  zoomSpeed: 10
+  firstDealDuration: 1
   lastDealDuration: 0.25
   skillDuration: 0.5
   chageState: 0
@@ -217,6 +229,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2372265220114701574, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2372265220114701574, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2466751899837716075, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: startState
       value: 4
@@ -261,6 +281,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 983afa2eca75da5488b1105ed7a563ac, type: 2}
+    - target: {fileID: 4331729793563792181, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4890638376562123823, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: tree
       value: 
@@ -337,9 +361,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7322128526996092535, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.166
+      objectReference: {fileID: 0}
+    - target: {fileID: 7322128526996092535, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.163
+      objectReference: {fileID: 0}
+    - target: {fileID: 8499508103413739669, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: vecZero
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8499508103413739669, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: deathTime
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8499508103413739669, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: zoomInFOV
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8499508103413739669, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: zoomSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8499508103413739669, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: stateCutScene
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8548918972681659567, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8548918972681659567, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

@@ -79,7 +79,7 @@ namespace Newvia
             if (skillRangeDisplay)
                 skillRangeDisplay.SetActive(false);
 
-            _damageZone.SetActive(true);
+            
             
             if (_targetPosition != null)
             {
@@ -110,7 +110,7 @@ namespace Newvia
 
         protected override void HandleLastDeal()
         {
-            _damageZone.SetActive(false);
+            _damageZone.SetActive(true);
             isRushing = false;
             _rBody.velocity = Vector2.zero;
         }

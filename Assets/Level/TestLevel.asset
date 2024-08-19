@@ -44,5 +44,5 @@ MonoBehaviour:
     maxSpawnNum: 1
     spawnMonsterNum: 1
     maxFieldMonsterNum: 15
-    minSpawnTime: 3
-    maxSpawnTime: 5
+    minSpawnTime: 1
+    maxSpawnTime: 1

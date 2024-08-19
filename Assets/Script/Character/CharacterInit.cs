@@ -79,8 +79,7 @@ namespace Newvia
 
         private void FixedUpdate()
         {
-            if(_gameManager.flowType == GameFlowType.Proceeding)
-                _stateContext.StateUpdate();
+            _stateContext.StateUpdate();
         }
 
         //캐릭터 초기 스테이터스 값 적용하는 함수
@@ -119,7 +118,7 @@ namespace Newvia
         }
 
         //캐릭터상태 전환
-        public void StateTransition(CharacterStateType type)
+        public virtual void StateTransition(CharacterStateType type)
         {
             CharacterState state = null;
             stateInfo findState = _stateList.Find(state => state.stateType == type);

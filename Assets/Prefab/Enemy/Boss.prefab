@@ -96,6 +96,61 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4058273768185490534}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3031259738528286831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7224137837052323562}
+  - component: {fileID: 2444195434701909335}
+  m_Layer: 7
+  m_Name: FinishAttackState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7224137837052323562
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3031259738528286831}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3631827188543563007}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2444195434701909335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3031259738528286831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6f68e8e3e444b349ad4dd1380700fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateAniPara: 
+  stateCutScene: 0
+  virtualCameraName: VirtualCamera
+  zoomInFOV: 30
+  zoomSpeed: 2
+  firstDealDuration: 0.25
+  lastDealDuration: 0.25
+  skillDuration: 1
+  chageState: 0
+  HandleSkilAniPara: 
+  HandleLastDealAniPara: 
 --- !u!1 &4550868736317828420
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,6 +572,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3289984974567573473, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5968028321473283330}
+    - targetCorrespondingSourceObject: {fileID: 3289984974567573473, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7224137837052323562}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 265350501265156002, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       insertIndex: -1

@@ -11,10 +11,9 @@ namespace Newvia
             base.Enter(character);
             _character.isInvincible = false;
         }
-
-        public override void Exit()
+        protected override void HandleLastDeal()
         {
-            base.Exit();
+            base.HandleLastDeal();
             _character.isInvincible = true;
         }
     }

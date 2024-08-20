@@ -1,0 +1,664 @@
+fileFormatVersion: 2
+guid: 1dcb8ecd2ddc3e944acab6c200f3fe55
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 15
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BossFinalAttak1-25_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 614
+        height: 415
+      alignment: 9
+      pivot: {x: 0.3289902, y: 0.1951807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8caa3cf7ec437ce4e91dfa62c4ec77f2
+      internalID: -1409480388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossFinalAttak1-25_1
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 0
+        width: 614
+        height: 415
+      alignment: 9
+      pivot: {x: 0.3289902, y: 0.1951807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac17a7c558f1a384f9e1bee6d2e8f3c0
+      internalID: -1366212839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossFinalAttak1-25_2
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 0
+        width: 614
+        height: 415
+      alignment: 9
+      pivot: {x: 0.3289902, y: 0.1951807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46dd64ed54606c24bbc5b555aab7f38a
+      internalID: -893320636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossFinalAttak1-25_3
+      rect:
+        serializedVersion: 2
+        x: 1842
+        y: 0
+        width: 614
+        height: 415
+      alignment: 9
+      pivot: {x: 0.3289902, y: 0.1951807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4d3a2831b7f9654580d6fb024d46887
+      internalID: -1734780671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossFinalAttak1-25_4
+      rect:
+        serializedVersion: 2
+        x: 2456
+        y: 0
+        width: 614
+        height: 415
+      alignment: 9
+      pivot: {x: 0.3289902, y: 0.1951807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63626f9a326107646a3223700d2a68e7
+      internalID: 683216899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossFinalAttak1-25_5
+      rect:
+        serializedVersion: 2
+        x: 3070
+        y: 0
+        width: 614
+        height: 415
+      alignment: 9
+      pivot: {x: 0.3289902, y: 0.1951807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c522bbb4e2cf6204dbbacdafe4e54e7f
+      internalID: 1086428213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossFinalAttak1-25_6
+      rect:
+        serializedVersion: 2
+        x: 3684
+        y: 0
+        width: 614
+        height: 415
+      alignment: 9
+      pivot: {x: 0.3289902, y: 0.1951807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b2c45b89d06bc44b84cc7531ab18a16
+      internalID: 1621813515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossFinalAttak1-25_7
+      rect:
+        serializedVersion: 2
+        x: 4298
+        y: 0
+        width: 614
+        height: 415
+      alignment: 9
+      pivot: {x: 0.3289902, y: 0.1951807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 338ca1e9f6b0db449a802b89235dec62
+      internalID: -828891825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossFinalAttak1-25_8
+      rect:
+        serializedVersion: 2
+        x: 4912
+        y: 0
+        width: 614
+        height: 415
+      alignment: 9
+      pivot: {x: 0.3289902, y: 0.1951807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 567b5ecb99dbeb44382c30a4028b52d0
+      internalID: 1025480511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossFinalAttak1-25_9
+      rect:
+        serializedVersion: 2
+        x: 5526
+        y: 0
+        width: 614
+        height: 415
+      alignment: 9
+      pivot: {x: 0.3289902, y: 0.1951807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29c05b9a50e61634d8c414dd415ed165
+      internalID: -1671980862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossFinalAttak1-25_10
+      rect:
+        serializedVersion: 2
+        x: 6140
+        y: 0
+        width: 614
+        height: 415
+      alignment: 9
+      pivot: {x: 0.3289902, y: 0.1951807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eae5f276ec680314eb77d8f450248175
+      internalID: 44408523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossFinalAttak1-25_11
+      rect:
+        serializedVersion: 2
+        x: 6754
+        y: 0
+        width: 614
+        height: 415
+      alignment: 9
+      pivot: {x: 0.3289902, y: 0.1951807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ea57c4637645cf4cb2348be680648f5
+      internalID: -1743127934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossFinalAttak1-25_12
+      rect:
+        serializedVersion: 2
+        x: 7368
+        y: 0
+        width: 614
+        height: 415
+      alignment: 9
+      pivot: {x: 0.3289902, y: 0.1951807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb8865bfc1d50824da5f840f32b70aa8
+      internalID: 1314905985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossFinalAttak1-25_13
+      rect:
+        serializedVersion: 2
+        x: 7982
+        y: 0
+        width: 614
+        height: 415
+      alignment: 9
+      pivot: {x: 0.3289902, y: 0.1951807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02737e3980da67b4f8ab505c911a3193
+      internalID: 897435842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossFinalAttak1-25_14
+      rect:
+        serializedVersion: 2
+        x: 8596
+        y: 0
+        width: 614
+        height: 415
+      alignment: 9
+      pivot: {x: 0.3289902, y: 0.1951807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f347c27a5d89f848856f7eddcc99f3d
+      internalID: -1924875040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossFinalAttak1-25_15
+      rect:
+        serializedVersion: 2
+        x: 9210
+        y: 0
+        width: 614
+        height: 415
+      alignment: 9
+      pivot: {x: 0.3289902, y: 0.1951807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08d2159c87566d44f9759657758eaf24
+      internalID: 206361484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossFinalAttak1-25_16
+      rect:
+        serializedVersion: 2
+        x: 9824
+        y: 0
+        width: 614
+        height: 415
+      alignment: 9
+      pivot: {x: 0.3289902, y: 0.1951807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7af4365be706c247a3a46e131371594
+      internalID: -1569766124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossFinalAttak1-25_17
+      rect:
+        serializedVersion: 2
+        x: 10438
+        y: 0
+        width: 614
+        height: 415
+      alignment: 9
+      pivot: {x: 0.3289902, y: 0.1951807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39358b737d76b394cab800ba8bcbb098
+      internalID: 2014323492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossFinalAttak1-25_18
+      rect:
+        serializedVersion: 2
+        x: 11052
+        y: 0
+        width: 614
+        height: 415
+      alignment: 9
+      pivot: {x: 0.3289902, y: 0.1951807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec0c76c6221ba5b43adf5cca87e0b7b9
+      internalID: 1306503491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossFinalAttak1-25_19
+      rect:
+        serializedVersion: 2
+        x: 11666
+        y: 0
+        width: 614
+        height: 415
+      alignment: 9
+      pivot: {x: 0.3289902, y: 0.1951807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ee45ee2383e6344ab4d83e76859070
+      internalID: 1526747269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossFinalAttak1-25_20
+      rect:
+        serializedVersion: 2
+        x: 12280
+        y: 0
+        width: 614
+        height: 415
+      alignment: 9
+      pivot: {x: 0.3289902, y: 0.1951807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a6a305a72f442c419afceafc5d51e2c
+      internalID: 1966682693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossFinalAttak1-25_21
+      rect:
+        serializedVersion: 2
+        x: 12894
+        y: 0
+        width: 614
+        height: 415
+      alignment: 9
+      pivot: {x: 0.3289902, y: 0.1951807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d36e5b4f3abe8ac4193bca4eb2054bb5
+      internalID: 233391276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossFinalAttak1-25_22
+      rect:
+        serializedVersion: 2
+        x: 13508
+        y: 0
+        width: 614
+        height: 415
+      alignment: 9
+      pivot: {x: 0.3289902, y: 0.1951807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65d72f0a7b1c8a048aadedda11c7200b
+      internalID: -917566904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossFinalAttak1-25_23
+      rect:
+        serializedVersion: 2
+        x: 14122
+        y: 0
+        width: 614
+        height: 415
+      alignment: 9
+      pivot: {x: 0.3289902, y: 0.1951807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34196d6a75df38640a484ee1fcc0fe10
+      internalID: -463620641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossFinalAttak1-25_24
+      rect:
+        serializedVersion: 2
+        x: 14736
+        y: 0
+        width: 614
+        height: 415
+      alignment: 9
+      pivot: {x: 0.3289902, y: 0.1951807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89eec504750077c4a9fc4da9bbf85841
+      internalID: 477382622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      BossFinalAttak1-25_0: -1409480388
+      BossFinalAttak1-25_1: -1366212839
+      BossFinalAttak1-25_10: 44408523
+      BossFinalAttak1-25_11: -1743127934
+      BossFinalAttak1-25_12: 1314905985
+      BossFinalAttak1-25_13: 897435842
+      BossFinalAttak1-25_14: -1924875040
+      BossFinalAttak1-25_15: 206361484
+      BossFinalAttak1-25_16: -1569766124
+      BossFinalAttak1-25_17: 2014323492
+      BossFinalAttak1-25_18: 1306503491
+      BossFinalAttak1-25_19: 1526747269
+      BossFinalAttak1-25_2: -893320636
+      BossFinalAttak1-25_20: 1966682693
+      BossFinalAttak1-25_21: 233391276
+      BossFinalAttak1-25_22: -917566904
+      BossFinalAttak1-25_23: -463620641
+      BossFinalAttak1-25_24: 477382622
+      BossFinalAttak1-25_3: -1734780671
+      BossFinalAttak1-25_4: 683216899
+      BossFinalAttak1-25_5: 1086428213
+      BossFinalAttak1-25_6: 1621813515
+      BossFinalAttak1-25_7: -828891825
+      BossFinalAttak1-25_8: 1025480511
+      BossFinalAttak1-25_9: -1671980862
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

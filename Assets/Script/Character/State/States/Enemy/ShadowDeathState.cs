@@ -10,7 +10,7 @@ namespace Newvia
         public override void Enter(CharacterInit character)
         {
             base.Enter(character);
-            
+            ((EnemyController)_summoner).SetSturnCnt++;
         }
 
         public override void StateUpdate()
@@ -26,7 +26,7 @@ namespace Newvia
         protected override void OnDeath()
         {
             base.OnDeath();
-            ((EnemyController)_summoner).SetSturnCnt++;
+            
         }
 
 

@@ -2,17 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TheKiwiCoder;
+using Unity.VisualScripting;
 
 namespace Newvia
 {
     public class CoolTimeCheck : ActionNode
     {
+        public bool _isStartupCool = false;//시작 시 쿨타운 부여 여부
         public float _coolTime = 5f;//쿨타임
         private float _lastEndTime = -Mathf.Infinity; // 마지막 종료 시간
 
+        private void Awake()
+        {
+            // 시작 시 쿨다운 부여
+            if (_isStartupCool)
+                _lastEndTime = Time.time + _coolTime;
+        }
+
         protected override void OnStart()
         {
-            
         }
 
         protected override void OnStop()

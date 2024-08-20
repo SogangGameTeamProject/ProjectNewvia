@@ -8,7 +8,21 @@ namespace Newvia
     public class EnemyController : CharacterInit
     {
         private NavMeshAgent _agent;
-
+        public int sturnCnt = 3;//스턴 까지의 카운트
+        private int nowSturnCnt = 0;//현제 스턴 카운트
+        public int SetSturnCnt
+        {
+            get
+            {
+                return nowSturnCnt;
+            }
+            set
+            {
+                nowSturnCnt = Mathf.Clamp(value, 0, sturnCnt);
+                if (nowSturnCnt == sturnCnt)
+                    StateTransition(CharacterStateType.Hit);
+            }
+        }
         protected override void Start()
         {
             base.Start();
@@ -45,7 +59,6 @@ namespace Newvia
 
         public override void StateTransition(CharacterStateType type)
         {
-            Debug.Log(type);
             base.StateTransition(type);
         }
     }

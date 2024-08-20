@@ -13,6 +13,15 @@ MonoBehaviour:
   m_Name: TestLevel
   m_EditorClassIdentifier: 
   wave:
+  - isBoss: 1
+    monsterList:
+    - prefab: {fileID: 148367944906056068, guid: ad3e823057373d14490cf9c820d2a882, type: 3}
+      weight: 2
+    maxSpawnNum: 1
+    spawnMonsterNum: 1
+    maxFieldMonsterNum: 15
+    minSpawnTime: 1
+    maxSpawnTime: 1
   - isBoss: 0
     monsterList:
     - prefab: {fileID: 2144157276693955226, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
@@ -37,12 +46,3 @@ MonoBehaviour:
     maxFieldMonsterNum: 12
     minSpawnTime: 2
     maxSpawnTime: 3
-  - isBoss: 1
-    monsterList:
-    - prefab: {fileID: 148367944906056068, guid: ad3e823057373d14490cf9c820d2a882, type: 3}
-      weight: 2
-    maxSpawnNum: 1
-    spawnMonsterNum: 1
-    maxFieldMonsterNum: 15
-    minSpawnTime: 1
-    maxSpawnTime: 1

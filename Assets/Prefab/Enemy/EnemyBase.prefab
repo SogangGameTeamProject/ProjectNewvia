@@ -46,6 +46,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniPara: IsAttack
+  stateCutScene: 0
+  virtualCameraName: VirtualCamera
+  zoomInFOV: 30
+  zoomSpeed: 2
   firstDealDuration: 0.3
   lastDealDuration: 0.25
   skillDuration: 0.25
@@ -98,6 +102,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniPara: 
+  stateCutScene: 0
+  virtualCameraName: VirtualCamera
+  zoomInFOV: 30
+  zoomSpeed: 2
 --- !u!1 &456228080294387207
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,6 +187,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniPara: IsIdle
+  stateCutScene: 0
+  virtualCameraName: VirtualCamera
+  zoomInFOV: 30
+  zoomSpeed: 2
 --- !u!1 &2144157276693955226
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,8 +201,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6470318082748202330}
   - component: {fileID: 5202670395233222630}
-  - component: {fileID: 6276406168292599155}
   - component: {fileID: 3100897008789503470}
+  - component: {fileID: 6276406168292599155}
   - component: {fileID: 8130798364931479644}
   - component: {fileID: 6178135845029963205}
   - component: {fileID: 2466751899837716075}
@@ -272,6 +284,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!95 &3100897008789503470
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144157276693955226}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ba7925f3f002ef946ac14804d43d326d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!50 &6276406168292599155
 Rigidbody2D:
   serializedVersion: 4
@@ -299,27 +332,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!95 &3100897008789503470
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2144157276693955226}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ba7925f3f002ef946ac14804d43d326d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!58 &8130798364931479644
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -412,6 +424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e862790522948d418acf5e0cf494e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startState: 0
   runningStateType: 0
   _stateList:
   - stateType: 0
@@ -444,7 +457,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 1
-  m_BaseOffset: 2.1333334
+  m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 1
 --- !u!114 &4890638376562123823
@@ -620,6 +633,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniPara: IsWalrk
+  stateCutScene: 0
+  virtualCameraName: VirtualCamera
+  zoomInFOV: 30
+  zoomSpeed: 2
 --- !u!1 &8609693433598998547
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,8 +764,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniPara: IsDeath
+  stateCutScene: 0
+  virtualCameraName: VirtualCamera
+  zoomInFOV: 30
+  zoomSpeed: 2
   deathTime: 1
+  vecZero: 0
   soulPre: {fileID: 7029730050973029124, guid: 6595fd205460c8c4cbbfaaedc394f95f, type: 3}
+  isDeathCount: 1
 --- !u!1001 &8541009266366724631
 PrefabInstance:
   m_ObjectHideFlags: 0

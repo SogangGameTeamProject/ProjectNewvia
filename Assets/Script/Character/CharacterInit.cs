@@ -45,7 +45,7 @@ namespace Newvia
         public int power {  get; private set; }//공격력
         public float moveSpeed {  get; private set; }//스피드
 
-        public bool isInvincible { get; set; }//무적 여부
+        public bool isInvincible = false;//무적 여부
         //캐릭터 방향
         private CharacterDirection characterDirection = CharacterDirection.right;
         public CharacterDirection CharacterDirection

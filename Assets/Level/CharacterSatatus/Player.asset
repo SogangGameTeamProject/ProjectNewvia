@@ -15,7 +15,7 @@ MonoBehaviour:
   characterName: Player
   hp: 1
   power: 1
-  moveSpeed: 15
+  moveSpeed: 20
   MaxStamina: 3
   StaminaRecoveryAmount: 0.1
   DashStaminaCoast: 3

@@ -60,7 +60,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6450775670995030192}
-  - component: {fileID: 1804056171143423523}
+  - component: {fileID: 4264941739483613564}
   m_Layer: 6
   m_Name: DeathState
   m_TagString: Untagged
@@ -83,7 +83,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 249055334795693142}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1804056171143423523
+--- !u!114 &4264941739483613564
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,11 +92,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 301061052409790782}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62503eb8847e8df4fbeba747debfa7ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 20c9eb10b11827645a0b727d24973f0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniPara: IsDeath
-  stateCutScene: 1
+  stateCutScene: 0
   virtualCameraName: VirtualCamera
   zoomInFOV: 75
   zoomSpeed: 100
@@ -516,10 +516,11 @@ MonoBehaviour:
   - stateType: 2
     state: {fileID: 5956038217694625353}
   - stateType: 3
-    state: {fileID: 1804056171143423523}
+    state: {fileID: 4264941739483613564}
   - stateType: 201
     state: {fileID: 3963996330606078325}
   _statusInit: {fileID: 11400000, guid: b0a042c49543b3544ab35755e9330963, type: 2}
+  isInvincible: 0
   staminaRecoveryCycle: 0.05
   _weaponePre: {fileID: 7689076634450953901, guid: eff9de73b61ae6744898f1114ebb5d6a, type: 3}
   _weaponMountingLocation: {fileID: 1199028205677779614}

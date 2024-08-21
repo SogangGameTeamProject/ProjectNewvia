@@ -15,4 +15,4 @@ MonoBehaviour:
   characterName: Enemy
   hp: 1
   power: 1
-  moveSpeed: 30
+  moveSpeed: 35

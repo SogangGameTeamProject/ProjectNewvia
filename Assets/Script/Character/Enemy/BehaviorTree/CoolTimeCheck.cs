@@ -17,7 +17,7 @@ namespace Newvia
             // 시작 시 쿨다운 부여
             if (_isStartupCool)
             {
-                _lastEndTime = 0;
+                _lastEndTime = Time.time;
             }
                 
         }

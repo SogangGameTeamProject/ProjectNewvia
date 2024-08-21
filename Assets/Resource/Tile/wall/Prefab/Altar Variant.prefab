@@ -68,6 +68,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5318795837537189747, guid: 0a089ad795f30224faab961478af467e, type: 3}
+      propertyPath: m_FalloffIntensity
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336380471804444521, guid: 0a089ad795f30224faab961478af467e, type: 3}
+      propertyPath: soulsRequired
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7920193090047061021, guid: 0a089ad795f30224faab961478af467e, type: 3}
       propertyPath: m_Enabled
       value: 0

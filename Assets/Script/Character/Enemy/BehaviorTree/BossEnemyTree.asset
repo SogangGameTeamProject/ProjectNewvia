@@ -485,7 +485,7 @@ MonoBehaviour:
   description: 
   drawGizmos: 0
   _isStartupCool: 1
-  _coolTime: 4
+  _coolTime: 8
 --- !u!114 &5550817224370282524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -587,7 +587,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 124bbfb71d6803443bd96322df0d8718
-  position: {x: -188, y: 1412}
+  position: {x: -187, y: 1412}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: 

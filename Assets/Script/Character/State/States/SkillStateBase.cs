@@ -32,8 +32,8 @@ namespace Newvia
 
         public override void Exit()
         {
-            base.Exit();
             OnSkillEnd();
+            base.Exit();
         }
 
         public override void StateUpdate()

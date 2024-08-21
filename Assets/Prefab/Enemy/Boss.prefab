@@ -51,7 +51,7 @@ MonoBehaviour:
   zoomInFOV: 30
   zoomSpeed: 10
   firstDealDuration: 0.3
-  lastDealDuration: 0.1
+  lastDealDuration: 0.5
   skillDuration: 0.4
   chageState: 0
   HandleSkilAniPara: 
@@ -125,7 +125,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8965668553388189736}
   m_Father: {fileID: 3631827188543563007}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2444195434701909335
@@ -140,17 +141,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6f68e8e3e444b349ad4dd1380700fd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateAniPara: 
-  stateCutScene: 0
+  stateAniPara: IsFinalAttackReady
+  stateCutScene: 1
   virtualCameraName: VirtualCamera
-  zoomInFOV: 30
-  zoomSpeed: 2
-  firstDealDuration: 0.25
-  lastDealDuration: 0.25
-  skillDuration: 1
-  chageState: 0
+  zoomInFOV: 135
+  zoomSpeed: 10
+  firstDealDuration: 3.2
+  lastDealDuration: 3
+  skillDuration: 10
+  chageState: 102
   HandleSkilAniPara: 
-  HandleLastDealAniPara: 
+  HandleLastDealAniPara: IsFinalAttack
+  isChaging: 0
 --- !u!1 &4550868736317828420
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,6 +282,100 @@ MonoBehaviour:
   - {fileID: 1036729271913601708}
   - {fileID: 5388230106399952920}
   shadowPre: {fileID: 8006287142673437887, guid: 09bf4620ee0411044b3b84a0517400d3, type: 3}
+--- !u!1 &6462268182664923979
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8965668553388189736}
+  - component: {fileID: 4548924935769379996}
+  m_Layer: 7
+  m_Name: SwardLight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &8965668553388189736
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6462268182664923979}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.77, y: 2.53, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7224137837052323562}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4548924935769379996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6462268182664923979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
+  m_LightType: 1
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Intensity: 1
+  m_LightVolumeIntensity: 1
+  m_LightVolumeIntensityEnabled: 0
+  m_ApplyToSortingLayers: 00000000ab537aaf2b493016838ac7cb27bce28f4fec8566
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowIntensityEnabled: 0
+  m_ShadowIntensity: 0.75
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: 0.34914994, y: 0.18299985, z: 0}
+    m_Extent: {x: 5.92865, y: 5.6385, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 1
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.19591129, y: -4.456497, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 2.1673923, y: -3.5900004, z: 0}
+  - {x: 1.1422834, y: -0.37488556, z: 0}
+  - {x: 5.2794213, y: 0.7547393, z: 0}
+  - {x: 1.0723896, y: 0.5104358, z: 0}
+  - {x: 3.4821353, y: 3.2491558, z: 0}
+  - {x: 0.58313227, y: 1.6054385, z: 0}
+  - {x: 0.20797193, y: 4.824457, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
+  - {x: -3.9366655, y: 3.7139018, z: 0}
+  - {x: -0.9079344, y: 0.2658069, z: 0}
+  - {x: -4.5810556, y: -0.26707196, z: 0}
+  - {x: -1.0477219, y: -0.270046, z: 0}
+  - {x: -3.726985, y: -2.8561153, z: 0}
 --- !u!1 &6889000050450430197
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,7 +480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2466751899837716075, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: _stateList.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2466751899837716075, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: _stateList.Array.data[2].state
@@ -405,7 +501,7 @@ PrefabInstance:
     - target: {fileID: 2466751899837716075, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: _stateList.Array.data[7].state
       value: 
-      objectReference: {fileID: 5489539232271124012}
+      objectReference: {fileID: 2444195434701909335}
     - target: {fileID: 2466751899837716075, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: _stateList.Array.data[4].stateType
       value: 4
@@ -420,7 +516,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2466751899837716075, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: _stateList.Array.data[7].stateType
-      value: 301
+      value: 102
       objectReference: {fileID: 0}
     - target: {fileID: 2939995966474624490, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: stateAniPara
@@ -602,7 +698,7 @@ MonoBehaviour:
   virtualCameraName: VirtualCamera
   zoomInFOV: 30
   zoomSpeed: 2
-  firstDealDuration: 2
+  firstDealDuration: 5
   lastDealDuration: 0.9
   skillDuration: 0.1
   chageState: 0

@@ -16,7 +16,10 @@ namespace Newvia
         {
             // 시작 시 쿨다운 부여
             if (_isStartupCool)
-                _lastEndTime = Time.time + _coolTime;
+            {
+                _lastEndTime = 0;
+            }
+                
         }
 
         protected override void OnStart()
@@ -35,6 +38,7 @@ namespace Newvia
             {
                 // 쿨타임이 지난 경우
                 _lastEndTime = Time.time; // 마지막 종료 시간을 현재 시간으로 업데이트
+                
                 return State.Success;
             }
             else

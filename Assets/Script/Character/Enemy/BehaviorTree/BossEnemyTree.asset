@@ -287,12 +287,12 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 6783c2b5600c4ee47b3de1dab373c004
-  position: {x: -358.10013, y: 1332.9502}
+  position: {x: -338.40002, y: 1335.2001}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: "\uC804\uBA78\uAE30 \uC2E4\uD589"
   drawGizmos: 0
-  _chageState: -1
+  _chageState: 102
 --- !u!114 &-2873450844175968180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,7 +443,7 @@ MonoBehaviour:
   description: 
   drawGizmos: 0
   _isStartupCool: 1
-  _coolTime: 60
+  _coolTime: 10
 --- !u!114 &3374588740961584852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -501,7 +501,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 394d43f1b562f7f468cafebfa1aeb484
-  position: {x: -448, y: 1205}
+  position: {x: -445.88394, y: 1204.8}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: "\uC804\uBA78\uAE30"

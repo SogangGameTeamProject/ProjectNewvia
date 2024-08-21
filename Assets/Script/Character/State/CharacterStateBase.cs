@@ -38,8 +38,26 @@ namespace Newvia {
             {
                 _animator.SetTrigger(stateAniPara);
             }
-                
 
+            StartCutScene();
+            
+        }
+
+        // 상태 업데이트를 처리
+        public abstract void StateUpdate();
+
+        // 상태 종료 시 처리
+        public virtual void Exit()
+        {
+            if (_animator && stateAniPara != string.Empty)
+                _animator.ResetTrigger(stateAniPara);
+
+            EndCutScene();
+        }
+
+        //컷씬 시작
+        public void StartCutScene()
+        {
             // 컷씬 재생 여부에 따른 처리
             if (stateCutScene)
             {
@@ -57,16 +75,9 @@ namespace Newvia {
                 GameFlowEventBus.Publish(GameFlowType.Pause);
             }
         }
-
-        // 상태 업데이트를 처리
-        public abstract void StateUpdate();
-
-        // 상태 종료 시 처리
-        public virtual void Exit()
+        //컷씬 종료
+        public void EndCutScene()
         {
-            if (_animator && stateAniPara != string.Empty)
-                _animator.ResetTrigger(stateAniPara);
-
             // 컷씬 재생 여부에 따른 처리
             if (stateCutScene)
             {

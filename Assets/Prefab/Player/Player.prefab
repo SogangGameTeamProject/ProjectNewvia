@@ -109,7 +109,7 @@ MonoBehaviour:
   isShake: 1
   shakeDuration: 2
   shakeAmplitude: 5
-  shakeFrequency: 0.5
+  shakeFrequency: 1
   bgmClip: {fileID: 0}
   sfxClip: {fileID: 0}
   deathTime: 2

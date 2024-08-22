@@ -443,7 +443,7 @@ MonoBehaviour:
   description: 
   drawGizmos: 0
   _isStartupCool: 1
-  _coolTime: 10
+  _coolTime: 20
 --- !u!114 &3374588740961584852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,7 +592,7 @@ MonoBehaviour:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: 
   drawGizmos: 0
-  _chkRange: 15
+  _chkRange: 10
   _targetLayer:
     serializedVersion: 2
     m_Bits: 320

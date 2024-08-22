@@ -158,6 +158,8 @@ namespace Newvia {
         {
             if(mainCamera && originalFOV > 0)
                 mainCamera.m_Lens.FieldOfView = originalFOV;
+            if (isShake && mainCameraNoise)
+                mainCameraNoise.m_AmplitudeGain = 0f;
         }
     }
 

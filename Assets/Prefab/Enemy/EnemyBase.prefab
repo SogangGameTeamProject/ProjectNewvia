@@ -55,7 +55,7 @@ MonoBehaviour:
   shakeAmplitude: 1.2
   shakeFrequency: 2
   bgmClip: {fileID: 0}
-  sfxClip: {fileID: 0}
+  sfxClip: {fileID: 8300000, guid: ad16a69e34884af498d846c30c5f9d77, type: 3}
   firstDealDuration: 0.3
   lastDealDuration: 0.25
   skillDuration: 0.25

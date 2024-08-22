@@ -30,6 +30,7 @@ namespace Newvia
 
             if (sound == -40f) audioMixer.SetFloat("BGM", -80);
             else audioMixer.SetFloat("BGM", sound);
+            Debug.Log(sound);
         }
 
         //SFX 컨트롤

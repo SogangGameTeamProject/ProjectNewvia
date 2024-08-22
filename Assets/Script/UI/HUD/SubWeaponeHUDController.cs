@@ -43,6 +43,7 @@ namespace Newvia
                 hlg.childControlHeight = false;
                 hlg.childForceExpandHeight = false;
                 hlg.childForceExpandWidth = false;
+                hlg.transform.localScale = Vector3.one;
 
                 for (int j = 0; j < _energyConsumed; j++)
                 {

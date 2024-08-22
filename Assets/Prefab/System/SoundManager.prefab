@@ -46,9 +46,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adf09a412da56bf458842fcdb1f563c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isDontDestroy: 0
+  _isDontDestroy: 1
+  audioMixer: {fileID: 24100000, guid: db1d5a55a6d73784d8190e4c1ca8905e, type: 2}
   bgmSource: {fileID: 640837300834594936}
   sfxSource: {fileID: 1856029383677655672}
+  BGM_VOLUME_KEY: BGMSoundScale
+  SFX_VOLUME_Key: SFXSoundScale
 --- !u!82 &640837300834594936
 AudioSource:
   m_ObjectHideFlags: 0

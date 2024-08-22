@@ -19,6 +19,7 @@ namespace Newvia
         public GameObject gameOverPopup = null;
         public GameObject gmaeClearPopup = null;
 
+        public GameObject finishAni = null;
         private void Start()
         {
             Debug.Log("게임 시작");
@@ -110,6 +111,16 @@ namespace Newvia
             GameFlowEventBus.Publish(GameFlowType.Proceeding);
         }
         
-    }
+        public void OnPlayFinishAni()
+        {
+            if(finishAni)
+                finishAni.SetActive(true);
+        }
 
+        public void OffPlayFinishAni()
+        {
+            if (finishAni)
+                finishAni.SetActive(false);
+        }
+    }
 }

@@ -7,11 +7,13 @@ namespace Newvia
     public class FinishAttackState : SkillStateBase
     {
         public bool isChaging = false;
+        public bool isFinishiAni = false;
 
         public override void Enter(CharacterInit character)
         {
             base.Enter(character);
             isChaging = false;
+            isFinishiAni = false;
         }
 
         protected override void HandleFirstDeal()
@@ -31,7 +33,8 @@ namespace Newvia
                 isChaging = true;
 
             StartCutScene();//컷씬 시작
-
+            //피니쉬 애니메이션 재생
+            GameManager.Instance.OnPlayFinishAni();
         }
 
         protected override void OnSkillEnd()

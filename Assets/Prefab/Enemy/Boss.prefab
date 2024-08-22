@@ -63,8 +63,8 @@ MonoBehaviour:
   HandleSkilAniPara: 
   HandleLastDealAniPara: 
   _damageZone: {fileID: 6084614523517978057}
-  rushPower: 75
-  dashDistance: 7
+  rushPower: 100
+  dashDistance: 10
   wallLayerMask:
     serializedVersion: 2
     m_Bits: 65
@@ -137,8 +137,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.82019997, y: 1.5806499, z: 0}
-    m_Extent: {x: 2.2468, y: 2.76575, z: 0}
+    m_Center: {x: 0.9786501, y: 2.0457497, z: 0}
+    m_Extent: {x: 24.42315, y: 24.67095, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -149,12 +149,18 @@ MonoBehaviour:
   m_ShapeLightFalloffSize: 1
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: -0.036480784, y: 0.9126282, z: 0}
-  - {x: -0.42703795, y: 0.07388282, z: 0}
-  - {x: 0.93614507, y: -0.18723321, z: 0}
-  - {x: 1.0906527, y: 1.335758, z: 0}
-  - {x: 2.0671372, y: 3.3473325, z: 0}
-  - {x: 0.6919074, y: 2.3540773, z: 0}
+  - {x: -1.7933083, y: 6.7177963, z: 0}
+  - {x: -0.9236679, y: 2.0701828, z: 0}
+  - {x: -3.4441986, y: -0.8045311, z: 0}
+  - {x: -0.96186066, y: -1.5198565, z: 0}
+  - {x: 0.37485504, y: -0.6032505, z: 0}
+  - {x: 1.7497635, y: -2.6274214, z: 0}
+  - {x: 5.404598, y: -1.6767168, z: 0}
+  - {x: 1.5588036, y: 0.9626174, z: 0}
+  - {x: 5.0626106, y: 3.0543942, z: 0}
+  - {x: 1.9025307, y: 1.9937987, z: 0}
+  - {x: 2.754593, y: 5.753422, z: 0}
+  - {x: 0.99744034, y: 2.163118, z: 0}
 --- !u!1 &2986660219436901814
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,11 +700,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6470318082748202330, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 37.848724
       objectReference: {fileID: 0}
     - target: {fileID: 6470318082748202330, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -10.927393
       objectReference: {fileID: 0}
     - target: {fileID: 6470318082748202330, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: m_LocalPosition.z
@@ -960,7 +966,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 1}
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 2.5
 --- !u!1001 &4794925610583390252
 PrefabInstance:
   m_ObjectHideFlags: 0

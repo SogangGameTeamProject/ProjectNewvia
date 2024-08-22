@@ -33,7 +33,6 @@ namespace Newvia
         public Transform _subWeaponMountingLocation = null;//서브무기 장착 위치
 
         private PlayerHUDController _playerHUD = null;
-
         private void Awake()
         {
             _playerHUD = GameObject.FindObjectOfType<PlayerHUDController>();

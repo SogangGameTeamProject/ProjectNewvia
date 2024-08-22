@@ -1,3 +1,4 @@
+using Newvia;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,4 +16,22 @@ public class SimpleButtonController : MonoBehaviour
         Instantiate(popupPrefab, transform);
     }
 
+    public void OpenPopup(GameObject popupPrefab)
+    {
+        popupPrefab.SetActive(true);
+    }
+
+    public void ColsePopup(GameObject popupPrefab) {
+        popupPrefab.SetActive(false);
+    }
+
+    public void PlayBtnSound(AudioClip clip)
+    {
+        SoundManger.Instance.PlaySFX(clip);
+    }
+
+    public void CloseGame()
+    {
+        Application.Quit();
+    }
 }

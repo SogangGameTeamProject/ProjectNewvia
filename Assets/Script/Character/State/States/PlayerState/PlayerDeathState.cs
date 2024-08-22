@@ -13,5 +13,12 @@ namespace Newvia
             if (player)
                 player._weapone.SetActive(false);
         }
+
+        public override void Exit()
+        {
+            GameManager.Instance.OffPlayFinishAni();
+            base.Exit();
+            
+        }
     }
  }

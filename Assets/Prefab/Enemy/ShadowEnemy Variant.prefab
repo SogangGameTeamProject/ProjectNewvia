@@ -172,10 +172,10 @@ MonoBehaviour:
   virtualCameraName: VirtualCamera
   zoomInFOV: 30
   zoomSpeed: 2
-  fleeDistance: 15
-  safeDistance: 20
-  wanderRadius: 30
-  wanderInterval: 1
+  fleeDistance: 2
+  safeDistance: 30
+  wanderRadius: 2
+  wanderInterval: 0.01
 --- !u!1 &1042464432417003942 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8983005543673859971, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}

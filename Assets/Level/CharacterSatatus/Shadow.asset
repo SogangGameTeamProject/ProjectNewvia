@@ -15,4 +15,4 @@ MonoBehaviour:
   characterName: Shadow
   hp: 1
   power: 1
-  moveSpeed: 25
+  moveSpeed: 30

@@ -51,7 +51,7 @@ MonoBehaviour:
   zoomInFOV: 30
   zoomSpeed: 10
   firstDealDuration: 0.3
-  lastDealDuration: 0.5
+  lastDealDuration: 0.2
   skillDuration: 0.4
   chageState: 0
   HandleSkilAniPara: 

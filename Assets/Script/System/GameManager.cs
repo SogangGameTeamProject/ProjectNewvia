@@ -52,7 +52,7 @@ namespace Newvia
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                SceneManager.LoadScene("TestScene");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
 
         }

@@ -55,6 +55,7 @@ namespace Newvia
             StateInit(SubWeaponeStateType.Idle);
             NavMeshInit();  
             SettingInitStatus();
+            transform.rotation = Quaternion.identity;
         }
 
         private void OnEnable()
@@ -93,11 +94,6 @@ namespace Newvia
             agent.updateUpAxis = false;
             agent.updateRotation = false;
 
-            UnityEngine.AI.NavMeshObstacle obstacle = GetComponent<NavMeshObstacle>();
-            if (obstacle != null)
-            {
-                obstacle.size = Vector3.zero;
-            }
         }
 
         //캐릭터상태 전환

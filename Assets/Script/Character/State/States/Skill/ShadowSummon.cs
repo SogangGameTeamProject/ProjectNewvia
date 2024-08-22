@@ -8,6 +8,7 @@ namespace Newvia
     {
         public List<Transform> summonPositionList = new List<Transform>();
         public GameObject shadowPre = null; // 소환할 그림자 프리팹
+        public GameObject shadowNavArrow = null;//그림자 위치 보여줄 화살표 Obj
         private bool isSummon = false;
 
         public override void Enter(CharacterInit character)
@@ -33,10 +34,18 @@ namespace Newvia
                 {
                     if (summonPos != null && shadowPre != null)
                     {
-                        
-                        
                         // 그림자 프리팹을 해당 위치에 생성
-                        Instantiate(shadowPre, summonPos.position, summonPos.rotation);
+                        GameObject shadow = Instantiate(shadowPre, summonPos.position, summonPos.rotation);
+                        //플레이어 오브젝트에 타겟 위치 표시 UI생성
+                        if (shadowNavArrow)
+                        {
+                            PlayerController player = GameObject.FindObjectOfType<PlayerController>();
+                            if (player)
+                            {
+                                shadowNavArrow.GetComponent<TargetNavArrowContlloer>().target = shadow.transform;
+                                Instantiate(shadowNavArrow, player.transform.position, Quaternion.identity, player.transform);
+                            }
+                        }
                     }
                 }
                 isSummon = true; // 소환이 완료되면 플래그를 true로 설정

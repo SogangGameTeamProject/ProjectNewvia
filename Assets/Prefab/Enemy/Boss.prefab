@@ -46,10 +46,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniPara: IsNormarAttak
-  stateCutScene: 0
   virtualCameraName: VirtualCamera
+  stateCutScene: 0
   zoomInFOV: 30
   zoomSpeed: 10
+  isShake: 0
+  shakeDuration: 0
+  shakeAmplitude: 1.2
+  shakeFrequency: 2
+  bgmClip: {fileID: 0}
+  sfxClip: {fileID: 0}
   firstDealDuration: 0.3
   lastDealDuration: 0.2
   skillDuration: 0.4
@@ -227,10 +233,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniPara: IsFinalAttackReady
-  stateCutScene: 1
   virtualCameraName: VirtualCamera
+  stateCutScene: 1
   zoomInFOV: 135
   zoomSpeed: 10
+  isShake: 1
+  shakeDuration: 3.2
+  shakeAmplitude: 10
+  shakeFrequency: 1
+  bgmClip: {fileID: 0}
+  sfxClip: {fileID: 0}
   firstDealDuration: 3.2
   lastDealDuration: 3
   skillDuration: 10
@@ -284,10 +296,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniPara: IsTelepotion
-  stateCutScene: 0
   virtualCameraName: VirtualCamera
+  stateCutScene: 0
   zoomInFOV: 30
   zoomSpeed: 10
+  isShake: 0
+  shakeDuration: 0
+  shakeAmplitude: 1.2
+  shakeFrequency: 2
+  bgmClip: {fileID: 0}
+  sfxClip: {fileID: 0}
   firstDealDuration: 1
   lastDealDuration: 0.25
   skillDuration: 0.5
@@ -352,10 +370,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniPara: IsAppeared
-  stateCutScene: 1
   virtualCameraName: VirtualCamera
+  stateCutScene: 1
   zoomInFOV: 75
   zoomSpeed: 100
+  isShake: 0
+  shakeDuration: 0
+  shakeAmplitude: 1.2
+  shakeFrequency: 2
+  bgmClip: {fileID: 8300000, guid: 511fe619f6ace31479f8ed6fe39fc254, type: 3}
+  sfxClip: {fileID: 0}
   firstDealDuration: 3
   lastDealDuration: 0
   skillDuration: 1
@@ -367,6 +391,7 @@ MonoBehaviour:
   - {fileID: 1036729271913601708}
   - {fileID: 5388230106399952920}
   shadowPre: {fileID: 8006287142673437887, guid: 09bf4620ee0411044b3b84a0517400d3, type: 3}
+  shadowNavArrow: {fileID: 1437494112626787075, guid: b4b873b9c7a545c4d9be3ef67899aef1, type: 3}
 --- !u!1 &6462268182664923979
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,10 +808,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniPara: IsSturn
-  stateCutScene: 0
   virtualCameraName: VirtualCamera
+  stateCutScene: 0
   zoomInFOV: 30
   zoomSpeed: 2
+  isShake: 0
+  shakeDuration: 0
+  shakeAmplitude: 1.2
+  shakeFrequency: 2
+  bgmClip: {fileID: 0}
+  sfxClip: {fileID: 0}
   firstDealDuration: 4
   lastDealDuration: 0.9
   skillDuration: 0.1
@@ -798,6 +829,7 @@ MonoBehaviour:
   - {fileID: 1036729271913601708}
   - {fileID: 5388230106399952920}
   shadowPre: {fileID: 8006287142673437887, guid: 09bf4620ee0411044b3b84a0517400d3, type: 3}
+  shadowNavArrow: {fileID: 1437494112626787075, guid: b4b873b9c7a545c4d9be3ef67899aef1, type: 3}
 --- !u!4 &3631827188543563007 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3289984974567573473, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}

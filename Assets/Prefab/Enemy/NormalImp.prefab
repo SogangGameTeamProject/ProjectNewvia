@@ -78,7 +78,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 24.1, y: 5.0666666}
+  m_Size: {x: 24.1, y: 2.3426816}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -176,10 +176,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateAniPara: IsAttackReady
-  stateCutScene: 0
   virtualCameraName: VirtualCamera
+  stateCutScene: 0
   zoomInFOV: 30
   zoomSpeed: 2
+  isShake: 0
+  shakeDuration: 0
+  shakeAmplitude: 1.2
+  shakeFrequency: 2
+  bgmClip: {fileID: 0}
+  sfxClip: {fileID: 0}
   firstDealDuration: 0.5
   lastDealDuration: 0.5
   skillDuration: 0.5
@@ -247,6 +253,30 @@ PrefabInstance:
       propertyPath: m_ApplyToSortingLayers.Array.data[7]
       value: 1720052815
       objectReference: {fileID: 0}
+    - target: {fileID: 2825189601600117294, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2825189601600117294, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2825189601600117294, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2825189601600117294, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2825189601600117294, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2825189601600117294, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3100897008789503470, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: m_Controller
       value: 
@@ -302,6 +332,30 @@ PrefabInstance:
     - target: {fileID: 3753098867592542200, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[7]
       value: 1720052815
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947645639978031462, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947645639978031462, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947645639978031462, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947645639978031462, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947645639978031462, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947645639978031462, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4349560370580275842, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: stateAniPara

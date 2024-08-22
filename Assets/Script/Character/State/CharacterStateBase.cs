@@ -11,13 +11,15 @@ namespace Newvia {
         [SerializeField]
         protected string stateAniPara = null; // 재생할 애니메이션의 파라미터
 
+        //가상 카메라 관련 전역 변수
+        public string virtualCameraName = "VirtualCamera";
+        private CinemachineVirtualCamera mainCamera = null;
+        CinemachineBasicMultiChannelPerlin mainCameraNoise = null;
+
         // 컷씬 관련 전역 변수
         [SerializeField]
         protected bool stateCutScene = false; // 컷씬 사용 여부
         protected bool isCutScene = false;    // 컷씬 재생 여부
-
-        public string virtualCameraName = "VirtualCamera";
-        private CinemachineVirtualCamera mainCamera = null;
         private Transform existingTarget = null;
 
         // 줌 관련 변수
@@ -26,6 +28,17 @@ namespace Newvia {
         [SerializeField]
         protected float zoomSpeed = 2f;        // 줌 속도
         private float originalFOV = 0f;        // 원래의 Field of View
+
+        //화면 흔들림
+        public bool isShake = false;//화면 흔들림 여부
+        public float shakeDuration = 0f; // 흔들림 시간
+        public float shakeAmplitude = 1.2f; // 흔들림 정도
+        public float shakeFrequency = 2.0f; // 흔들림 빈도
+
+        //사운드 재생
+        private SoundManger _soundManger;
+        public AudioClip bgmClip = null;
+        public AudioClip sfxClip = null;
 
         // 상태 전환 시 처리
         public virtual void Enter(CharacterInit character)
@@ -38,6 +51,23 @@ namespace Newvia {
             {
                 _animator.SetTrigger(stateAniPara);
             }
+
+            //가상 카메라 값 초기화
+            if (mainCamera == null)
+                mainCamera = GameObject.Find(virtualCameraName).GetComponent<CinemachineVirtualCamera>();
+            if (mainCamera && mainCameraNoise == null)
+                mainCameraNoise = mainCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+
+            //사운드 재생
+            if (_soundManger == null)
+                _soundManger = SoundManger.Instance;
+            if (_soundManger && bgmClip)
+                _soundManger.PlayBGM(bgmClip);
+            if (_soundManger && sfxClip)
+                _soundManger.PlaySFX(sfxClip);
+
+            if (isShake)
+                StartCoroutine(CameraShake());
 
             StartCutScene();
             
@@ -62,7 +92,6 @@ namespace Newvia {
             if (stateCutScene)
             {
                 // 가상 카메라를 해당 캐릭터를 비추게 설정
-                mainCamera = GameObject.Find(virtualCameraName).GetComponent<CinemachineVirtualCamera>();
                 if (mainCamera)
                 {
                     existingTarget = mainCamera.Follow;
@@ -115,9 +144,19 @@ namespace Newvia {
             mainCamera.m_Lens.FieldOfView = originalFOV; // 원래 FOV로 복원
         }
 
+        private IEnumerator CameraShake()
+        {
+            mainCameraNoise.m_AmplitudeGain = shakeAmplitude;
+            mainCameraNoise.m_FrequencyGain = shakeFrequency;
+
+            yield return new WaitForSeconds(shakeDuration);
+
+            mainCameraNoise.m_AmplitudeGain = 0f;
+        }
+
         private void OnDestroy()
         {
-            if(mainCamera)
+            if(mainCamera && originalFOV > 0)
                 mainCamera.m_Lens.FieldOfView = originalFOV;
         }
     }

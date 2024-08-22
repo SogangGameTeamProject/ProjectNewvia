@@ -443,7 +443,7 @@ MonoBehaviour:
   description: 
   drawGizmos: 0
   _isStartupCool: 1
-  _coolTime: 20
+  _coolTime: 10
 --- !u!114 &3374588740961584852
 MonoBehaviour:
   m_ObjectHideFlags: 0

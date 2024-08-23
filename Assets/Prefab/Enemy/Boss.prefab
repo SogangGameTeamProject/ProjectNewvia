@@ -55,7 +55,7 @@ MonoBehaviour:
   shakeAmplitude: 1.2
   shakeFrequency: 2
   bgmClip: {fileID: 0}
-  sfxClip: {fileID: 0}
+  sfxClip: {fileID: 8300000, guid: 81fe097da90a8c645b77830b9e4adfa7, type: 3}
   firstDealDuration: 0.3
   lastDealDuration: 0.2
   skillDuration: 0.4
@@ -71,6 +71,7 @@ MonoBehaviour:
   wallCheckDistance: 2
   wallCastY: 1
   skillRangeDisplay: {fileID: 0}
+  attackSound: {fileID: 0}
 --- !u!1 &2452596290988920795
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,10 +331,10 @@ MonoBehaviour:
   shakeAmplitude: 7.5
   shakeFrequency: 3
   bgmClip: {fileID: 0}
-  sfxClip: {fileID: 0}
+  sfxClip: {fileID: 8300000, guid: 1751a8623c4ca634f8ed746db1230c4c, type: 3}
   firstDealDuration: 3.2
   lastDealDuration: 3
-  skillDuration: 10
+  skillDuration: 7
   chageState: 102
   HandleSkilAniPara: 
   HandleLastDealAniPara: IsFinalAttack
@@ -342,6 +343,8 @@ MonoBehaviour:
   thirdZoomStartTime: 2
   thirdZoomScale: 90
   isFinishiAni: 0
+  isSecontSahke: 0
+  attakSound: {fileID: 8300000, guid: 7e98cbdd36520b1498e9c12063e6c575, type: 3}
 --- !u!1 &4550868736317828420
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,7 +400,7 @@ MonoBehaviour:
   shakeAmplitude: 1.2
   shakeFrequency: 2
   bgmClip: {fileID: 0}
-  sfxClip: {fileID: 0}
+  sfxClip: {fileID: 8300000, guid: 735c1e5d35b38a64695e2303f1e1c0b5, type: 3}
   firstDealDuration: 1
   lastDealDuration: 0.75
   skillDuration: 0.5
@@ -413,6 +416,7 @@ MonoBehaviour:
   wallCheckDistance: 2.25
   wallCastY: 1.75
   skillRangeDisplay: {fileID: 0}
+  attackSound: {fileID: 8300000, guid: 81fe097da90a8c645b77830b9e4adfa7, type: 3}
   teleportDistance: 7.5
 --- !u!1 &5211159451111877562
 GameObject:
@@ -472,7 +476,7 @@ MonoBehaviour:
   shakeAmplitude: 1.2
   shakeFrequency: 2
   bgmClip: {fileID: 8300000, guid: 511fe619f6ace31479f8ed6fe39fc254, type: 3}
-  sfxClip: {fileID: 0}
+  sfxClip: {fileID: 8300000, guid: 2c5d600501283554483bdd518d944489, type: 3}
   firstDealDuration: 3
   lastDealDuration: 0
   skillDuration: 1
@@ -832,6 +836,10 @@ PrefabInstance:
     - target: {fileID: 7322128526996092535, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: m_LocalPosition.y
       value: 3.163
+      objectReference: {fileID: 0}
+    - target: {fileID: 8499508103413739669, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
+      propertyPath: sfxClip
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8499508103413739669, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
       propertyPath: vecZero

@@ -36,7 +36,7 @@ namespace Newvia {
         public float shakeFrequency = 2.0f; // 흔들림 빈도
 
         //사운드 재생
-        private SoundManger _soundManger;
+        protected SoundManger _soundManger;
         public AudioClip bgmClip = null;
         public AudioClip sfxClip = null;
 
@@ -144,7 +144,7 @@ namespace Newvia {
             mainCamera.m_Lens.FieldOfView = originalFOV; // 원래 FOV로 복원
         }
 
-        private IEnumerator CameraShake()
+        public IEnumerator CameraShake()
         {
             mainCameraNoise.m_AmplitudeGain = shakeAmplitude;
             mainCameraNoise.m_FrequencyGain = shakeFrequency;

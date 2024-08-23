@@ -111,7 +111,7 @@ MonoBehaviour:
   shakeAmplitude: 5
   shakeFrequency: 3
   bgmClip: {fileID: 0}
-  sfxClip: {fileID: 0}
+  sfxClip: {fileID: 8300000, guid: 7703821528c6ebb44b2cd805744727e5, type: 3}
   deathTime: 2
   vecZero: 0
 --- !u!1 &632780687174138422

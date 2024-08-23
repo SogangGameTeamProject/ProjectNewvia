@@ -78,6 +78,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebd52c67c3fc6b34b90def1dd886a634, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgmClip: {fileID: 0}
+  sfxClip: {fileID: 8300000, guid: c27698738a7f8184c84d9678a107ac57, type: 3}
   _boomObjPre: {fileID: 6042577625620264151, guid: 491c477af49eda344b08dec6016e884c, type: 3}
 --- !u!1 &3913642982040535044
 GameObject:
@@ -123,6 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d98bc579f41544282106e4a0f60e25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgmClip: {fileID: 0}
+  sfxClip: {fileID: 0}
 --- !u!1 &6273917848178606605
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,6 +171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac5d9e5a93bd6a4bbda3029fc0df61e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgmClip: {fileID: 0}
+  sfxClip: {fileID: 0}
 --- !u!1 &8860754139407080717
 GameObject:
   m_ObjectHideFlags: 0

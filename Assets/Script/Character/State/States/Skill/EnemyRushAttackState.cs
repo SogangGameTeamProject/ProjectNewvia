@@ -23,6 +23,9 @@ namespace Newvia
         //스킬 사거리 표시
         public GameObject skillRangeDisplay = null;
 
+        public AudioClip attackSound = null;
+        private bool isPlayRushSound = false;
+
         public override void Exit()
         {
             base.Exit();
@@ -33,7 +36,6 @@ namespace Newvia
             base.Enter(character);
             if (_rBody == null)
                 _rBody = _character.GetComponent<Rigidbody2D>();
-
             isRushing = false;
         }
 
@@ -79,8 +81,14 @@ namespace Newvia
             if (skillRangeDisplay)
                 skillRangeDisplay.SetActive(false);
 
-            
-            
+            //러쉬 사운드 재생
+            if (_soundManger && attackSound && !isPlayRushSound)
+            {
+                isPlayRushSound = true;
+                _soundManger.PlaySFX(attackSound);
+            }
+                
+
             if (_targetPosition != null)
             {
                 //돌진 방향에 따른 캐릭터 방향 조정

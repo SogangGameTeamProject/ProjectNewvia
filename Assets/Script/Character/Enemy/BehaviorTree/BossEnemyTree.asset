@@ -437,13 +437,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 63bd4a961f6d86541aa7d2ab245a3cc3
-  position: {x: -577.3729, y: 1335.2003}
+  position: {x: -577.858, y: 1335.2001}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: 
   drawGizmos: 0
   _isStartupCool: 1
-  _coolTime: 20
+  _coolTime: 15
 --- !u!114 &3374588740961584852
 MonoBehaviour:
   m_ObjectHideFlags: 0

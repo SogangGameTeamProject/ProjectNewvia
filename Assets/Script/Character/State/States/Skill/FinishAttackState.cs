@@ -18,7 +18,10 @@ namespace Newvia
 
         private bool isChaging = false;
         public bool isFinishiAni = false;
+        public bool isSecontSahke = false;
 
+        public AudioClip attakSound = null;
+        private bool isPlayAttackSound = false;
         public override void Enter(CharacterInit character)
         {
             base.Enter(character);
@@ -53,6 +56,19 @@ namespace Newvia
 
         protected override void HandleLastDeal()
         {
+            if (isShake && !isSecontSahke)
+            {
+                isSecontSahke = true;
+                StartCoroutine(CameraShake());
+            }
+
+            //러쉬 사운드 재생
+            if (_soundManger && attakSound && !isPlayAttackSound)
+            {
+                isPlayAttackSound = true;
+                _soundManger.PlaySFX(attakSound);
+            }
+
             if (!isChaging)
                 isChaging = true;
 

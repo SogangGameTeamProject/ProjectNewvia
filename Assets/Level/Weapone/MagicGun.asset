@@ -17,7 +17,7 @@ MonoBehaviour:
   FireCost: 1
   RateOfFire: 0.25
   FireSpeedReduction: 1
-  ReloadingSpeed: 0.77
+  ReloadingSpeed: 0.45
   ReloadingSpeedReduction: 0.5
   BulletPower: 125
   BulletRange: 40

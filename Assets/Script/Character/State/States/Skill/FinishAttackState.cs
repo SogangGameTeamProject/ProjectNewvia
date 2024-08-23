@@ -6,7 +6,17 @@ namespace Newvia
 {
     public class FinishAttackState : SkillStateBase
     {
-        public bool isChaging = false;
+        //2단 줌
+        private bool isSecondZoom = false;
+        public float secondZoomStartTime = 1f;
+        public float secondZoomScale = 110f;
+
+        //3단 줌
+        private bool isThirdZoom = false;
+        public float thirdZoomStartTime = 2f;
+        public float thirdZoomScale = 90f;
+
+        private bool isChaging = false;
         public bool isFinishiAni = false;
 
         public override void Enter(CharacterInit character)
@@ -18,7 +28,21 @@ namespace Newvia
 
         protected override void HandleFirstDeal()
         {
-            
+            if (elapsedTime >= secondZoomStartTime && !isSecondZoom)
+            {
+                isSecondZoom = true;
+                Debug.Log("두번쨰 줌인");
+                StartCoroutine(ZoomIn(secondZoomScale));
+            }
+                
+            if (elapsedTime >= thirdZoomStartTime && !isThirdZoom)
+            {
+                isThirdZoom = true;
+                Debug.Log("세번째 줌인");
+                StartCoroutine(ZoomIn(thirdZoomScale));
+            }
+                
+
         }
 
         protected override void HandleSkill()

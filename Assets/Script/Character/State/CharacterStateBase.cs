@@ -97,7 +97,7 @@ namespace Newvia {
                     existingTarget = mainCamera.Follow;
                     originalFOV = mainCamera.m_Lens.FieldOfView; // 원래 FOV 저장
                     mainCamera.Follow = _character.transform;
-                    StartCoroutine(ZoomIn()); // 줌 인 시작
+                    StartCoroutine(ZoomIn(zoomInFOV)); // 줌 인 시작
                 }
 
                 isCutScene = true;
@@ -123,7 +123,7 @@ namespace Newvia {
         }
 
         // 줌 인 코루틴
-        private IEnumerator ZoomIn()
+        public IEnumerator ZoomIn(float zoomInFOV)
         {
             while (mainCamera.m_Lens.FieldOfView > zoomInFOV)
             {
@@ -134,7 +134,7 @@ namespace Newvia {
         }
 
         // 줌 아웃 코루틴
-        private IEnumerator ZoomOut()
+        public IEnumerator ZoomOut()
         {
             while (mainCamera.m_Lens.FieldOfView < originalFOV)
             {

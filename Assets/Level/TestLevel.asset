@@ -20,10 +20,10 @@ MonoBehaviour:
     - prefab: {fileID: 150925620444700059, guid: 5ef7e22d64289f5438f64c6f17f8d05d, type: 3}
       weight: 2
     maxSpawnNum: 30
-    spawnMonsterNum: 2
-    maxFieldMonsterNum: 10
-    minSpawnTime: 1
-    maxSpawnTime: 2
+    spawnMonsterNum: 3
+    maxFieldMonsterNum: 7
+    minSpawnTime: 5
+    maxSpawnTime: 7
   - isBoss: 0
     monsterList:
     - prefab: {fileID: 2144157276693955226, guid: 6876ebe6aea89e34488e3338d48e4e30, type: 3}
@@ -33,10 +33,10 @@ MonoBehaviour:
     - prefab: {fileID: 150925620444700059, guid: 9404778326faa704cb11539997ed0106, type: 3}
       weight: 1
     maxSpawnNum: 70
-    spawnMonsterNum: 3
-    maxFieldMonsterNum: 15
-    minSpawnTime: 1
-    maxSpawnTime: 2
+    spawnMonsterNum: 5
+    maxFieldMonsterNum: 10
+    minSpawnTime: 5
+    maxSpawnTime: 7
   - isBoss: 1
     monsterList:
     - prefab: {fileID: 148367944906056068, guid: ad3e823057373d14490cf9c820d2a882, type: 3}
